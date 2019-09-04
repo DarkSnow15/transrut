@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Transrut</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <%= javascript_include_tag "main.js"%>
+    <%=  stylesheet_link_tag "font-face.css" %>
+    <%=  stylesheet_link_tag "theme.css" %>
+
+    <%= stylesheet_link_tag "vendor/font-awesome-4.7/css/font-awesome.min.css"%>
+    <%= stylesheet_link_tag "vendor/font-awesome-5/css/fontawesome-all.min.css"%>
+    <%= stylesheet_link_tag "vendor/mdi-font/css/material-design-iconic-font.min.css"%>
+
+    <!-- Bootstrap CSS-->
+    <%= stylesheet_link_tag "vendor/bootstrap-4.1/bootstrap.min.css"%>
+
+    <!-- Vendor CSS-->
+    <%= stylesheet_link_tag "vendor/animsition/animsition.min.css"%>
+    <%= stylesheet_link_tag "vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css"%>
+    <%= stylesheet_link_tag "vendor/wow/animate.css"%>
+    <%= stylesheet_link_tag "vendor/css-hamburgers/hamburgers.min.css"%>
+    <%= stylesheet_link_tag "vendor/slick/slick.css"%>
+    <%= stylesheet_link_tag "vendor/select2/select2.min.css"%>
+    <%= stylesheet_link_tag "vendor/perfect-scrollbar/perfect-scrollbar.css"%>
+    <%= stylesheet_link_tag "vendor/vector-map/jqvmap.min.css"%>
+  </head>
+
+  <body class="animsition" style="animation-duration: 900ms; opacity: 1;">
+    <div class="page-wrapper">
+      <%= render 'layouts/navigation' %>
+      <div class="page-container2">
+        <%= render 'layouts/topnavbar' %>
+        <%= render 'layouts/sidebar' %>
+        <%= render 'layouts/breadcrumb' %>
+        <section class="statistic">
+            <div class="section__content section__content--p30">
+                <div class="container-fluid">
+                  <%= yield %>
+                </div>
+            </div>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>
