@@ -1,0 +1,19 @@
+es-CO:
+  conductores:
+    create:
+      success: Conductor registrado
+      alert: Problemas al registrar
+    update_responder:
+      success: Conductor registrado correctamente
+      alert: Problemas con el registro de la respuesta
+    attributes:
+      tecnico:
+        num_documento: Conductor
+        nombre: Nombre
+        fech_ven_licen: Vencimiento de licencia
+        fech_seg_ini: Fecha de seguro inicial
+        fech_seg_ven: Fecha vencimiento seguro
+        fech_ingreso: Fecha ingreso a la empresa
+        cedula_img: Pdf cedula
+        hoja_vida: Pdf Hoja de vida
+        licencia: Pdf licencia

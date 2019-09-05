@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  num_documento: 1
+  nombre: MyString
+  cedula_img: MyString
+  hoja_vida: MyString
+  licencia: MyString
+  fech_ven_licen: 2019-09-04
+  fech_seg_ini: 2019-09-04
+  fech_seg_ven: 2019-09-04
+  fech_ingreso: 2019-09-04
+
+two:
+  num_documento: 1
+  nombre: MyString
+  cedula_img: MyString
+  hoja_vida: MyString
+  licencia: MyString
+  fech_ven_licen: 2019-09-04
+  fech_seg_ini: 2019-09-04
+  fech_seg_ven: 2019-09-04
+  fech_ingreso: 2019-09-04
