@@ -1,0 +1,48 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Carros</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Placa</th>
+      <th>Nom prop</th>
+      <th>Id prop</th>
+      <th>Fecha venc soat</th>
+      <th>Fecha venc tm</th>
+      <th>Fecha venc pe</th>
+      <th>Fecha venc pc</th>
+      <th>Img lic trans</th>
+      <th>Img tarj oper</th>
+      <th>Img soat</th>
+      <th>Img tm</th>
+      <th colspan="3"></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @carros.each do |carro| %>
+      <tr>
+        <td><%= carro.placa %></td>
+        <td><%= carro.nom_prop %></td>
+        <td><%= carro.id_prop %></td>
+        <td><%= carro.fecha_venc_soat %></td>
+        <td><%= carro.fecha_venc_tm %></td>
+        <td><%= carro.fecha_venc_pe %></td>
+        <td><%= carro.fecha_venc_pc %></td>
+        <td><%= carro.img_lic_trans %></td>
+        <td><%= carro.img_tarj_oper %></td>
+        <td><%= carro.img_soat %></td>
+        <td><%= carro.img_tm %></td>
+        <td><%= link_to 'Show', carro %></td>
+        <td><%= link_to 'Edit', edit_carro_path(carro) %></td>
+        <td><%= link_to 'Destroy', carro, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Nuevo Carro', new_carro_path %>

@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Placa:</strong>
+  <%= @carro.placa %>
+</p>
+
+<p>
+  <strong>Nom prop:</strong>
+  <%= @carro.nom_prop %>
+</p>
+
+<p>
+  <strong>Id prop:</strong>
+  <%= @carro.id_prop %>
+</p>
+
+<p>
+  <strong>Fecha venc soat:</strong>
+  <%= @carro.fecha_venc_soat %>
+</p>
+
+<p>
+  <strong>Fecha venc tm:</strong>
+  <%= @carro.fecha_venc_tm %>
+</p>
+
+<p>
+  <strong>Fecha venc pe:</strong>
+  <%= @carro.fecha_venc_pe %>
+</p>
+
+<p>
+  <strong>Fecha venc pc:</strong>
+  <%= @carro.fecha_venc_pc %>
+</p>
+
+<p>
+  <strong>Img lic trans:</strong>
+  <%= @carro.img_lic_trans %>
+</p>
+
+<p>
+  <strong>Img tarj oper:</strong>
+  <%= @carro.img_tarj_oper %>
+</p>
+
+<p>
+  <strong>Img soat:</strong>
+  <%= @carro.img_soat %>
+</p>
+
+<p>
+  <strong>Img tm:</strong>
+  <%= @carro.img_tm %>
+</p>
+
+<%= link_to 'Editar', edit_carro_path(@carro) %> |
+<%= link_to 'Regresar', carros_path %>
