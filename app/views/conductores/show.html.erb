@@ -1,0 +1,42 @@
+<div class="row">
+  <div class="col-lg-6">
+    <div class="card">
+      <div class="card-header">
+          <strong>Conductor <%= @conductor.nombre.humanize %> <a href="<%= edit_conductor_path(@conductor)%>" class="check-o"><i class="fa fa-edit"></i></a></strong>
+      </div>
+      <div class="card-body">
+        <strong>Numero de documento: </strong><%= @conductor.num_documento%><br><br>
+        <strong>Fecha de ingreso: </strong><%= @conductor.fech_ingreso %><br><br>
+        <strong>Fecha de licencia: </strong><%= @conductor.fech_ven_licen %><br><br>
+        <strong>Fecha de vencimiento seguro: </strong><%= @conductor.fech_seg_ven %>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-6">
+    <div class="card">
+      <div class="card-header">
+          <strong>Archivos requeridos</strong>
+      </div>
+      <div class="card-body">
+        <strong>Hoja de vida: </strong>
+        <% if @conductor.hoja_vida.present?%>
+          <i class="fas fa-check-circle fa-lg check-o"></i><br><br>
+        <% else %>
+          <i class="fas fa-times-circle fa-lg check-d"></i><br><br>
+        <% end %>
+        <strong>Licencia: </strong>
+        <% if @conductor.licencia.present?%>
+          <i class="fas fa-check-circle fa-lg check-o"></i><br><br>
+        <% else %>
+          <i class="fas fa-times-circle fa-lg check-d"></i><br><br>
+        <% end %>
+        <strong>Cedula: </strong>
+        <% if @conductor.cedula_img.present?%>
+          <i class="fas fa-check-circle fa-lg check-o"></i><br><br>
+        <% else %>
+          <i class="fas fa-times-circle fa-lg check-d"></i><br><br>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

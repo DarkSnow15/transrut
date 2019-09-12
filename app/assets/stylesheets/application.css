@@ -13,3 +13,14 @@
  *= require_tree .
  *= require_self
  */
+.check-s{
+  color: #28a745;
+}
+
+.check-d{
+  color: #dc3545;
+}
+
+a:hover {
+  text-decoration: none;
+}
