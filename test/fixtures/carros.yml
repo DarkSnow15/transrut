@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  placa: MyString
+  nom_prop: MyString
+  id_prop: 1
+  fecha_venc_soat: 2019-09-06
+  fecha_venc_tm: 2019-09-06
+  fecha_venc_pe: 2019-09-06
+  fecha_venc_pc: 2019-09-06
+  img_lic_trans: MyString
+  img_tarj_oper: MyString
+  img_soat: MyString
+  img_tm: MyString
+
+two:
+  placa: MyString
+  nom_prop: MyString
+  id_prop: 1
+  fecha_venc_soat: 2019-09-06
+  fecha_venc_tm: 2019-09-06
+  fecha_venc_pe: 2019-09-06
+  fecha_venc_pc: 2019-09-06
+  img_lic_trans: MyString
+  img_tarj_oper: MyString
+  img_soat: MyString
+  img_tm: MyString

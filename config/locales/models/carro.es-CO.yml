@@ -1,0 +1,21 @@
+es-CO:
+  conductores:
+    create:
+      success: Carro registrado
+      alert: Problemas al registrar
+    update_responder:
+      success: Carro registrado correctamente
+      alert: Problemas con el registro de la respuesta
+    attributes:
+      tecnico:
+        placa: Placa
+        nom_prop: Nombre Del Propetario
+        id_prop: Identificacion Del Propietario
+        fecha_venc_soat: Fecha de Vencimiento Del Soat
+        fecha_venc_tm: Fecha de Vencimiento Tecno Mecanica
+        fecha_venc_pe: Fecha de Vencimiento De La Poliza Extracontractual
+        fecha_venc_pc: Fecha de Vencimiento De La Poliza Contractual
+        img_lic_trans: Imagen Licencia De Transito
+        img_tarj_oper: Imagen Tarjeta De Operaciones
+        img_soat: Imagen Soat
+        img_tm: Imagen Tecno Mecanica
