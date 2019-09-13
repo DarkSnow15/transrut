@@ -11,7 +11,11 @@ gem 'pg', '~> 0.18.4'
 
 gem 'simple_form'
 
+gem 'devise'
+
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
+
+gem 'toastr-rails'
 
 gem 'carrierwave', '~> 0.11.2'
 # Use Puma as the app server

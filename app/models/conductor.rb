@@ -21,6 +21,7 @@ class Conductor < ApplicationRecord
   mount_uploader :hoja_vida, FileUploader
   mount_uploader :licencia, FileUploader
   validates :num_documento, presence: true
+  validates :num_documento, numericality: true
   validates :nombre, presence: true
   validates :fech_ingreso, presence: true
 end

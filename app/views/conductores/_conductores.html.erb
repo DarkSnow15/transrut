@@ -1,5 +1,6 @@
 <tr>
-  <td><%= conductor.num_documento %></td>
-  <td><%= conductor.nombre %></td>
+  <td><%= link_to conductor.num_documento, conductor_path(conductor) %></td>
+  <td><%= link_to conductor.nombre, conductor_path(conductor) %></td>
   <td><%= conductor.fech_ingreso %></td>
+  <td><%= link_to edit_conductor_path(conductor) do %> <i class="fa fa-edit"></i> <% end %></td>
 </tr>

@@ -1,4 +1,5 @@
 class ConductoresController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_conductor, only: [:show, :edit]
   def index
     @conductores = Conductor.all
@@ -18,8 +19,21 @@ class ConductoresController < ApplicationController
   def create
     @conductor = Conductor.create(params_conductor)
     if @conductor.save
+      flash[:success] = "Conductor guardado correctamente"
       render :show
     else
+      flash[:alert] = "No se pudo guardar el conductor"
+      render :new
+    end
+  end
+
+  def update
+    @conductor = Conductor.find(params[:id])
+    if @conductor.update(params_conductor)
+      flash[:success] = "Conductor actualizado correctamente"
+      render :show
+    else
+      flash[:alert] = "No se pudo actualizar el conductor"
       render :new
     end
   end
