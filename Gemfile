@@ -8,6 +8,16 @@ gem 'rails', '~> 5.2.3'
 # Use sqlite3 as the database for Active Record
 # gem 'sqlite3'
 gem 'pg', '~> 0.18.4'
+
+gem 'simple_form'
+
+gem 'devise'
+
+gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
+
+gem 'toastr-rails'
+
+gem 'carrierwave', '~> 0.11.2'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets

@@ -14,7 +14,7 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 # Rails.application.config.assets.precompile += %w( admin.js admin.css )
 Rails.application.config.assets.precompile += %w( main.js )
 
-Rails.application.config.assets.precompile += %w( font-face.css )
+Rails.application.config.assets.precompile += %w( icon/logo.png )
 Rails.application.config.assets.precompile += %w( theme.css )
 Rails.application.config.assets.precompile += %w( vendor/font-awesome-4.7/css/font-awesome.min.css )
 Rails.application.config.assets.precompile += %w( vendor/font-awesome-5/css/fontawesome-all.min.css )

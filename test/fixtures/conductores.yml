@@ -1,0 +1,41 @@
+# == Schema Information
+#
+# Table name: conductores
+#
+#  id             :bigint           not null, primary key
+#  num_documento  :integer
+#  nombre         :string
+#  cedula_img     :string
+#  hoja_vida      :string
+#  licencia       :string
+#  fech_ven_licen :date
+#  fech_seg_ini   :date
+#  fech_seg_ven   :date
+#  fech_ingreso   :date
+#  created_at     :datetime         not null
+#  updated_at     :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  num_documento: 1
+  nombre: MyString
+  cedula_img: MyString
+  hoja_vida: MyString
+  licencia: MyString
+  fech_ven_licen: 2019-09-04
+  fech_seg_ini: 2019-09-04
+  fech_seg_ven: 2019-09-04
+  fech_ingreso: 2019-09-04
+
+two:
+  num_documento: 1
+  nombre: MyString
+  cedula_img: MyString
+  hoja_vida: MyString
+  licencia: MyString
+  fech_ven_licen: 2019-09-04
+  fech_seg_ini: 2019-09-04
+  fech_seg_ven: 2019-09-04
+  fech_ingreso: 2019-09-04

@@ -1,0 +1,15 @@
+<div class="table-responsive table--no-card m-b-30">
+    <table class="table table-borderless table-striped table-earning">
+        <thead>
+            <tr>
+                <th>Nº documento</th>
+                <th>Nombre</th>
+                <th>Fecha de ingreso</th>
+                <th>Editar</th>
+            </tr>
+        </thead>
+        <tbody>
+            <%= render partial: "conductores", collection: @conductores, as: :conductor %>
+        </tbody>
+    </table>
+</div>
