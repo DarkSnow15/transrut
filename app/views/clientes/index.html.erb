@@ -1,47 +1,32 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Clientes</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Id cliente</th>
-      <th>Nombres</th>
-      <th>Apellidos</th>
-      <th>Correo</th>
-      <th>Telefono</th>
-      <th>Ciudad</th>
-      <th>Estado</th>
-      <th>Codigo trans</th>
-      <th>Precio</th>
-      <th>Direccion inicial</th>
-      <th>Direccion final</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @clientes.each do |cliente| %>
+<div class="table-responsive table--no-card m-b-30">
+  <table class="table table-borderless table-striped table-earning">
+    <thead>
       <tr>
-        <td><%= cliente.id_cliente %></td>
-        <td><%= cliente.nombres %></td>
-        <td><%= cliente.apellidos %></td>
-        <td><%= cliente.correo %></td>
-        <td><%= cliente.telefono %></td>
-        <td><%= cliente.ciudad %></td>
-        <td><%= cliente.estado %></td>
-        <td><%= cliente.codigo_trans %></td>
-        <td><%= cliente.precio %></td>
-        <td><%= cliente.direccion_inicial %></td>
-        <td><%= cliente.direccion_final %></td>
-        <td><%= link_to 'Show', cliente %></td>
-        <td><%= link_to 'Edit', edit_cliente_path(cliente) %></td>
-        <td><%= link_to 'Destroy', cliente, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Nombres</th>
+        <th>Apellidos</th>
+        <th>Correo</th>
+        <th>Telefono</th>
+        <th>Ciudad</th>
+        <th>Direccion</th>
+        <th>Editar</th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
+    <tbody>
+      <% @clientes.each do |cliente| %>
+        <tr>
+          <td><%= link_to cliente.nombres, cliente_path(cliente) %></td>
+          <td><%= cliente.apellidos %></td>
+          <td><%= cliente.correo %></td>
+          <td><%= cliente.telefono %></td>
+          <td><%= cliente.ciudad %></td>
+          <td><%= cliente.direccion_inicial %></td>
+          <td><%= link_to edit_cliente_path(cliente) do %> <i class="fa fa-edit"></i> <% end %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
 <br>
 
 <%= link_to 'Nuevo Cliente', new_cliente_path %>

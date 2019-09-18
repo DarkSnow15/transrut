@@ -1,63 +1,44 @@
 <div class="col-lg-12">
   <div class="card">
       <div class="card-header">
-          <strong><center>Nuevo carro</center></strong>
+          <strong>Ingresar vehiculo</strong>
       </div>
       <div class="card-body card-block">
         <%= simple_form_for @carro do |f| %>
-          <div class="form-group">
-            <%= f.label :placa %>
-            <%= f.text_field :placa, class: "form-control"%>
+          <div class="row">
+            <div class="col-md-6">
+              <%= f.input :placa %>
+              <%= f.input :nom_prop %>
+            </div>
+            <div class="col-md-6">
+              <%= f.input :id_prop %>
+              <%= f.input :fecha_venc_soat, order: [:day, :month, :year] %>
+            </div>
           </div>
-          <div class="form-group">
-            <%= f.label :Nombre_Propietario %>
-            <%= f.text_field :nom_prop, class: "form-control" %>
+          <div class="row">
+            <div class="col-md-6">
+              <%= f.input :fecha_venc_pc, order: [:day, :month, :year] %>
+              <%= f.input :fecha_venc_tm, order: [:day, :month, :year] %>
+            </div>
+            <div class="col-md-6">
+              <%= f.input :fecha_venc_pe, order: [:day, :month, :year] %>
+              <%= f.input :img_tm %>
+            </div>
           </div>
-          <div class="form-group">
-              <%= f.label :Identificacion_Propietario %>
-            <%= form.number_field :id_prop, class: "form-control" %>
-          </div>
-          <div class="form-group">
-              <%= f.label :Fecha_Vencimiento_Soat %>
-            <%= f.date_select :fecha_venc_soat, order: [:day, :month, :year] %>
-          </div>
-          <div class="form-group">
-              <%= f.label :Fecha_Vencimiento_Tecno_Mecanica %>
-            <%= f.date_select :fecha_venc_tm, order: [:day, :month, :year] %>
-          </div>
-          <div class="form-group">
-              <%= f.label :Fecha_Vencimiento_Poliza_Extracontractual %>
-            <%= f.date_select :fecha_venc_pe, order: [:day, :month, :year] %>
-          </div>
-          <div class="form-group">
-              <%= f.label :Fecha_Vencimiento_Poliza_Contractual %>
-            <%= f.date_select :fecha_venc_pc, order: [:day, :month, :year] %>
-          </div>
-          <div class="form-group">
-              <%= f.label :Imagen_Licencia_De_Transito %>
-            <%= f.text_field :img_lic_trans, class: "form-control" %>
-          </div>
-          <div class="form-group">
-              <%= f.label :Imagen_Tarjeta_De_Operaciones %>
-            <%= f.text_field :img_tarj_oper, class: "form-control" %>
-          </div>
-          <div class="form-group">
-              <%= f.label :Imagen_Soat %>
-            <%= f.text_field :img_soat, class: "form-control" %>
-          </div>
-          <div class="form-group">
-              <%= f.label :Imagen_Tecno_Mecanica %>
-            <%= f.text_field :img_tm, class: "form-control" %>
+          <div class="row">
+            <div class="col-md-6">
+              <%= f.input :img_lic_trans %>
+              <%= f.input :img_tarj_oper %>
+            </div>
+            <div class="col-md-6">
+              <%= f.input :img_soat %>
+            </div>
           </div>
 
       <div class="actions">
           <%= f.button :submit, class: "btn btn-primary btn-sm"%>
-            <button type="reset" class="btn btn-danger btn-sm">
-                <i class="fa fa-ban"></i> Limpiar
-            </button>
-
-          <%end%>
       </div>
+      <% end %>
 </div>
   </div>
 </div>

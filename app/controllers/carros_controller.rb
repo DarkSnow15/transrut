@@ -1,4 +1,5 @@
 class CarrosController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_carro, only: [:show, :edit, :update, :destroy]
 
   # GET /carros

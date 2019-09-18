@@ -1,59 +1,19 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Id cliente:</strong>
-  <%= @cliente.id_cliente %>
-</p>
-
-<p>
-  <strong>Nombres:</strong>
-  <%= @cliente.nombres %>
-</p>
-
-<p>
-  <strong>Apellidos:</strong>
-  <%= @cliente.apellidos %>
-</p>
-
-<p>
-  <strong>Correo:</strong>
-  <%= @cliente.correo %>
-</p>
-
-<p>
-  <strong>Telefono:</strong>
-  <%= @cliente.telefono %>
-</p>
-
-<p>
-  <strong>Ciudad:</strong>
-  <%= @cliente.ciudad %>
-</p>
-
-<p>
-  <strong>Estado:</strong>
-  <%= @cliente.estado %>
-</p>
-
-<p>
-  <strong>Codigo trans:</strong>
-  <%= @cliente.codigo_trans %>
-</p>
-
-<p>
-  <strong>Precio:</strong>
-  <%= @cliente.precio %>
-</p>
-
-<p>
-  <strong>Direccion inicial:</strong>
-  <%= @cliente.direccion_inicial %>
-</p>
-
-<p>
-  <strong>Direccion final:</strong>
-  <%= @cliente.direccion_final %>
-</p>
+<div class="row">
+  <div class="col-lg-12">
+    <div class="card">
+      <div class="card-header">
+          <strong>Cliente <%= @cliente.nombres.humanize %> <a href="<%= edit_cliente_path(@cliente)%>" class="check-o"><i class="fa fa-edit"></i></a></strong>
+      </div>
+      <div class="card-body">
+        <strong>Nombre: </strong><%= @cliente.nombres%><br><br>
+        <strong>Apellidos: </strong><%= @cliente.apellidos %><br><br>
+        <strong>Correo: </strong><%= @cliente.correo %><br><br>
+        <strong>Telefono: </strong><%= @cliente.telefono %><br><br>
+        <strong>Ciudad: </strong><%= @cliente.ciudad %>
+      </div>
+    </div>
+  </div>
+</div>
 
 <%= link_to 'Editar', edit_cliente_path(@cliente) %> |
 <%= link_to 'Regresar', clientes_path %>

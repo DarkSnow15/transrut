@@ -2,26 +2,26 @@
   <%= simple_form_for @conductor do |f| %>
       <div class="row">
         <div class="col-md-6">
-          <%= f.input :num_documento, label_html: { class: 'form-control-label' }, input_html: { class: 'form-control' } %>
-          <%= f.input :fech_ven_licen, order: [:day, :month, :year], label_html: { class: 'form-control-label' }, input_html: { class: 'form-control' } %>
-          <%= f.input :fech_seg_ven, order: [:day, :month, :year], label_html: { class: 'form-control-label' }, input_html: { class: 'form-control' } %>
+          <%= f.input :num_documento %>
+          <%= f.input :fech_ven_licen, order: [:day, :month, :year] %>
+          <%= f.input :fech_seg_ven, order: [:day, :month, :year] %>
         </div>
         <div class="col-md-6">
-          <%= f.input :nombre, label_html: { class: 'form-control-label' }, input_html: { class: 'form-control' } %>
-          <%= f.input :fech_seg_ini, order: [:day, :month, :year], label_html: { class: 'form-control-label' }, input_html: { class: 'form-control' } %>
-          <%= f.input :fech_ingreso, order: [:day, :month, :year], label_html: { class: 'form-control-label' }, input_html: { class: 'form-control' } %>
+          <%= f.input :nombre %>
+          <%= f.input :fech_seg_ini, order: [:day, :month, :year] %>
+          <%= f.input :fech_ingreso, order: [:day, :month, :year] %>
         </div>
       </div>
 
       <div class="row">
         <div class="col-md-6">
-          <%= f.input :cedula_img, label_html: { class: 'form-control-label' }, input_html: { class: 'form-control' }%>
+          <%= f.input :cedula_img%>
 
 
-          <%= f.input :hoja_vida, label_html: { class: 'form-control-label' }, input_html: { class: 'form-control' } %>
+          <%= f.input :hoja_vida %>
 
 
-          <%= f.input :licencia, label_html: { class: 'form-control-label' }, input_html: { class: 'form-control' } %>
+          <%= f.input :licencia %>
 
         </div>
       </div>

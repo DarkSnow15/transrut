@@ -1,4 +1,5 @@
 class ClientesController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_cliente, only: [:show, :edit, :update, :destroy]
 
   # GET /clientes
@@ -6,7 +7,6 @@ class ClientesController < ApplicationController
   def index
     @clientes = Cliente.all
   end
-
   # GET /clientes/1
   # GET /clientes/1.json
   def show
