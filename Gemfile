@@ -15,6 +15,8 @@ gem 'devise'
 
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
 
+gem "gretel"
+
 gem 'toastr-rails'
 
 gem 'carrierwave', '~> 0.11.2'

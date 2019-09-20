@@ -59060,3 +59060,2159 @@ Completed 200 OK in 321ms (Views: 161.3ms | ActiveRecord: 148.3ms)
 
 
 >>>>>>> 38241df89b41787ab9998451c2ac9b861c1985ae
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7461761791342367880)[0m
+  ↳ /home/ronald/.rbenv/versions/2.6.0/bin/rake:23
+  [1m[35m (23.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ronald/.rbenv/versions/2.6.0/bin/rake:23
+Migrating to CreateCarros (20190906204549)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/ronald/.rbenv/versions/2.6.0/bin/rake:23
+  [1m[35m (544.3ms)[0m  [1m[35mCREATE TABLE "carros" ("id" bigserial primary key, "placa" character varying, "nom_prop" character varying, "id_prop" integer, "fecha_venc_soat" date, "fecha_venc_tm" date, "fecha_venc_pe" date, "fecha_venc_pc" date, "img_lic_trans" character varying, "img_tarj_oper" character varying, "img_soat" character varying, "img_tm" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190906204549_create_carros.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190906204549"]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/bin/rake:23
+  [1m[35m (33.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/ronald/.rbenv/versions/2.6.0/bin/rake:23
+Migrating to CreateClientes (20190911140550)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/ronald/.rbenv/versions/2.6.0/bin/rake:23
+  [1m[35m (72.8ms)[0m  [1m[35mCREATE TABLE "clientes" ("id" bigserial primary key, "id_cliente" integer, "nombres" character varying, "apellidos" character varying, "correo" character varying, "telefono" character varying, "ciudad" character varying, "estado" character varying, "codigo_trans" character varying, "precio" integer, "direccion_inicial" character varying, "direccion_final" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190911140550_create_clientes.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190911140550"]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/bin/rake:23
+  [1m[35m (18.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/ronald/.rbenv/versions/2.6.0/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (35.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/ronald/.rbenv/versions/2.6.0/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/ronald/.rbenv/versions/2.6.0/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT pg_advisory_unlock(7461761791342367880)[0m
+  ↳ /home/ronald/.rbenv/versions/2.6.0/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ronald/.rbenv/versions/2.6.0/bin/rake:23
+Started GET "/" for 127.0.0.1 at 2019-09-20 10:34:30 -0500
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 15ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-09-20 10:34:31 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/empty
+  Rendered devise/shared/_links.html.erb (1.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/empty (391.6ms)
+Completed 200 OK in 1865ms (Views: 1835.2ms | ActiveRecord: 9.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2019-09-20 10:34:35 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ThkbHavr7cpUzKslHBHLWYKQyr268SIB+CPYofFV2xAjbnk6SsW59McfBhNnIz1rpfvGPyGccJ0nJLJ9ZCj52g==", "user"=>{"email"=>"realeskr2001@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Validar Usuario"}
+  [1m[36mUser Load (164.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "realeskr2001@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 474ms (ActiveRecord: 164.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-09-20 10:34:35 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (2.3ms)
+  Rendered layouts/_topnavbar.html.erb (5.1ms)
+Completed 200 OK in 85ms (Views: 77.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/conductores" for 127.0.0.1 at 2019-09-20 10:35:41 -0500
+Processing by ConductoresController#index as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering conductores/index.html.erb within layouts/application
+  [1m[36mConductor Load (104.6ms)[0m  [1m[34mSELECT "conductores".* FROM "conductores"[0m
+  ↳ app/views/conductores/index.html.erb:12
+  Rendered collection of conductores/_conductores.html.erb [0 times] (0.0ms)
+  Rendered conductores/index.html.erb within layouts/application (116.7ms)
+  Rendered layouts/_navigation.html.erb (2.4ms)
+  Rendered layouts/_topnavbar.html.erb (4.9ms)
+Completed 200 OK in 285ms (Views: 124.8ms | ActiveRecord: 112.9ms)
+
+
+Started GET "/conductores" for 127.0.0.1 at 2019-09-20 10:48:53 -0500
+Processing by ConductoresController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering conductores/index.html.erb within layouts/application
+  [1m[36mConductor Load (0.8ms)[0m  [1m[34mSELECT "conductores".* FROM "conductores"[0m
+  ↳ app/views/conductores/index.html.erb:12
+  Rendered collection of conductores/_conductores.html.erb [0 times] (0.0ms)
+  Rendered conductores/index.html.erb within layouts/application (4.6ms)
+  Rendered layouts/_navigation.html.erb (4.1ms)
+  Rendered layouts/_topnavbar.html.erb (8.0ms)
+Completed 200 OK in 107ms (Views: 99.7ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/conductores" for 127.0.0.1 at 2019-09-20 10:49:00 -0500
+Processing by ConductoresController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering conductores/index.html.erb within layouts/application
+  [1m[36mConductor Load (0.8ms)[0m  [1m[34mSELECT "conductores".* FROM "conductores"[0m
+  ↳ app/views/conductores/index.html.erb:12
+  Rendered collection of conductores/_conductores.html.erb [0 times] (0.0ms)
+  Rendered conductores/index.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_navigation.html.erb (2.7ms)
+  Rendered layouts/_topnavbar.html.erb (6.2ms)
+Completed 200 OK in 108ms (Views: 101.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/conductores/new" for 127.0.0.1 at 2019-09-20 10:49:04 -0500
+Processing by ConductoresController#new as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering conductores/new.html.erb within layouts/application
+  Rendered conductores/_form.html.erb (60.4ms)
+  Rendered conductores/new.html.erb within layouts/application (61.8ms)
+  Rendered layouts/_navigation.html.erb (2.6ms)
+  Rendered layouts/_topnavbar.html.erb (5.7ms)
+Completed 200 OK in 205ms (Views: 175.2ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/carros" for 127.0.0.1 at 2019-09-20 10:49:07 -0500
+Processing by CarrosController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering carros/index.html.erb within layouts/application
+  [1m[36mCarro Load (0.9ms)[0m  [1m[34mSELECT "carros".* FROM "carros"[0m
+  ↳ app/views/carros/index.html.erb:15
+  Rendered carros/index.html.erb within layouts/application (8.6ms)
+  Rendered layouts/_navigation.html.erb (2.5ms)
+  Rendered layouts/_topnavbar.html.erb (5.5ms)
+Completed 200 OK in 118ms (Views: 96.7ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/clientes" for 127.0.0.1 at 2019-09-20 10:49:09 -0500
+Processing by ClientesController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering clientes/index.html.erb within layouts/application
+  [1m[36mCliente Load (1.4ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/views/clientes/index.html.erb:16
+  Rendered clientes/index.html.erb within layouts/application (10.3ms)
+  Rendered layouts/_navigation.html.erb (2.9ms)
+  Rendered layouts/_topnavbar.html.erb (6.1ms)
+Completed 200 OK in 138ms (Views: 122.8ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/conductores" for 127.0.0.1 at 2019-09-20 10:49:11 -0500
+Processing by ConductoresController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering conductores/index.html.erb within layouts/application
+  [1m[36mConductor Load (0.8ms)[0m  [1m[34mSELECT "conductores".* FROM "conductores"[0m
+  ↳ app/views/conductores/index.html.erb:12
+  Rendered collection of conductores/_conductores.html.erb [0 times] (0.0ms)
+  Rendered conductores/index.html.erb within layouts/application (4.1ms)
+  Rendered layouts/_navigation.html.erb (4.5ms)
+  Rendered layouts/_topnavbar.html.erb (5.7ms)
+Completed 200 OK in 120ms (Views: 114.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/conductores" for 127.0.0.1 at 2019-09-20 10:49:39 -0500
+Processing by ConductoresController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering conductores/index.html.erb within layouts/application
+  [1m[36mConductor Load (1.1ms)[0m  [1m[34mSELECT "conductores".* FROM "conductores"[0m
+  ↳ app/views/conductores/index.html.erb:12
+  Rendered collection of conductores/_conductores.html.erb [0 times] (0.0ms)
+  Rendered conductores/index.html.erb within layouts/application (4.5ms)
+  Rendered layouts/_navigation.html.erb (4.2ms)
+  Rendered layouts/_topnavbar.html.erb (7.6ms)
+Completed 200 OK in 126ms (Views: 121.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/conductores" for 127.0.0.1 at 2019-09-20 10:50:47 -0500
+Processing by ConductoresController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering conductores/index.html.erb within layouts/application
+  [1m[36mConductor Load (0.7ms)[0m  [1m[34mSELECT "conductores".* FROM "conductores"[0m
+  ↳ app/views/conductores/index.html.erb:12
+  Rendered collection of conductores/_conductores.html.erb [0 times] (0.0ms)
+  Rendered conductores/index.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_navigation.html.erb (2.9ms)
+  Rendered layouts/_topnavbar.html.erb (7.9ms)
+Completed 200 OK in 104ms (Views: 99.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/carros" for 127.0.0.1 at 2019-09-20 10:50:52 -0500
+Processing by CarrosController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering carros/index.html.erb within layouts/application
+  [1m[36mCarro Load (0.8ms)[0m  [1m[34mSELECT "carros".* FROM "carros"[0m
+  ↳ app/views/carros/index.html.erb:15
+  Rendered carros/index.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_navigation.html.erb (2.7ms)
+  Rendered layouts/_topnavbar.html.erb (5.7ms)
+Completed 200 OK in 106ms (Views: 99.1ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/conductores" for 127.0.0.1 at 2019-09-20 10:50:53 -0500
+Processing by ConductoresController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering conductores/index.html.erb within layouts/application
+  [1m[36mConductor Load (4.5ms)[0m  [1m[34mSELECT "conductores".* FROM "conductores"[0m
+  ↳ app/views/conductores/index.html.erb:12
+  Rendered collection of conductores/_conductores.html.erb [0 times] (0.0ms)
+  Rendered conductores/index.html.erb within layouts/application (12.2ms)
+  Rendered layouts/_navigation.html.erb (2.7ms)
+  Rendered layouts/_topnavbar.html.erb (6.0ms)
+Completed 200 OK in 160ms (Views: 141.3ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/conductores" for 127.0.0.1 at 2019-09-20 10:50:54 -0500
+Processing by ConductoresController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering conductores/index.html.erb within layouts/application
+  [1m[36mConductor Load (2.9ms)[0m  [1m[34mSELECT "conductores".* FROM "conductores"[0m
+  ↳ app/views/conductores/index.html.erb:12
+  Rendered collection of conductores/_conductores.html.erb [0 times] (0.0ms)
+  Rendered conductores/index.html.erb within layouts/application (21.7ms)
+  Rendered layouts/_navigation.html.erb (3.1ms)
+  Rendered layouts/_topnavbar.html.erb (8.9ms)
+Completed 200 OK in 146ms (Views: 135.9ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/conductores/new" for 127.0.0.1 at 2019-09-20 10:50:57 -0500
+Processing by ConductoresController#new as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering conductores/new.html.erb within layouts/application
+  Rendered conductores/_form.html.erb (33.5ms)
+  Rendered conductores/new.html.erb within layouts/application (35.0ms)
+  Rendered layouts/_navigation.html.erb (2.4ms)
+  Rendered layouts/_topnavbar.html.erb (5.3ms)
+Completed 200 OK in 137ms (Views: 131.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/conductores/new" for 127.0.0.1 at 2019-09-20 10:50:58 -0500
+Processing by ConductoresController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering conductores/new.html.erb within layouts/application
+  Rendered conductores/_form.html.erb (33.1ms)
+  Rendered conductores/new.html.erb within layouts/application (34.4ms)
+  Rendered layouts/_navigation.html.erb (3.8ms)
+  Rendered layouts/_topnavbar.html.erb (5.0ms)
+Completed 200 OK in 147ms (Views: 143.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/conductores/new" for 127.0.0.1 at 2019-09-20 10:51:00 -0500
+Processing by ConductoresController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering conductores/new.html.erb within layouts/application
+  Rendered conductores/_form.html.erb (26.5ms)
+  Rendered conductores/new.html.erb within layouts/application (28.7ms)
+  Rendered layouts/_navigation.html.erb (2.6ms)
+  Rendered layouts/_topnavbar.html.erb (5.4ms)
+Completed 200 OK in 112ms (Views: 108.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/conductores" for 127.0.0.1 at 2019-09-20 10:51:01 -0500
+Processing by ConductoresController#index as HTML
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering conductores/index.html.erb within layouts/application
+  [1m[36mConductor Load (5.0ms)[0m  [1m[34mSELECT "conductores".* FROM "conductores"[0m
+  ↳ app/views/conductores/index.html.erb:12
+  Rendered collection of conductores/_conductores.html.erb [0 times] (0.0ms)
+  Rendered conductores/index.html.erb within layouts/application (9.4ms)
+  Rendered layouts/_navigation.html.erb (3.6ms)
+  Rendered layouts/_topnavbar.html.erb (6.2ms)
+Completed 200 OK in 168ms (Views: 152.0ms | ActiveRecord: 7.4ms)
+
+
+Started GET "/conductores" for 127.0.0.1 at 2019-09-20 10:51:31 -0500
+Processing by ConductoresController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering conductores/index.html.erb within layouts/application
+  [1m[36mConductor Load (3.2ms)[0m  [1m[34mSELECT "conductores".* FROM "conductores"[0m
+  ↳ app/views/conductores/index.html.erb:12
+  Rendered collection of conductores/_conductores.html.erb [0 times] (0.0ms)
+  Rendered conductores/index.html.erb within layouts/application (6.9ms)
+  Rendered layouts/_navigation.html.erb (2.4ms)
+  Rendered layouts/_topnavbar.html.erb (5.8ms)
+Completed 200 OK in 105ms (Views: 97.3ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/conductores" for 127.0.0.1 at 2019-09-20 10:51:32 -0500
+Processing by ConductoresController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering conductores/index.html.erb within layouts/application
+  [1m[36mConductor Load (1.2ms)[0m  [1m[34mSELECT "conductores".* FROM "conductores"[0m
+  ↳ app/views/conductores/index.html.erb:12
+  Rendered collection of conductores/_conductores.html.erb [0 times] (0.0ms)
+  Rendered conductores/index.html.erb within layouts/application (4.6ms)
+  Rendered layouts/_navigation.html.erb (2.9ms)
+  Rendered layouts/_topnavbar.html.erb (7.6ms)
+Completed 200 OK in 99ms (Views: 94.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/conductores" for 127.0.0.1 at 2019-09-20 10:51:34 -0500
+Processing by ConductoresController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering conductores/index.html.erb within layouts/application
+  [1m[36mConductor Load (0.8ms)[0m  [1m[34mSELECT "conductores".* FROM "conductores"[0m
+  ↳ app/views/conductores/index.html.erb:12
+  Rendered collection of conductores/_conductores.html.erb [0 times] (0.0ms)
+  Rendered conductores/index.html.erb within layouts/application (4.4ms)
+  Rendered layouts/_navigation.html.erb (2.5ms)
+  Rendered layouts/_topnavbar.html.erb (5.1ms)
+Completed 200 OK in 113ms (Views: 108.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/conductores" for 127.0.0.1 at 2019-09-20 10:51:50 -0500
+Processing by ConductoresController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering conductores/index.html.erb within layouts/application
+  [1m[36mConductor Load (3.9ms)[0m  [1m[34mSELECT "conductores".* FROM "conductores"[0m
+  ↳ app/views/conductores/index.html.erb:12
+  Rendered collection of conductores/_conductores.html.erb [0 times] (0.1ms)
+  Rendered conductores/index.html.erb within layouts/application (8.9ms)
+  Rendered layouts/_navigation.html.erb (2.5ms)
+  Rendered layouts/_topnavbar.html.erb (7.1ms)
+Completed 200 OK in 99ms (Views: 90.6ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/conductores" for 127.0.0.1 at 2019-09-20 10:51:52 -0500
+Processing by ConductoresController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering conductores/index.html.erb within layouts/application
+  [1m[36mConductor Load (0.5ms)[0m  [1m[34mSELECT "conductores".* FROM "conductores"[0m
+  ↳ app/views/conductores/index.html.erb:12
+  Rendered collection of conductores/_conductores.html.erb [0 times] (0.0ms)
+  Rendered conductores/index.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_navigation.html.erb (2.1ms)
+  Rendered layouts/_topnavbar.html.erb (5.4ms)
+Completed 200 OK in 85ms (Views: 80.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/conductores" for 127.0.0.1 at 2019-09-20 10:51:54 -0500
+Processing by ConductoresController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering conductores/index.html.erb within layouts/application
+  [1m[36mConductor Load (0.7ms)[0m  [1m[34mSELECT "conductores".* FROM "conductores"[0m
+  ↳ app/views/conductores/index.html.erb:12
+  Rendered collection of conductores/_conductores.html.erb [0 times] (0.0ms)
+  Rendered conductores/index.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_navigation.html.erb (3.0ms)
+  Rendered layouts/_topnavbar.html.erb (6.3ms)
+Completed 200 OK in 125ms (Views: 119.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/carros" for 127.0.0.1 at 2019-09-20 10:51:55 -0500
+Processing by CarrosController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering carros/index.html.erb within layouts/application
+  [1m[36mCarro Load (0.6ms)[0m  [1m[34mSELECT "carros".* FROM "carros"[0m
+  ↳ app/views/carros/index.html.erb:15
+  Rendered carros/index.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_navigation.html.erb (2.6ms)
+  Rendered layouts/_topnavbar.html.erb (5.3ms)
+Completed 200 OK in 98ms (Views: 93.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/clientes" for 127.0.0.1 at 2019-09-20 10:51:56 -0500
+Processing by ClientesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering clientes/index.html.erb within layouts/application
+  [1m[36mCliente Load (0.9ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/views/clientes/index.html.erb:16
+  Rendered clientes/index.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_navigation.html.erb (2.5ms)
+  Rendered layouts/_topnavbar.html.erb (5.7ms)
+Completed 200 OK in 124ms (Views: 117.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/conductores" for 127.0.0.1 at 2019-09-20 10:51:57 -0500
+Processing by ConductoresController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering conductores/index.html.erb within layouts/application
+  [1m[36mConductor Load (3.3ms)[0m  [1m[34mSELECT "conductores".* FROM "conductores"[0m
+  ↳ app/views/conductores/index.html.erb:12
+  Rendered collection of conductores/_conductores.html.erb [0 times] (0.3ms)
+  Rendered conductores/index.html.erb within layouts/application (6.4ms)
+  Rendered layouts/_navigation.html.erb (3.2ms)
+  Rendered layouts/_topnavbar.html.erb (7.0ms)
+Completed 200 OK in 136ms (Views: 125.3ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/carros" for 127.0.0.1 at 2019-09-20 10:52:00 -0500
+Processing by CarrosController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering carros/index.html.erb within layouts/application
+  [1m[36mCarro Load (3.0ms)[0m  [1m[34mSELECT "carros".* FROM "carros"[0m
+  ↳ app/views/carros/index.html.erb:15
+  Rendered carros/index.html.erb within layouts/application (5.4ms)
+  Rendered layouts/_navigation.html.erb (2.8ms)
+  Rendered layouts/_topnavbar.html.erb (7.4ms)
+Completed 200 OK in 130ms (Views: 105.0ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/conductores" for 127.0.0.1 at 2019-09-20 10:52:01 -0500
+Processing by ConductoresController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering conductores/index.html.erb within layouts/application
+  [1m[36mConductor Load (0.6ms)[0m  [1m[34mSELECT "conductores".* FROM "conductores"[0m
+  ↳ app/views/conductores/index.html.erb:12
+  Rendered collection of conductores/_conductores.html.erb [0 times] (0.0ms)
+  Rendered conductores/index.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_navigation.html.erb (3.0ms)
+  Rendered layouts/_topnavbar.html.erb (6.2ms)
+Completed 200 OK in 154ms (Views: 149.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/clientes" for 127.0.0.1 at 2019-09-20 10:52:02 -0500
+Processing by ClientesController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering clientes/index.html.erb within layouts/application
+  [1m[36mCliente Load (1.5ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/views/clientes/index.html.erb:16
+  Rendered clientes/index.html.erb within layouts/application (4.2ms)
+  Rendered layouts/_navigation.html.erb (3.0ms)
+  Rendered layouts/_topnavbar.html.erb (6.7ms)
+Completed 200 OK in 120ms (Views: 114.7ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/conductores" for 127.0.0.1 at 2019-09-20 10:52:02 -0500
+Processing by ConductoresController#index as HTML
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering conductores/index.html.erb within layouts/application
+  [1m[36mConductor Load (0.7ms)[0m  [1m[34mSELECT "conductores".* FROM "conductores"[0m
+  ↳ app/views/conductores/index.html.erb:12
+  Rendered collection of conductores/_conductores.html.erb [0 times] (0.0ms)
+  Rendered conductores/index.html.erb within layouts/application (4.4ms)
+  Rendered layouts/_navigation.html.erb (2.5ms)
+  Rendered layouts/_topnavbar.html.erb (7.7ms)
+Completed 200 OK in 149ms (Views: 139.8ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/carros" for 127.0.0.1 at 2019-09-20 11:04:17 -0500
+Processing by CarrosController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering carros/index.html.erb within layouts/application
+  [1m[36mCarro Load (1.0ms)[0m  [1m[34mSELECT "carros".* FROM "carros"[0m
+  ↳ app/views/carros/index.html.erb:15
+  Rendered carros/index.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_navigation.html.erb (3.8ms)
+  Rendered layouts/_topnavbar.html.erb (8.2ms)
+Completed 200 OK in 143ms (Views: 124.0ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/conductores" for 127.0.0.1 at 2019-09-20 11:04:18 -0500
+Processing by ConductoresController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering conductores/index.html.erb within layouts/application
+  [1m[36mConductor Load (1.3ms)[0m  [1m[34mSELECT "conductores".* FROM "conductores"[0m
+  ↳ app/views/conductores/index.html.erb:12
+  Rendered collection of conductores/_conductores.html.erb [0 times] (0.0ms)
+  Rendered conductores/index.html.erb within layouts/application (6.5ms)
+  Rendered layouts/_navigation.html.erb (2.6ms)
+  Rendered layouts/_topnavbar.html.erb (5.8ms)
+Completed 200 OK in 147ms (Views: 138.4ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/conductores" for 127.0.0.1 at 2019-09-20 11:04:48 -0500
+Processing by ConductoresController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering conductores/index.html.erb within layouts/application
+  [1m[36mConductor Load (0.8ms)[0m  [1m[34mSELECT "conductores".* FROM "conductores"[0m
+  ↳ app/views/conductores/index.html.erb:12
+  Rendered collection of conductores/_conductores.html.erb [0 times] (0.0ms)
+  Rendered conductores/index.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_navigation.html.erb (4.0ms)
+  Rendered layouts/_topnavbar.html.erb (7.5ms)
+Completed 200 OK in 118ms (Views: 112.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/conductores" for 127.0.0.1 at 2019-09-20 11:04:55 -0500
+Processing by ConductoresController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering conductores/index.html.erb within layouts/application
+  [1m[36mConductor Load (2.1ms)[0m  [1m[34mSELECT "conductores".* FROM "conductores"[0m
+  ↳ app/views/conductores/index.html.erb:12
+  Rendered collection of conductores/_conductores.html.erb [0 times] (0.0ms)
+  Rendered conductores/index.html.erb within layouts/application (4.8ms)
+  Rendered layouts/_navigation.html.erb (3.0ms)
+  Rendered layouts/_topnavbar.html.erb (8.2ms)
+Completed 200 OK in 132ms (Views: 123.7ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/conductores" for 127.0.0.1 at 2019-09-20 11:04:56 -0500
+Processing by ConductoresController#index as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering conductores/index.html.erb within layouts/application
+  [1m[36mConductor Load (1.4ms)[0m  [1m[34mSELECT "conductores".* FROM "conductores"[0m
+  ↳ app/views/conductores/index.html.erb:12
+  Rendered collection of conductores/_conductores.html.erb [0 times] (0.0ms)
+  Rendered conductores/index.html.erb within layouts/application (4.6ms)
+  Rendered layouts/_navigation.html.erb (3.1ms)
+  Rendered layouts/_topnavbar.html.erb (5.9ms)
+Completed 200 OK in 109ms (Views: 99.4ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/conductores" for 127.0.0.1 at 2019-09-20 11:07:54 -0500
+Processing by ConductoresController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering conductores/index.html.erb within layouts/application
+  [1m[36mConductor Load (0.7ms)[0m  [1m[34mSELECT "conductores".* FROM "conductores"[0m
+  ↳ app/views/conductores/index.html.erb:12
+  Rendered collection of conductores/_conductores.html.erb [0 times] (0.1ms)
+  Rendered conductores/index.html.erb within layouts/application (4.8ms)
+  Rendered layouts/_navigation.html.erb (2.8ms)
+  Rendered layouts/_topnavbar.html.erb (7.2ms)
+Completed 200 OK in 126ms (Views: 121.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-09-20 11:07:56 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navigation.html.erb (3.4ms)
+  Rendered layouts/_topnavbar.html.erb (5.8ms)
+Completed 200 OK in 111ms (Views: 106.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/conductores" for 127.0.0.1 at 2019-09-20 11:07:58 -0500
+Processing by ConductoresController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering conductores/index.html.erb within layouts/application
+  [1m[36mConductor Load (0.9ms)[0m  [1m[34mSELECT "conductores".* FROM "conductores"[0m
+  ↳ app/views/conductores/index.html.erb:12
+  Rendered collection of conductores/_conductores.html.erb [0 times] (0.0ms)
+  Rendered conductores/index.html.erb within layouts/application (5.3ms)
+  Rendered layouts/_navigation.html.erb (4.5ms)
+  Rendered layouts/_topnavbar.html.erb (7.2ms)
+Completed 200 OK in 131ms (Views: 126.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/carros" for 127.0.0.1 at 2019-09-20 11:07:59 -0500
+Processing by CarrosController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering carros/index.html.erb within layouts/application
+  [1m[36mCarro Load (3.6ms)[0m  [1m[34mSELECT "carros".* FROM "carros"[0m
+  ↳ app/views/carros/index.html.erb:15
+  Rendered carros/index.html.erb within layouts/application (6.1ms)
+  Rendered layouts/_navigation.html.erb (2.6ms)
+  Rendered layouts/_topnavbar.html.erb (5.1ms)
+Completed 200 OK in 95ms (Views: 86.4ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/conductores" for 127.0.0.1 at 2019-09-20 11:08:00 -0500
+Processing by ConductoresController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering conductores/index.html.erb within layouts/application
+  [1m[36mConductor Load (1.2ms)[0m  [1m[34mSELECT "conductores".* FROM "conductores"[0m
+  ↳ app/views/conductores/index.html.erb:12
+  Rendered collection of conductores/_conductores.html.erb [0 times] (0.0ms)
+  Rendered conductores/index.html.erb within layouts/application (9.1ms)
+  Rendered layouts/_navigation.html.erb (3.0ms)
+  Rendered layouts/_topnavbar.html.erb (6.8ms)
+Completed 200 OK in 145ms (Views: 139.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/conductores" for 127.0.0.1 at 2019-09-20 11:09:16 -0500
+Processing by ConductoresController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering conductores/index.html.erb within layouts/application
+  [1m[36mConductor Load (0.4ms)[0m  [1m[34mSELECT "conductores".* FROM "conductores"[0m
+  ↳ app/views/conductores/index.html.erb:12
+  Rendered collection of conductores/_conductores.html.erb [0 times] (0.0ms)
+  Rendered conductores/index.html.erb within layouts/application (2.9ms)
+  Rendered layouts/_navigation.html.erb (2.1ms)
+  Rendered layouts/_topnavbar.html.erb (7.3ms)
+Completed 200 OK in 92ms (Views: 88.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-09-20 11:09:18 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (2.9ms)
+  Rendered layouts/_topnavbar.html.erb (7.4ms)
+Completed 200 OK in 97ms (Views: 92.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-09-20 11:09:18 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_navigation.html.erb (2.6ms)
+  Rendered layouts/_topnavbar.html.erb (14.4ms)
+Completed 200 OK in 126ms (Views: 121.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-09-20 11:09:20 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_navigation.html.erb (6.4ms)
+  Rendered layouts/_topnavbar.html.erb (6.1ms)
+Completed 200 OK in 256ms (Views: 249.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-09-20 11:10:08 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (2.6ms)
+  Rendered layouts/_topnavbar.html.erb (5.0ms)
+Completed 200 OK in 98ms (Views: 91.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-09-20 11:10:11 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (2.7ms)
+  Rendered layouts/_topnavbar.html.erb (5.8ms)
+Completed 200 OK in 88ms (Views: 84.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-09-20 11:10:12 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (3.3ms)
+  Rendered layouts/_topnavbar.html.erb (6.8ms)
+Completed 200 OK in 159ms (Views: 150.7ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-09-20 11:10:13 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (3.0ms)
+  Rendered layouts/_topnavbar.html.erb (6.5ms)
+Completed 200 OK in 124ms (Views: 112.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-09-20 11:10:14 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navigation.html.erb (3.4ms)
+  Rendered layouts/_topnavbar.html.erb (6.9ms)
+Completed 200 OK in 146ms (Views: 142.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/carros" for 127.0.0.1 at 2019-09-20 11:10:15 -0500
+Processing by CarrosController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering carros/index.html.erb within layouts/application
+  [1m[36mCarro Load (0.7ms)[0m  [1m[34mSELECT "carros".* FROM "carros"[0m
+  ↳ app/views/carros/index.html.erb:15
+  Rendered carros/index.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_navigation.html.erb (2.7ms)
+  Rendered layouts/_topnavbar.html.erb (5.1ms)
+Completed 200 OK in 99ms (Views: 93.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/conductores" for 127.0.0.1 at 2019-09-20 11:10:17 -0500
+Processing by ConductoresController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering conductores/index.html.erb within layouts/application
+  [1m[36mConductor Load (0.5ms)[0m  [1m[34mSELECT "conductores".* FROM "conductores"[0m
+  ↳ app/views/conductores/index.html.erb:12
+  Rendered collection of conductores/_conductores.html.erb [0 times] (0.0ms)
+  Rendered conductores/index.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_navigation.html.erb (2.9ms)
+  Rendered layouts/_topnavbar.html.erb (7.4ms)
+Completed 200 OK in 133ms (Views: 128.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-09-20 11:10:18 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navigation.html.erb (2.9ms)
+  Rendered layouts/_topnavbar.html.erb (6.3ms)
+Completed 200 OK in 124ms (Views: 119.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-09-20 11:10:20 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_navigation.html.erb (4.4ms)
+  Rendered layouts/_topnavbar.html.erb (6.2ms)
+Completed 200 OK in 154ms (Views: 149.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-09-20 11:10:21 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navigation.html.erb (3.0ms)
+  Rendered layouts/_topnavbar.html.erb (6.3ms)
+Completed 200 OK in 121ms (Views: 116.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-09-20 11:10:22 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_navigation.html.erb (3.4ms)
+  Rendered layouts/_topnavbar.html.erb (6.0ms)
+Completed 200 OK in 144ms (Views: 133.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-09-20 11:10:22 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navigation.html.erb (3.0ms)
+  Rendered layouts/_topnavbar.html.erb (6.0ms)
+Completed 200 OK in 123ms (Views: 118.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-09-20 11:10:37 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navigation.html.erb (4.5ms)
+  Rendered layouts/_topnavbar.html.erb (5.3ms)
+Completed 200 OK in 115ms (Views: 109.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/carros" for 127.0.0.1 at 2019-09-20 11:10:41 -0500
+Processing by CarrosController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering carros/index.html.erb within layouts/application
+  [1m[36mCarro Load (2.9ms)[0m  [1m[34mSELECT "carros".* FROM "carros"[0m
+  ↳ app/views/carros/index.html.erb:15
+  Rendered carros/index.html.erb within layouts/application (5.4ms)
+  Rendered layouts/_navigation.html.erb (2.8ms)
+  Rendered layouts/_topnavbar.html.erb (7.2ms)
+Completed 200 OK in 121ms (Views: 113.2ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/conductores" for 127.0.0.1 at 2019-09-20 11:11:30 -0500
+Processing by ConductoresController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering conductores/index.html.erb within layouts/application
+  [1m[36mConductor Load (6.9ms)[0m  [1m[34mSELECT "conductores".* FROM "conductores"[0m
+  ↳ app/views/conductores/index.html.erb:12
+  Rendered collection of conductores/_conductores.html.erb [0 times] (0.0ms)
+  Rendered conductores/index.html.erb within layouts/application (10.5ms)
+  Rendered layouts/_navigation.html.erb (2.9ms)
+  Rendered layouts/_topnavbar.html.erb (5.9ms)
+Completed 200 OK in 112ms (Views: 100.9ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/conductores" for 127.0.0.1 at 2019-09-20 11:11:49 -0500
+Processing by ConductoresController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering conductores/index.html.erb within layouts/application
+  [1m[36mConductor Load (0.7ms)[0m  [1m[34mSELECT "conductores".* FROM "conductores"[0m
+  ↳ app/views/conductores/index.html.erb:12
+  Rendered collection of conductores/_conductores.html.erb [0 times] (0.0ms)
+  Rendered conductores/index.html.erb within layouts/application (3.9ms)
+  Rendered layouts/_navigation.html.erb (2.3ms)
+  Rendered layouts/_topnavbar.html.erb (5.9ms)
+Completed 200 OK in 119ms (Views: 114.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/conductores" for 127.0.0.1 at 2019-09-20 11:11:50 -0500
+Processing by ConductoresController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering conductores/index.html.erb within layouts/application
+  [1m[36mConductor Load (2.5ms)[0m  [1m[34mSELECT "conductores".* FROM "conductores"[0m
+  ↳ app/views/conductores/index.html.erb:12
+  Rendered collection of conductores/_conductores.html.erb [0 times] (0.0ms)
+  Rendered conductores/index.html.erb within layouts/application (5.2ms)
+  Rendered layouts/_navigation.html.erb (3.1ms)
+  Rendered layouts/_topnavbar.html.erb (7.5ms)
+Completed 200 OK in 135ms (Views: 129.4ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/carros" for 127.0.0.1 at 2019-09-20 11:11:51 -0500
+Processing by CarrosController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering carros/index.html.erb within layouts/application
+  [1m[36mCarro Load (0.8ms)[0m  [1m[34mSELECT "carros".* FROM "carros"[0m
+  ↳ app/views/carros/index.html.erb:15
+  Rendered carros/index.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_navigation.html.erb (3.6ms)
+  Rendered layouts/_topnavbar.html.erb (6.1ms)
+Completed 200 OK in 100ms (Views: 95.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/conductores" for 127.0.0.1 at 2019-09-20 11:11:53 -0500
+Processing by ConductoresController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering conductores/index.html.erb within layouts/application
+  [1m[36mConductor Load (0.8ms)[0m  [1m[34mSELECT "conductores".* FROM "conductores"[0m
+  ↳ app/views/conductores/index.html.erb:12
+  Rendered collection of conductores/_conductores.html.erb [0 times] (0.0ms)
+  Rendered conductores/index.html.erb within layouts/application (8.4ms)
+  Rendered layouts/_navigation.html.erb (3.0ms)
+  Rendered layouts/_topnavbar.html.erb (7.2ms)
+Completed 200 OK in 162ms (Views: 157.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-09-20 11:11:53 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navigation.html.erb (2.8ms)
+  Rendered layouts/_topnavbar.html.erb (6.3ms)
+Completed 200 OK in 105ms (Views: 100.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/conductores" for 127.0.0.1 at 2019-09-20 11:11:58 -0500
+Processing by ConductoresController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering conductores/index.html.erb within layouts/application
+  [1m[36mConductor Load (0.6ms)[0m  [1m[34mSELECT "conductores".* FROM "conductores"[0m
+  ↳ app/views/conductores/index.html.erb:12
+  Rendered collection of conductores/_conductores.html.erb [0 times] (0.0ms)
+  Rendered conductores/index.html.erb within layouts/application (4.7ms)
+  Rendered layouts/_navigation.html.erb (3.7ms)
+  Rendered layouts/_topnavbar.html.erb (6.4ms)
+Completed 200 OK in 132ms (Views: 126.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/carros" for 127.0.0.1 at 2019-09-20 11:11:59 -0500
+Processing by CarrosController#index as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering carros/index.html.erb within layouts/application
+  [1m[36mCarro Load (0.5ms)[0m  [1m[34mSELECT "carros".* FROM "carros"[0m
+  ↳ app/views/carros/index.html.erb:15
+  Rendered carros/index.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_navigation.html.erb (3.9ms)
+  Rendered layouts/_topnavbar.html.erb (7.3ms)
+Completed 200 OK in 158ms (Views: 137.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/carros" for 127.0.0.1 at 2019-09-20 11:12:18 -0500
+Processing by CarrosController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering carros/index.html.erb within layouts/application
+  [1m[36mCarro Load (0.7ms)[0m  [1m[34mSELECT "carros".* FROM "carros"[0m
+  ↳ app/views/carros/index.html.erb:15
+  Rendered carros/index.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_navigation.html.erb (4.0ms)
+  Rendered layouts/_topnavbar.html.erb (5.5ms)
+Completed 200 OK in 98ms (Views: 92.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/carros" for 127.0.0.1 at 2019-09-20 11:12:20 -0500
+Processing by CarrosController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering carros/index.html.erb within layouts/application
+  [1m[36mCarro Load (0.7ms)[0m  [1m[34mSELECT "carros".* FROM "carros"[0m
+  ↳ app/views/carros/index.html.erb:15
+  Rendered carros/index.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_navigation.html.erb (3.9ms)
+  Rendered layouts/_topnavbar.html.erb (5.2ms)
+Completed 200 OK in 96ms (Views: 91.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/carros" for 127.0.0.1 at 2019-09-20 11:12:45 -0500
+Processing by CarrosController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering carros/index.html.erb within layouts/application
+  [1m[36mCarro Load (0.5ms)[0m  [1m[34mSELECT "carros".* FROM "carros"[0m
+  ↳ app/views/carros/index.html.erb:15
+  Rendered carros/index.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_navigation.html.erb (2.8ms)
+  Rendered layouts/_topnavbar.html.erb (7.0ms)
+Completed 200 OK in 94ms (Views: 88.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/conductores" for 127.0.0.1 at 2019-09-20 11:12:48 -0500
+Processing by ConductoresController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering conductores/index.html.erb within layouts/application
+  [1m[36mConductor Load (1.7ms)[0m  [1m[34mSELECT "conductores".* FROM "conductores"[0m
+  ↳ app/views/conductores/index.html.erb:12
+  Rendered collection of conductores/_conductores.html.erb [0 times] (0.0ms)
+  Rendered conductores/index.html.erb within layouts/application (5.4ms)
+  Rendered layouts/_navigation.html.erb (2.5ms)
+  Rendered layouts/_topnavbar.html.erb (4.9ms)
+Completed 200 OK in 101ms (Views: 94.0ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/carros" for 127.0.0.1 at 2019-09-20 11:12:50 -0500
+Processing by CarrosController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering carros/index.html.erb within layouts/application
+  [1m[36mCarro Load (1.6ms)[0m  [1m[34mSELECT "carros".* FROM "carros"[0m
+  ↳ app/views/carros/index.html.erb:15
+  Rendered carros/index.html.erb within layouts/application (4.2ms)
+  Rendered layouts/_navigation.html.erb (2.8ms)
+  Rendered layouts/_topnavbar.html.erb (7.7ms)
+Completed 200 OK in 143ms (Views: 135.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/conductores" for 127.0.0.1 at 2019-09-20 11:12:51 -0500
+Processing by ConductoresController#index as HTML
+  [1m[36mUser Load (4.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering conductores/index.html.erb within layouts/application
+  [1m[36mConductor Load (0.5ms)[0m  [1m[34mSELECT "conductores".* FROM "conductores"[0m
+  ↳ app/views/conductores/index.html.erb:12
+  Rendered collection of conductores/_conductores.html.erb [0 times] (0.0ms)
+  Rendered conductores/index.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_navigation.html.erb (2.5ms)
+  Rendered layouts/_topnavbar.html.erb (8.3ms)
+Completed 200 OK in 134ms (Views: 122.9ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-09-20 11:12:52 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navigation.html.erb (3.2ms)
+  Rendered layouts/_topnavbar.html.erb (6.2ms)
+Completed 200 OK in 108ms (Views: 104.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/carros" for 127.0.0.1 at 2019-09-20 11:12:55 -0500
+Processing by CarrosController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering carros/index.html.erb within layouts/application
+  [1m[36mCarro Load (0.8ms)[0m  [1m[34mSELECT "carros".* FROM "carros"[0m
+  ↳ app/views/carros/index.html.erb:15
+  Rendered carros/index.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_navigation.html.erb (2.6ms)
+  Rendered layouts/_topnavbar.html.erb (6.9ms)
+Completed 200 OK in 158ms (Views: 147.6ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/clientes" for 127.0.0.1 at 2019-09-20 11:12:56 -0500
+Processing by ClientesController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering clientes/index.html.erb within layouts/application
+  [1m[36mCliente Load (1.2ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/views/clientes/index.html.erb:16
+  Rendered clientes/index.html.erb within layouts/application (4.8ms)
+  Rendered layouts/_navigation.html.erb (2.6ms)
+  Rendered layouts/_topnavbar.html.erb (6.8ms)
+Completed 200 OK in 104ms (Views: 97.6ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/carros" for 127.0.0.1 at 2019-09-20 11:12:57 -0500
+Processing by CarrosController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering carros/index.html.erb within layouts/application
+  [1m[36mCarro Load (0.7ms)[0m  [1m[34mSELECT "carros".* FROM "carros"[0m
+  ↳ app/views/carros/index.html.erb:15
+  Rendered carros/index.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_navigation.html.erb (3.6ms)
+  Rendered layouts/_topnavbar.html.erb (6.7ms)
+Completed 200 OK in 172ms (Views: 168.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/conductores" for 127.0.0.1 at 2019-09-20 11:12:58 -0500
+Processing by ConductoresController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering conductores/index.html.erb within layouts/application
+  [1m[36mConductor Load (0.6ms)[0m  [1m[34mSELECT "conductores".* FROM "conductores"[0m
+  ↳ app/views/conductores/index.html.erb:12
+  Rendered collection of conductores/_conductores.html.erb [0 times] (0.0ms)
+  Rendered conductores/index.html.erb within layouts/application (3.9ms)
+  Rendered layouts/_navigation.html.erb (3.3ms)
+  Rendered layouts/_topnavbar.html.erb (8.5ms)
+Completed 200 OK in 138ms (Views: 133.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/conductores" for 127.0.0.1 at 2019-09-20 11:13:58 -0500
+Processing by ConductoresController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering conductores/index.html.erb within layouts/application
+  [1m[36mConductor Load (0.8ms)[0m  [1m[34mSELECT "conductores".* FROM "conductores"[0m
+  ↳ app/views/conductores/index.html.erb:12
+  Rendered collection of conductores/_conductores.html.erb [0 times] (0.0ms)
+  Rendered conductores/index.html.erb within layouts/application (4.1ms)
+  Rendered layouts/_navigation.html.erb (2.8ms)
+  Rendered layouts/_topnavbar.html.erb (7.6ms)
+Completed 200 OK in 128ms (Views: 122.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-09-20 11:13:59 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_navigation.html.erb (2.9ms)
+  Rendered layouts/_topnavbar.html.erb (7.2ms)
+Completed 200 OK in 144ms (Views: 139.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-09-20 11:14:04 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navigation.html.erb (2.2ms)
+  Rendered layouts/_topnavbar.html.erb (7.6ms)
+Completed 200 OK in 93ms (Views: 88.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-09-20 11:17:17 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navigation.html.erb (3.6ms)
+  Rendered layouts/_topnavbar.html.erb (7.9ms)
+Completed 200 OK in 123ms (Views: 117.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/carros" for 127.0.0.1 at 2019-09-20 11:17:21 -0500
+Processing by CarrosController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering carros/index.html.erb within layouts/application
+  [1m[36mCarro Load (0.9ms)[0m  [1m[34mSELECT "carros".* FROM "carros"[0m
+  ↳ app/views/carros/index.html.erb:15
+  Rendered carros/index.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_navigation.html.erb (2.8ms)
+  Rendered layouts/_topnavbar.html.erb (5.4ms)
+Completed 200 OK in 123ms (Views: 117.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/conductores" for 127.0.0.1 at 2019-09-20 11:17:22 -0500
+Processing by ConductoresController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering conductores/index.html.erb within layouts/application
+  [1m[36mConductor Load (0.7ms)[0m  [1m[34mSELECT "conductores".* FROM "conductores"[0m
+  ↳ app/views/conductores/index.html.erb:12
+  Rendered collection of conductores/_conductores.html.erb [0 times] (0.0ms)
+  Rendered conductores/index.html.erb within layouts/application (4.9ms)
+  Rendered layouts/_navigation.html.erb (2.2ms)
+  Rendered layouts/_topnavbar.html.erb (5.3ms)
+Completed 200 OK in 112ms (Views: 106.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/carros" for 127.0.0.1 at 2019-09-20 11:17:23 -0500
+Processing by CarrosController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering carros/index.html.erb within layouts/application
+  [1m[36mCarro Load (2.1ms)[0m  [1m[34mSELECT "carros".* FROM "carros"[0m
+  ↳ app/views/carros/index.html.erb:15
+  Rendered carros/index.html.erb within layouts/application (4.5ms)
+  Rendered layouts/_navigation.html.erb (2.8ms)
+  Rendered layouts/_topnavbar.html.erb (6.1ms)
+Completed 200 OK in 135ms (Views: 127.9ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-09-20 11:17:24 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navigation.html.erb (3.5ms)
+  Rendered layouts/_topnavbar.html.erb (8.5ms)
+Completed 200 OK in 116ms (Views: 112.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/conductores" for 127.0.0.1 at 2019-09-20 11:17:25 -0500
+Processing by ConductoresController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering conductores/index.html.erb within layouts/application
+  [1m[36mConductor Load (1.3ms)[0m  [1m[34mSELECT "conductores".* FROM "conductores"[0m
+  ↳ app/views/conductores/index.html.erb:12
+  Rendered collection of conductores/_conductores.html.erb [0 times] (0.0ms)
+  Rendered conductores/index.html.erb within layouts/application (7.8ms)
+  Rendered layouts/_navigation.html.erb (2.8ms)
+  Rendered layouts/_topnavbar.html.erb (6.0ms)
+Completed 200 OK in 143ms (Views: 136.4ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/conductores" for 127.0.0.1 at 2019-09-20 11:26:52 -0500
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by ConductoresController#index as HTML
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering conductores/index.html.erb within layouts/application
+  [1m[36mConductor Load (1.8ms)[0m  [1m[34mSELECT "conductores".* FROM "conductores"[0m
+  ↳ app/views/conductores/index.html.erb:12
+  Rendered collection of conductores/_conductores.html.erb [0 times] (0.0ms)
+  Rendered conductores/index.html.erb within layouts/application (12.4ms)
+  Rendered layouts/_navigation.html.erb (2.5ms)
+  Rendered layouts/_topnavbar.html.erb (5.3ms)
+Completed 200 OK in 663ms (Views: 601.9ms | ActiveRecord: 18.5ms)
+
+
+Started GET "/conductores" for 127.0.0.1 at 2019-09-20 11:32:36 -0500
+Processing by ConductoresController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering conductores/index.html.erb within layouts/application
+  [1m[36mConductor Load (0.7ms)[0m  [1m[34mSELECT "conductores".* FROM "conductores"[0m
+  ↳ app/views/conductores/index.html.erb:12
+  Rendered collection of conductores/_conductores.html.erb [0 times] (0.0ms)
+  Rendered conductores/index.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_navigation.html.erb (3.9ms)
+  Rendered layouts/_topnavbar.html.erb (6.1ms)
+Completed 200 OK in 115ms (Views: 107.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/conductores" for 127.0.0.1 at 2019-09-20 11:33:09 -0500
+Processing by ConductoresController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering conductores/index.html.erb within layouts/application
+  [1m[36mConductor Load (0.6ms)[0m  [1m[34mSELECT "conductores".* FROM "conductores"[0m
+  ↳ app/views/conductores/index.html.erb:12
+  Rendered collection of conductores/_conductores.html.erb [0 times] (0.0ms)
+  Rendered conductores/index.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_navigation.html.erb (2.7ms)
+  Rendered layouts/_topnavbar.html.erb (6.9ms)
+Completed 200 OK in 111ms (Views: 105.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/conductores" for 127.0.0.1 at 2019-09-20 11:33:21 -0500
+Processing by ConductoresController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering conductores/index.html.erb within layouts/application
+  [1m[36mConductor Load (1.1ms)[0m  [1m[34mSELECT "conductores".* FROM "conductores"[0m
+  ↳ app/views/conductores/index.html.erb:12
+  Rendered collection of conductores/_conductores.html.erb [0 times] (0.0ms)
+  Rendered conductores/index.html.erb within layouts/application (5.3ms)
+  Rendered layouts/_navigation.html.erb (3.2ms)
+  Rendered layouts/_topnavbar.html.erb (6.5ms)
+Completed 200 OK in 119ms (Views: 111.2ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/conductores" for 127.0.0.1 at 2019-09-20 11:52:44 -0500
+Processing by ConductoresController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering conductores/index.html.erb within layouts/application
+  [1m[36mConductor Load (0.9ms)[0m  [1m[34mSELECT "conductores".* FROM "conductores"[0m
+  ↳ app/views/conductores/index.html.erb:12
+  Rendered collection of conductores/_conductores.html.erb [0 times] (0.0ms)
+  Rendered conductores/index.html.erb within layouts/application (4.2ms)
+  Rendered layouts/_navigation.html.erb (2.6ms)
+  Rendered layouts/_topnavbar.html.erb (5.4ms)
+Completed 200 OK in 99ms (Views: 90.6ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/conductores" for 127.0.0.1 at 2019-09-20 11:55:05 -0500
+Processing by ConductoresController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering conductores/index.html.erb within layouts/application
+  [1m[36mConductor Load (2.2ms)[0m  [1m[34mSELECT "conductores".* FROM "conductores"[0m
+  ↳ app/views/conductores/index.html.erb:13
+  Rendered collection of conductores/_conductores.html.erb [0 times] (0.0ms)
+  Rendered conductores/index.html.erb within layouts/application (6.0ms)
+  Rendered layouts/_navigation.html.erb (3.1ms)
+  Rendered layouts/_topnavbar.html.erb (7.8ms)
+Completed 200 OK in 124ms (Views: 114.8ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/conductores/new" for 127.0.0.1 at 2019-09-20 11:56:09 -0500
+Processing by ConductoresController#new as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering conductores/new.html.erb within layouts/application
+  Rendered conductores/_form.html.erb (66.1ms)
+  Rendered conductores/new.html.erb within layouts/application (67.4ms)
+  Rendered layouts/_navigation.html.erb (2.8ms)
+  Rendered layouts/_topnavbar.html.erb (5.5ms)
+Completed 200 OK in 229ms (Views: 200.5ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/conductores" for 127.0.0.1 at 2019-09-20 11:58:37 -0500
+Processing by ConductoresController#index as HTML
+  [1m[36mUser Load (4.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering conductores/index.html.erb within layouts/application
+  [1m[36mConductor Load (0.8ms)[0m  [1m[34mSELECT "conductores".* FROM "conductores"[0m
+  ↳ app/views/conductores/index.html.erb:13
+  Rendered collection of conductores/_conductores.html.erb [0 times] (0.1ms)
+  Rendered conductores/index.html.erb within layouts/application (5.0ms)
+  Rendered layouts/_navigation.html.erb (3.4ms)
+  Rendered layouts/_topnavbar.html.erb (7.5ms)
+Completed 200 OK in 142ms (Views: 133.1ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/conductores/new" for 127.0.0.1 at 2019-09-20 11:58:48 -0500
+Processing by ConductoresController#new as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering conductores/new.html.erb within layouts/application
+  Rendered conductores/_form.html.erb (45.1ms)
+  Rendered conductores/new.html.erb within layouts/application (51.3ms)
+  Rendered layouts/_navigation.html.erb (3.0ms)
+  Rendered layouts/_topnavbar.html.erb (7.1ms)
+Completed 200 OK in 176ms (Views: 169.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/conductores/new" for 127.0.0.1 at 2019-09-20 11:59:29 -0500
+Processing by ConductoresController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering conductores/new.html.erb within layouts/application
+  Rendered conductores/_form.html.erb (30.3ms)
+  Rendered conductores/new.html.erb within layouts/application (31.4ms)
+  Rendered layouts/_navigation.html.erb (3.6ms)
+  Rendered layouts/_topnavbar.html.erb (5.5ms)
+Completed 500 Internal Server Error in 177ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (Breadcrumb :articulos not found.):
+    41:                 <div class="container-fluid">
+    42:                     <div class="row">
+    43:                       <!-- hola aqui breadcrumbs -->
+    44:                       <%= breadcrumbs display_single_fragment: true, style: :bootstrap %>
+    45: 
+    46:                      <%= yield %>
+    47:                     </div>
+  
+config/breadcrumbs.rb:11:in `block (2 levels) in load_breadcrumbs'
+app/views/layouts/application.html.erb:44:in `_app_views_layouts_application_html_erb__4469191388501621242_69982602389400'
+Started GET "/conductores/new" for 127.0.0.1 at 2019-09-20 11:59:51 -0500
+Processing by ConductoresController#new as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering conductores/new.html.erb within layouts/application
+  Rendered conductores/_form.html.erb (33.1ms)
+  Rendered conductores/new.html.erb within layouts/application (35.6ms)
+  Rendered layouts/_navigation.html.erb (3.1ms)
+  Rendered layouts/_topnavbar.html.erb (8.8ms)
+Completed 200 OK in 136ms (Views: 131.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-09-20 11:59:56 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (3.1ms)
+  Rendered layouts/_topnavbar.html.erb (6.8ms)
+Completed 200 OK in 108ms (Views: 102.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/conductores" for 127.0.0.1 at 2019-09-20 11:59:59 -0500
+Processing by ConductoresController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering conductores/index.html.erb within layouts/application
+  [1m[36mConductor Load (0.8ms)[0m  [1m[34mSELECT "conductores".* FROM "conductores"[0m
+  ↳ app/views/conductores/index.html.erb:13
+  Rendered collection of conductores/_conductores.html.erb [0 times] (0.0ms)
+  Rendered conductores/index.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_navigation.html.erb (2.4ms)
+  Rendered layouts/_topnavbar.html.erb (5.2ms)
+Completed 200 OK in 114ms (Views: 109.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/conductores/new" for 127.0.0.1 at 2019-09-20 12:00:03 -0500
+Processing by ConductoresController#new as HTML
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering conductores/new.html.erb within layouts/application
+  Rendered conductores/_form.html.erb (50.6ms)
+  Rendered conductores/new.html.erb within layouts/application (52.4ms)
+  Rendered layouts/_navigation.html.erb (3.1ms)
+  Rendered layouts/_topnavbar.html.erb (7.4ms)
+Completed 200 OK in 214ms (Views: 203.0ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/conductores/new" for 127.0.0.1 at 2019-09-20 12:04:25 -0500
+Processing by ConductoresController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering conductores/new.html.erb within layouts/application
+  Rendered conductores/_form.html.erb (30.5ms)
+  Rendered conductores/new.html.erb within layouts/application (33.0ms)
+  Rendered layouts/_navigation.html.erb (2.5ms)
+  Rendered layouts/_topnavbar.html.erb (7.8ms)
+Completed 200 OK in 131ms (Views: 126.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-09-20 12:04:28 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/empty
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/empty (19.8ms)
+Completed 200 OK in 124ms (Views: 105.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/conductores" for 127.0.0.1 at 2019-09-20 12:04:28 -0500
+Processing by ConductoresController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering conductores/index.html.erb within layouts/application
+  [1m[36mConductor Load (1.2ms)[0m  [1m[34mSELECT "conductores".* FROM "conductores"[0m
+  ↳ app/views/conductores/index.html.erb:13
+  Rendered collection of conductores/_conductores.html.erb [0 times] (0.0ms)
+  Rendered conductores/index.html.erb within layouts/application (5.4ms)
+  Rendered layouts/_navigation.html.erb (3.0ms)
+  Rendered layouts/_topnavbar.html.erb (6.1ms)
+Completed 200 OK in 124ms (Views: 116.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/conductores/new" for 127.0.0.1 at 2019-09-20 12:04:31 -0500
+Processing by ConductoresController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering conductores/new.html.erb within layouts/application
+  Rendered conductores/_form.html.erb (46.7ms)
+  Rendered conductores/new.html.erb within layouts/application (52.4ms)
+  Rendered layouts/_navigation.html.erb (3.0ms)
+  Rendered layouts/_topnavbar.html.erb (7.4ms)
+Completed 200 OK in 170ms (Views: 165.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/conductores" for 127.0.0.1 at 2019-09-20 12:05:00 -0500
+Processing by ConductoresController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering conductores/index.html.erb within layouts/application
+  [1m[36mConductor Load (0.8ms)[0m  [1m[34mSELECT "conductores".* FROM "conductores"[0m
+  ↳ app/views/conductores/index.html.erb:13
+  Rendered collection of conductores/_conductores.html.erb [0 times] (0.0ms)
+  Rendered conductores/index.html.erb within layouts/application (5.5ms)
+  Rendered layouts/_navigation.html.erb (2.9ms)
+  Rendered layouts/_topnavbar.html.erb (6.2ms)
+Completed 200 OK in 180ms (Views: 175.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/conductores/new" for 127.0.0.1 at 2019-09-20 12:05:02 -0500
+Processing by ConductoresController#new as HTML
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering conductores/new.html.erb within layouts/application
+  Rendered conductores/_form.html.erb (49.1ms)
+  Rendered conductores/new.html.erb within layouts/application (51.8ms)
+  Rendered layouts/_navigation.html.erb (3.4ms)
+  Rendered layouts/_topnavbar.html.erb (7.2ms)
+Completed 200 OK in 182ms (Views: 172.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/carros" for 127.0.0.1 at 2019-09-20 12:06:28 -0500
+Processing by CarrosController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering carros/index.html.erb within layouts/application
+  [1m[36mCarro Load (3.4ms)[0m  [1m[34mSELECT "carros".* FROM "carros"[0m
+  ↳ app/views/carros/index.html.erb:15
+  Rendered carros/index.html.erb within layouts/application (12.7ms)
+  Rendered layouts/_navigation.html.erb (3.3ms)
+  Rendered layouts/_topnavbar.html.erb (6.7ms)
+Completed 200 OK in 121ms (Views: 98.4ms | ActiveRecord: 9.3ms)
+
+
+Started GET "/carros/new" for 127.0.0.1 at 2019-09-20 12:06:40 -0500
+Processing by CarrosController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering carros/new.html.erb within layouts/application
+  Rendered carros/_form.html.erb (75.1ms)
+  Rendered carros/new.html.erb within layouts/application (76.8ms)
+  Rendered layouts/_navigation.html.erb (2.6ms)
+  Rendered layouts/_topnavbar.html.erb (6.0ms)
+Completed 200 OK in 220ms (Views: 184.4ms | ActiveRecord: 9.0ms)
+
+
+Started POST "/carros" for 127.0.0.1 at 2019-09-20 12:07:04 -0500
+Processing by CarrosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iuYM5SP2nsCXhfr63ACElQ0kRoas4Oj4W5FM9K3/QI/t+NHDUvaN61m2bkKKxzTMj8AoFhk8BP4B6eXB/+aSoA==", "carro"=>{"placa"=>"asdfsd", "nom_prop"=>"sdfasdfa", "id_prop"=>"231321", "fecha_venc_soat(3i)"=>"20", "fecha_venc_soat(2i)"=>"9", "fecha_venc_soat(1i)"=>"2019", "fecha_venc_pc(3i)"=>"20", "fecha_venc_pc(2i)"=>"9", "fecha_venc_pc(1i)"=>"2019", "fecha_venc_tm(3i)"=>"20", "fecha_venc_tm(2i)"=>"9", "fecha_venc_tm(1i)"=>"2019", "fecha_venc_pe(3i)"=>"20", "fecha_venc_pe(2i)"=>"9", "fecha_venc_pe(1i)"=>"2019", "img_tm"=>#<ActionDispatch::Http::UploadedFile:0x00007f4c383162b8 @tempfile=#<Tempfile:/tmp/RackMultipart20190920-8625-luj0o4.jpg>, @original_filename="0f023e2ee35fa6c020901530c5db469a.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"carro[img_tm]\"; filename=\"0f023e2ee35fa6c020901530c5db469a.jpg\"\r\nContent-Type: image/jpeg\r\n">, "img_lic_trans"=>#<ActionDispatch::Http::UploadedFile:0x00007f4c38316240 @tempfile=#<Tempfile:/tmp/RackMultipart20190920-8625-gdo5bs.jpg>, @original_filename="LHA3UF4APFDNZNJOU572F2CRWM.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"carro[img_lic_trans]\"; filename=\"LHA3UF4APFDNZNJOU572F2CRWM.jpg\"\r\nContent-Type: image/jpeg\r\n">, "img_tarj_oper"=>#<ActionDispatch::Http::UploadedFile:0x00007f4c383161c8 @tempfile=#<Tempfile:/tmp/RackMultipart20190920-8625-1sybht5.png>, @original_filename="Captura de pantalla de 2019-09-10 16-49-57.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"carro[img_tarj_oper]\"; filename=\"Captura de pantalla de 2019-09-10 16-49-57.png\"\r\nContent-Type: image/png\r\n">, "img_soat"=>#<ActionDispatch::Http::UploadedFile:0x00007f4c38316150 @tempfile=#<Tempfile:/tmp/RackMultipart20190920-8625-epyisj.jpg>, @original_filename="LHA3UF4APFDNZNJOU572F2CRWM.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"carro[img_soat]\"; filename=\"LHA3UF4APFDNZNJOU572F2CRWM.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Validar Carro"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/carros_controller.rb:31
+  [1m[36mCarro Create (1.1ms)[0m  [1m[32mINSERT INTO "carros" ("placa", "nom_prop", "id_prop", "fecha_venc_soat", "fecha_venc_tm", "fecha_venc_pe", "fecha_venc_pc", "img_lic_trans", "img_tarj_oper", "img_soat", "img_tm", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["placa", "asdfsd"], ["nom_prop", "sdfasdfa"], ["id_prop", 231321], ["fecha_venc_soat", "2019-09-20"], ["fecha_venc_tm", "2019-09-20"], ["fecha_venc_pe", "2019-09-20"], ["fecha_venc_pc", "2019-09-20"], ["img_lic_trans", "LHA3UF4APFDNZNJOU572F2CRWM.jpg"], ["img_tarj_oper", "Captura_de_pantalla_de_2019-09-10_16-49-57.png"], ["img_soat", "LHA3UF4APFDNZNJOU572F2CRWM.jpg"], ["img_tm", "0f023e2ee35fa6c020901530c5db469a.jpg"], ["created_at", "2019-09-20 17:07:04.901297"], ["updated_at", "2019-09-20 17:07:04.901297"]]
+  ↳ app/controllers/carros_controller.rb:31
+  [1m[35m (28.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/carros_controller.rb:31
+Redirected to http://localhost:3000/carros/1
+Completed 302 Found in 233ms (ActiveRecord: 30.1ms)
+
+
+Started GET "/carros/1" for 127.0.0.1 at 2019-09-20 12:07:05 -0500
+Processing by CarrosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCarro Load (1.1ms)[0m  [1m[34mSELECT  "carros".* FROM "carros" WHERE "carros"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carros_controller.rb:68
+  Rendering carros/show.html.erb within layouts/application
+  Rendered carros/show.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_navigation.html.erb (3.0ms)
+  Rendered layouts/_topnavbar.html.erb (7.6ms)
+Completed 200 OK in 118ms (Views: 108.8ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/carros" for 127.0.0.1 at 2019-09-20 12:07:16 -0500
+Processing by CarrosController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering carros/index.html.erb within layouts/application
+  [1m[36mCarro Load (0.7ms)[0m  [1m[34mSELECT "carros".* FROM "carros"[0m
+  ↳ app/views/carros/index.html.erb:15
+  Rendered carros/index.html.erb within layouts/application (4.5ms)
+  Rendered layouts/_navigation.html.erb (3.7ms)
+  Rendered layouts/_topnavbar.html.erb (50.8ms)
+Completed 200 OK in 150ms (Views: 145.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/carros" for 127.0.0.1 at 2019-09-20 12:08:16 -0500
+Processing by CarrosController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering carros/index.html.erb within layouts/application
+  [1m[36mCarro Load (0.6ms)[0m  [1m[34mSELECT "carros".* FROM "carros"[0m
+  ↳ app/views/carros/index.html.erb:15
+  Rendered carros/index.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_navigation.html.erb (3.1ms)
+  Rendered layouts/_topnavbar.html.erb (6.6ms)
+Completed 200 OK in 107ms (Views: 102.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/carros" for 127.0.0.1 at 2019-09-20 12:10:12 -0500
+Processing by CarrosController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering carros/index.html.erb within layouts/application
+  [1m[36mCarro Load (0.6ms)[0m  [1m[34mSELECT "carros".* FROM "carros"[0m
+  ↳ app/views/carros/index.html.erb:15
+  Rendered carros/index.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_navigation.html.erb (3.6ms)
+  Rendered layouts/_topnavbar.html.erb (8.2ms)
+Completed 200 OK in 114ms (Views: 109.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/carros" for 127.0.0.1 at 2019-09-20 12:10:14 -0500
+Processing by CarrosController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering carros/index.html.erb within layouts/application
+  [1m[36mCarro Load (0.6ms)[0m  [1m[34mSELECT "carros".* FROM "carros"[0m
+  ↳ app/views/carros/index.html.erb:15
+  Rendered carros/index.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_navigation.html.erb (3.4ms)
+  Rendered layouts/_topnavbar.html.erb (8.0ms)
+Completed 200 OK in 109ms (Views: 103.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/carros" for 127.0.0.1 at 2019-09-20 12:12:04 -0500
+Processing by CarrosController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering carros/index.html.erb within layouts/application
+  [1m[36mCarro Load (0.7ms)[0m  [1m[34mSELECT "carros".* FROM "carros"[0m
+  ↳ app/views/carros/index.html.erb:16
+  Rendered carros/index.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_navigation.html.erb (3.1ms)
+  Rendered layouts/_topnavbar.html.erb (6.9ms)
+Completed 200 OK in 145ms (Views: 141.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/carros" for 127.0.0.1 at 2019-09-20 12:12:06 -0500
+Processing by CarrosController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering carros/index.html.erb within layouts/application
+  [1m[36mCarro Load (0.7ms)[0m  [1m[34mSELECT "carros".* FROM "carros"[0m
+  ↳ app/views/carros/index.html.erb:16
+  Rendered carros/index.html.erb within layouts/application (4.7ms)
+  Rendered layouts/_navigation.html.erb (2.9ms)
+  Rendered layouts/_topnavbar.html.erb (6.2ms)
+Completed 200 OK in 98ms (Views: 94.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/carros" for 127.0.0.1 at 2019-09-20 12:12:06 -0500
+Processing by CarrosController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering carros/index.html.erb within layouts/application
+  [1m[36mCarro Load (1.5ms)[0m  [1m[34mSELECT "carros".* FROM "carros"[0m
+  ↳ app/views/carros/index.html.erb:16
+  Rendered carros/index.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_navigation.html.erb (4.8ms)
+  Rendered layouts/_topnavbar.html.erb (46.2ms)
+Completed 200 OK in 181ms (Views: 174.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-09-20 12:12:08 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navigation.html.erb (4.1ms)
+  Rendered layouts/_topnavbar.html.erb (7.1ms)
+Completed 200 OK in 108ms (Views: 102.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/carros" for 127.0.0.1 at 2019-09-20 12:12:09 -0500
+Processing by CarrosController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering carros/index.html.erb within layouts/application
+  [1m[36mCarro Load (8.1ms)[0m  [1m[34mSELECT "carros".* FROM "carros"[0m
+  ↳ app/views/carros/index.html.erb:16
+  Rendered carros/index.html.erb within layouts/application (17.8ms)
+  Rendered layouts/_navigation.html.erb (2.8ms)
+  Rendered layouts/_topnavbar.html.erb (7.9ms)
+Completed 200 OK in 145ms (Views: 127.4ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/conductores" for 127.0.0.1 at 2019-09-20 12:12:10 -0500
+Processing by ConductoresController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering conductores/index.html.erb within layouts/application
+  [1m[36mConductor Load (4.2ms)[0m  [1m[34mSELECT "conductores".* FROM "conductores"[0m
+  ↳ app/views/conductores/index.html.erb:13
+  Rendered collection of conductores/_conductores.html.erb [0 times] (0.0ms)
+  Rendered conductores/index.html.erb within layouts/application (7.5ms)
+  Rendered layouts/_navigation.html.erb (3.0ms)
+  Rendered layouts/_topnavbar.html.erb (6.5ms)
+Completed 200 OK in 107ms (Views: 99.1ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/conductores" for 127.0.0.1 at 2019-09-20 12:14:25 -0500
+Processing by ConductoresController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering conductores/index.html.erb within layouts/application
+  [1m[36mConductor Load (0.7ms)[0m  [1m[34mSELECT "conductores".* FROM "conductores"[0m
+  ↳ app/views/conductores/index.html.erb:13
+  Rendered collection of conductores/_conductores.html.erb [0 times] (0.0ms)
+  Rendered conductores/index.html.erb within layouts/application (4.8ms)
+  Rendered layouts/_navigation.html.erb (3.0ms)
+  Rendered layouts/_topnavbar.html.erb (7.4ms)
+Completed 200 OK in 146ms (Views: 140.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/carros" for 127.0.0.1 at 2019-09-20 12:14:27 -0500
+Processing by CarrosController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering carros/index.html.erb within layouts/application
+  [1m[36mCarro Load (1.1ms)[0m  [1m[34mSELECT "carros".* FROM "carros"[0m
+  ↳ app/views/carros/index.html.erb:16
+  Rendered carros/index.html.erb within layouts/application (4.4ms)
+  Rendered layouts/_navigation.html.erb (3.7ms)
+  Rendered layouts/_topnavbar.html.erb (7.8ms)
+Completed 200 OK in 115ms (Views: 107.3ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/carros/new" for 127.0.0.1 at 2019-09-20 12:14:28 -0500
+Processing by CarrosController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering carros/new.html.erb within layouts/application
+  Rendered carros/_form.html.erb (36.7ms)
+  Rendered carros/new.html.erb within layouts/application (38.4ms)
+  Rendered layouts/_navigation.html.erb (3.4ms)
+  Rendered layouts/_topnavbar.html.erb (5.8ms)
+Completed 200 OK in 179ms (Views: 174.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/conductores" for 127.0.0.1 at 2019-09-20 12:14:33 -0500
+Processing by ConductoresController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering conductores/index.html.erb within layouts/application
+  [1m[36mConductor Load (5.1ms)[0m  [1m[34mSELECT "conductores".* FROM "conductores"[0m
+  ↳ app/views/conductores/index.html.erb:13
+  Rendered collection of conductores/_conductores.html.erb [0 times] (0.0ms)
+  Rendered conductores/index.html.erb within layouts/application (9.1ms)
+  Rendered layouts/_navigation.html.erb (2.9ms)
+  Rendered layouts/_topnavbar.html.erb (6.2ms)
+Completed 200 OK in 124ms (Views: 113.7ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/conductores" for 127.0.0.1 at 2019-09-20 12:14:54 -0500
+Processing by ConductoresController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering conductores/index.html.erb within layouts/application
+  [1m[36mConductor Load (0.6ms)[0m  [1m[34mSELECT "conductores".* FROM "conductores"[0m
+  ↳ app/views/conductores/index.html.erb:13
+  Rendered collection of conductores/_conductores.html.erb [0 times] (0.0ms)
+  Rendered conductores/index.html.erb within layouts/application (4.1ms)
+  Rendered layouts/_navigation.html.erb (3.1ms)
+  Rendered layouts/_topnavbar.html.erb (6.6ms)
+Completed 200 OK in 106ms (Views: 101.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/carros" for 127.0.0.1 at 2019-09-20 12:14:55 -0500
+Processing by CarrosController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering carros/index.html.erb within layouts/application
+  [1m[36mCarro Load (0.6ms)[0m  [1m[34mSELECT "carros".* FROM "carros"[0m
+  ↳ app/views/carros/index.html.erb:16
+  Rendered carros/index.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_navigation.html.erb (3.0ms)
+  Rendered layouts/_topnavbar.html.erb (6.1ms)
+Completed 200 OK in 103ms (Views: 98.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/carros/new" for 127.0.0.1 at 2019-09-20 12:14:57 -0500
+Processing by CarrosController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering carros/new.html.erb within layouts/application
+  Rendered carros/_form.html.erb (34.2ms)
+  Rendered carros/new.html.erb within layouts/application (35.9ms)
+  Rendered layouts/_navigation.html.erb (2.9ms)
+  Rendered layouts/_topnavbar.html.erb (6.7ms)
+Completed 200 OK in 133ms (Views: 128.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/clientes" for 127.0.0.1 at 2019-09-20 12:16:52 -0500
+Processing by ClientesController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering clientes/index.html.erb within layouts/application
+  [1m[36mCliente Load (0.9ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/views/clientes/index.html.erb:16
+  Rendered clientes/index.html.erb within layouts/application (14.8ms)
+  Rendered layouts/_navigation.html.erb (3.0ms)
+  Rendered layouts/_topnavbar.html.erb (6.7ms)
+Completed 200 OK in 167ms (Views: 148.8ms | ActiveRecord: 11.4ms)
+
+
+Started GET "/clientes" for 127.0.0.1 at 2019-09-20 12:20:57 -0500
+Processing by ClientesController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering clientes/index.html.erb within layouts/application
+  [1m[36mCliente Load (0.8ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/views/clientes/index.html.erb:17
+  Rendered clientes/index.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_navigation.html.erb (3.0ms)
+  Rendered layouts/_topnavbar.html.erb (7.2ms)
+Completed 200 OK in 104ms (Views: 98.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/clientes" for 127.0.0.1 at 2019-09-20 12:20:59 -0500
+Processing by ClientesController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering clientes/index.html.erb within layouts/application
+  [1m[36mCliente Load (0.9ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/views/clientes/index.html.erb:17
+  Rendered clientes/index.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_navigation.html.erb (3.0ms)
+  Rendered layouts/_topnavbar.html.erb (6.6ms)
+Completed 200 OK in 143ms (Views: 136.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/clientes/new" for 127.0.0.1 at 2019-09-20 12:21:01 -0500
+Processing by ClientesController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering clientes/new.html.erb within layouts/application
+  Rendered clientes/_form.html.erb (14.2ms)
+  Rendered clientes/new.html.erb within layouts/application (15.7ms)
+  Rendered layouts/_navigation.html.erb (3.1ms)
+  Rendered layouts/_topnavbar.html.erb (6.2ms)
+Completed 200 OK in 137ms (Views: 106.1ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/carros" for 127.0.0.1 at 2019-09-20 12:21:03 -0500
+Processing by CarrosController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering carros/index.html.erb within layouts/application
+  [1m[36mCarro Load (1.1ms)[0m  [1m[34mSELECT "carros".* FROM "carros"[0m
+  ↳ app/views/carros/index.html.erb:16
+  Rendered carros/index.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_navigation.html.erb (2.9ms)
+  Rendered layouts/_topnavbar.html.erb (6.3ms)
+Completed 200 OK in 100ms (Views: 93.2ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/carros/new" for 127.0.0.1 at 2019-09-20 12:21:04 -0500
+Processing by CarrosController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering carros/new.html.erb within layouts/application
+  Rendered carros/_form.html.erb (32.0ms)
+  Rendered carros/new.html.erb within layouts/application (38.6ms)
+  Rendered layouts/_navigation.html.erb (3.8ms)
+  Rendered layouts/_topnavbar.html.erb (5.5ms)
+Completed 200 OK in 186ms (Views: 181.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/carros" for 127.0.0.1 at 2019-09-20 12:21:20 -0500
+Processing by CarrosController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering carros/index.html.erb within layouts/application
+  [1m[36mCarro Load (1.1ms)[0m  [1m[34mSELECT "carros".* FROM "carros"[0m
+  ↳ app/views/carros/index.html.erb:16
+  Rendered carros/index.html.erb within layouts/application (7.5ms)
+  Rendered layouts/_navigation.html.erb (2.9ms)
+  Rendered layouts/_topnavbar.html.erb (10.0ms)
+Completed 200 OK in 141ms (Views: 133.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/carros/1" for 127.0.0.1 at 2019-09-20 12:21:22 -0500
+Processing by CarrosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCarro Load (0.4ms)[0m  [1m[34mSELECT  "carros".* FROM "carros" WHERE "carros"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carros_controller.rb:68
+  Rendering carros/show.html.erb within layouts/application
+  Rendered carros/show.html.erb within layouts/application (3.9ms)
+  Rendered layouts/_navigation.html.erb (3.0ms)
+  Rendered layouts/_topnavbar.html.erb (7.6ms)
+Completed 500 Internal Server Error in 108ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionView::Template::Error (Breadcrumb :carro_show not found.):
+    41:                 <div class="container-fluid">
+    42:                     <div class="row">
+    43:                       <!-- hola aqui breadcrumbs -->
+    44:                       <%= breadcrumbs display_single_fragment: true, style: :bootstrap %>
+    45: 
+    46:                      <%= yield %>
+    47:                     </div>
+  
+app/views/layouts/application.html.erb:44:in `_app_views_layouts_application_html_erb__4469191388501621242_69982600625220'
+Started GET "/carros" for 127.0.0.1 at 2019-09-20 12:21:35 -0500
+Processing by CarrosController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering carros/index.html.erb within layouts/application
+  [1m[36mCarro Load (0.8ms)[0m  [1m[34mSELECT "carros".* FROM "carros"[0m
+  ↳ app/views/carros/index.html.erb:16
+  Rendered carros/index.html.erb within layouts/application (3.9ms)
+  Rendered layouts/_navigation.html.erb (2.9ms)
+  Rendered layouts/_topnavbar.html.erb (6.7ms)
+Completed 200 OK in 110ms (Views: 104.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/conductores" for 127.0.0.1 at 2019-09-20 12:21:43 -0500
+Processing by ConductoresController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering conductores/index.html.erb within layouts/application
+  [1m[36mConductor Load (2.2ms)[0m  [1m[34mSELECT "conductores".* FROM "conductores"[0m
+  ↳ app/views/conductores/index.html.erb:13
+  Rendered collection of conductores/_conductores.html.erb [0 times] (0.0ms)
+  Rendered conductores/index.html.erb within layouts/application (5.5ms)
+  Rendered layouts/_navigation.html.erb (2.7ms)
+  Rendered layouts/_topnavbar.html.erb (6.1ms)
+Completed 200 OK in 111ms (Views: 104.1ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/carros" for 127.0.0.1 at 2019-09-20 12:21:43 -0500
+Processing by CarrosController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering carros/index.html.erb within layouts/application
+  [1m[36mCarro Load (1.0ms)[0m  [1m[34mSELECT "carros".* FROM "carros"[0m
+  ↳ app/views/carros/index.html.erb:16
+  Rendered carros/index.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_navigation.html.erb (3.8ms)
+  Rendered layouts/_topnavbar.html.erb (9.8ms)
+Completed 200 OK in 210ms (Views: 202.4ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/carros" for 127.0.0.1 at 2019-09-20 12:24:02 -0500
+Processing by CarrosController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering carros/index.html.erb within layouts/application
+  [1m[36mCarro Load (0.8ms)[0m  [1m[34mSELECT "carros".* FROM "carros"[0m
+  ↳ app/views/carros/index.html.erb:16
+  Rendered carros/index.html.erb within layouts/application (4.2ms)
+  Rendered layouts/_navigation.html.erb (2.8ms)
+  Rendered layouts/_topnavbar.html.erb (7.8ms)
+Completed 200 OK in 229ms (Views: 223.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/carros/1" for 127.0.0.1 at 2019-09-20 12:24:05 -0500
+Processing by CarrosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCarro Load (0.7ms)[0m  [1m[34mSELECT  "carros".* FROM "carros" WHERE "carros"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carros_controller.rb:68
+  Rendering carros/show.html.erb within layouts/application
+  Rendered carros/show.html.erb within layouts/application (2.9ms)
+  Rendered layouts/_navigation.html.erb (3.0ms)
+  Rendered layouts/_topnavbar.html.erb (6.4ms)
+Completed 500 Internal Server Error in 121ms (ActiveRecord: 2.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `nombre' for #<Carro:0x00007f4c3824dd18>):
+    41:                 <div class="container-fluid">
+    42:                     <div class="row">
+    43:                       <!-- hola aqui breadcrumbs -->
+    44:                       <%= breadcrumbs display_single_fragment: true, style: :bootstrap %>
+    45: 
+    46:                      <%= yield %>
+    47:                     </div>
+  
+config/breadcrumbs.rb:31:in `block (2 levels) in load_breadcrumbs'
+app/views/layouts/application.html.erb:44:in `_app_views_layouts_application_html_erb__4469191388501621242_69982668104080'
+Started GET "/carros/1" for 127.0.0.1 at 2019-09-20 12:28:08 -0500
+Processing by CarrosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCarro Load (0.5ms)[0m  [1m[34mSELECT  "carros".* FROM "carros" WHERE "carros"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carros_controller.rb:68
+  Rendering carros/show.html.erb within layouts/application
+  Rendered carros/show.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_navigation.html.erb (2.9ms)
+  Rendered layouts/_topnavbar.html.erb (6.5ms)
+Completed 500 Internal Server Error in 116ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `nombre' for #<Carro:0x00007f4c342bb150>):
+    41:                 <div class="container-fluid">
+    42:                     <div class="row">
+    43:                       <!-- hola aqui breadcrumbs -->
+    44:                       <%= breadcrumbs display_single_fragment: true, style: :bootstrap %>
+    45: 
+    46:                      <%= yield %>
+    47:                     </div>
+  
+config/breadcrumbs.rb:31:in `block (2 levels) in load_breadcrumbs'
+app/views/layouts/application.html.erb:44:in `_app_views_layouts_application_html_erb__4469191388501621242_69982634866560'
+Started GET "/conductores" for 127.0.0.1 at 2019-09-20 13:03:27 -0500
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by ConductoresController#index as HTML
+Completed 401 Unauthorized in 13ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-09-20 13:03:27 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/empty
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/empty (31.1ms)
+Completed 200 OK in 553ms (Views: 519.6ms | ActiveRecord: 9.1ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2019-09-20 13:03:30 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"U7KRxXc3/wA7Ig4B6wd4xfaFDuNiv0zfdlJT/ainQZj5t86Wq0u/BI4AmuTI6JpGESzy1yjeRYdY7h5jR1WwHw==", "user"=>{"email"=>"realeskr2001@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Validar Usuario"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "realeskr2001@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/conductores
+Completed 302 Found in 216ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/conductores" for 127.0.0.1 at 2019-09-20 13:03:30 -0500
+Processing by ConductoresController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering conductores/index.html.erb within layouts/application
+  [1m[36mConductor Load (0.7ms)[0m  [1m[34mSELECT "conductores".* FROM "conductores"[0m
+  ↳ app/views/conductores/index.html.erb:13
+  Rendered collection of conductores/_conductores.html.erb [0 times] (0.0ms)
+  Rendered conductores/index.html.erb within layouts/application (13.4ms)
+  Rendered layouts/_navigation.html.erb (2.7ms)
+  Rendered layouts/_topnavbar.html.erb (6.3ms)
+Completed 200 OK in 117ms (Views: 92.3ms | ActiveRecord: 8.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-09-20 13:06:16 -0500
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_navigation.html.erb (3.2ms)
+  Rendered layouts/_topnavbar.html.erb (7.1ms)
+Completed 200 OK in 610ms (Views: 567.3ms | ActiveRecord: 11.9ms)
+
+
+Started GET "/conductores" for 127.0.0.1 at 2019-09-20 13:06:20 -0500
+Processing by ConductoresController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering conductores/index.html.erb within layouts/application
+  [1m[36mConductor Load (0.8ms)[0m  [1m[34mSELECT "conductores".* FROM "conductores"[0m
+  ↳ app/views/conductores/index.html.erb:13
+  Rendered collection of conductores/_conductores.html.erb [0 times] (0.0ms)
+  Rendered conductores/index.html.erb within layouts/application (8.7ms)
+  Rendered layouts/_navigation.html.erb (5.6ms)
+  Rendered layouts/_topnavbar.html.erb (20.6ms)
+Completed 200 OK in 249ms (Views: 229.9ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/conductores/new" for 127.0.0.1 at 2019-09-20 13:06:23 -0500
+Processing by ConductoresController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering conductores/new.html.erb within layouts/application
+  Rendered conductores/_form.html.erb (64.9ms)
+  Rendered conductores/new.html.erb within layouts/application (66.4ms)
+  Rendered layouts/_navigation.html.erb (2.7ms)
+  Rendered layouts/_topnavbar.html.erb (5.4ms)
+Completed 200 OK in 208ms (Views: 174.3ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/carros" for 127.0.0.1 at 2019-09-20 13:06:46 -0500
+Processing by CarrosController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering carros/index.html.erb within layouts/application
+  [1m[36mCarro Load (1.1ms)[0m  [1m[34mSELECT "carros".* FROM "carros"[0m
+  ↳ app/views/carros/index.html.erb:16
+  Rendered carros/index.html.erb within layouts/application (29.9ms)
+  Rendered layouts/_navigation.html.erb (2.2ms)
+  Rendered layouts/_topnavbar.html.erb (6.4ms)
+Completed 200 OK in 128ms (Views: 104.8ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/carros/new" for 127.0.0.1 at 2019-09-20 13:06:47 -0500
+Processing by CarrosController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering carros/new.html.erb within layouts/application
+  Rendered carros/_form.html.erb (32.8ms)
+  Rendered carros/new.html.erb within layouts/application (34.3ms)
+  Rendered layouts/_navigation.html.erb (2.3ms)
+  Rendered layouts/_topnavbar.html.erb (5.1ms)
+Completed 200 OK in 126ms (Views: 119.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/clientes" for 127.0.0.1 at 2019-09-20 13:06:49 -0500
+Processing by ClientesController#index as HTML
+  [1m[36mUser Load (4.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering clientes/index.html.erb within layouts/application
+  [1m[36mCliente Load (1.4ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/views/clientes/index.html.erb:17
+  Rendered clientes/index.html.erb within layouts/application (9.0ms)
+  Rendered layouts/_navigation.html.erb (2.3ms)
+  Rendered layouts/_topnavbar.html.erb (5.5ms)
+Completed 200 OK in 149ms (Views: 133.8ms | ActiveRecord: 9.3ms)
+
+
+Started GET "/clientes/new" for 127.0.0.1 at 2019-09-20 13:06:51 -0500
+Processing by ClientesController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering clientes/new.html.erb within layouts/application
+  Rendered clientes/_form.html.erb (12.8ms)
+  Rendered clientes/new.html.erb within layouts/application (14.0ms)
+  Rendered layouts/_navigation.html.erb (2.6ms)
+  Rendered layouts/_topnavbar.html.erb (7.0ms)
+Completed 200 OK in 123ms (Views: 93.5ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/carros" for 127.0.0.1 at 2019-09-20 13:06:57 -0500
+Processing by CarrosController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering carros/index.html.erb within layouts/application
+  [1m[36mCarro Load (1.1ms)[0m  [1m[34mSELECT "carros".* FROM "carros"[0m
+  ↳ app/views/carros/index.html.erb:16
+  Rendered carros/index.html.erb within layouts/application (4.2ms)
+  Rendered layouts/_navigation.html.erb (4.1ms)
+  Rendered layouts/_topnavbar.html.erb (5.4ms)
+Completed 200 OK in 113ms (Views: 107.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/carros" for 127.0.0.1 at 2019-09-20 13:07:13 -0500
+Processing by CarrosController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering carros/index.html.erb within layouts/application
+  [1m[36mCarro Load (0.6ms)[0m  [1m[34mSELECT "carros".* FROM "carros"[0m
+  ↳ app/views/carros/index.html.erb:16
+  Rendered carros/index.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_navigation.html.erb (2.7ms)
+  Rendered layouts/_topnavbar.html.erb (7.0ms)
+Completed 200 OK in 93ms (Views: 86.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/conductores" for 127.0.0.1 at 2019-09-20 13:07:15 -0500
+Processing by ConductoresController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering conductores/index.html.erb within layouts/application
+  [1m[36mConductor Load (3.1ms)[0m  [1m[34mSELECT "conductores".* FROM "conductores"[0m
+  ↳ app/views/conductores/index.html.erb:13
+  Rendered collection of conductores/_conductores.html.erb [0 times] (0.0ms)
+  Rendered conductores/index.html.erb within layouts/application (7.0ms)
+  Rendered layouts/_navigation.html.erb (2.5ms)
+  Rendered layouts/_topnavbar.html.erb (5.0ms)
+Completed 200 OK in 100ms (Views: 90.5ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/conductores/new" for 127.0.0.1 at 2019-09-20 13:07:16 -0500
+Processing by ConductoresController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering conductores/new.html.erb within layouts/application
+  Rendered conductores/_form.html.erb (27.8ms)
+  Rendered conductores/new.html.erb within layouts/application (29.4ms)
+  Rendered layouts/_navigation.html.erb (3.0ms)
+  Rendered layouts/_topnavbar.html.erb (5.1ms)
+Completed 200 OK in 122ms (Views: 116.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/carros" for 127.0.0.1 at 2019-09-20 13:07:18 -0500
+Processing by CarrosController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering carros/index.html.erb within layouts/application
+  [1m[36mCarro Load (1.0ms)[0m  [1m[34mSELECT "carros".* FROM "carros"[0m
+  ↳ app/views/carros/index.html.erb:16
+  Rendered carros/index.html.erb within layouts/application (7.6ms)
+  Rendered layouts/_navigation.html.erb (3.6ms)
+  Rendered layouts/_topnavbar.html.erb (5.5ms)
+Completed 200 OK in 178ms (Views: 169.8ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/carros/new" for 127.0.0.1 at 2019-09-20 13:07:20 -0500
+Processing by CarrosController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering carros/new.html.erb within layouts/application
+  Rendered carros/_form.html.erb (31.3ms)
+  Rendered carros/new.html.erb within layouts/application (32.9ms)
+  Rendered layouts/_navigation.html.erb (2.5ms)
+  Rendered layouts/_topnavbar.html.erb (5.3ms)
+Completed 200 OK in 127ms (Views: 122.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/clientes" for 127.0.0.1 at 2019-09-20 13:07:22 -0500
+Processing by ClientesController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering clientes/index.html.erb within layouts/application
+  [1m[36mCliente Load (1.8ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes"[0m
+  ↳ app/views/clientes/index.html.erb:17
+  Rendered clientes/index.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_navigation.html.erb (2.5ms)
+  Rendered layouts/_topnavbar.html.erb (5.8ms)
+Completed 200 OK in 91ms (Views: 85.8ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/clientes/new" for 127.0.0.1 at 2019-09-20 13:07:23 -0500
+Processing by ClientesController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ronald/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering clientes/new.html.erb within layouts/application
+  Rendered clientes/_form.html.erb (15.9ms)
+  Rendered clientes/new.html.erb within layouts/application (17.7ms)
+  Rendered layouts/_navigation.html.erb (2.3ms)
+  Rendered layouts/_topnavbar.html.erb (5.2ms)
+Completed 200 OK in 137ms (Views: 132.0ms | ActiveRecord: 0.7ms)
+
+
