@@ -1,0 +1,30 @@
+<div class="table-responsive table--no-card m-b-30">
+  <table class="table table-borderless table-striped table-earning">
+    <thead>
+      <tr>
+        <th>Placa</th>
+        <th>Nombre propietario</th>
+        <th>Cedula</th>
+        <th>Fecha vencimiento soat</th>
+        <th>Fecha vencimiento tecnomecanica</th>
+        <th>Editar</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @carros.each do |carro| %>
+        <tr>
+          <td><%= link_to carro.placa.upcase, carro_path(carro) %></td>
+          <td><%= carro.nom_prop %></td>
+          <td><%= carro.id_prop %></td>
+          <td><%= carro.fecha_venc_soat %></td>
+          <td><%= carro.fecha_venc_tm %></td>
+          <td><%= link_to edit_carro_path(carro) do %> <i class="fa fa-edit"></i> <% end %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+<br>
+
+<%= link_to 'Nuevo Carro', new_carro_path %>

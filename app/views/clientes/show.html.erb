@@ -1,0 +1,19 @@
+<div class="row">
+  <div class="col-lg-12">
+    <div class="card">
+      <div class="card-header">
+          <strong>Cliente <%= @cliente.nombres.humanize %> <a href="<%= edit_cliente_path(@cliente)%>" class="check-o"><i class="fa fa-edit"></i></a></strong>
+      </div>
+      <div class="card-body">
+        <strong>Nombre: </strong><%= @cliente.nombres%><br><br>
+        <strong>Apellidos: </strong><%= @cliente.apellidos %><br><br>
+        <strong>Correo: </strong><%= @cliente.correo %><br><br>
+        <strong>Telefono: </strong><%= @cliente.telefono %><br><br>
+        <strong>Ciudad: </strong><%= @cliente.ciudad %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%= link_to 'Editar', edit_cliente_path(@cliente) %> |
+<%= link_to 'Regresar', clientes_path %>

@@ -1,0 +1,21 @@
+es-CO:
+  conductores:
+    create:
+      success: Cliente registrado
+      alert: Problemas al registrar
+    update_responder:
+      success: Cliente registrado correctamente
+      alert: Problemas con el registro de la respuesta
+    attributes:
+      tecnico:
+          id_cliente: Identificacion Del Clientes
+          nombres: Primer y Segundo Nombre
+          apellidos: Primer y Segundo Apellido
+          correo: Correo Electronico
+          telefono: Numero de Telefono
+          ciudad: Ciudad Donde Se Encuentra
+          estado: Habilitado o Desabilitado
+          codigo_trans: Codigo Del Transporte
+          precio: Precio
+          direccion_inicial: Direccion Inicial
+          direccion_final: Direccion Final

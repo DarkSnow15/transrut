@@ -15,6 +15,38 @@ ActiveRecord::Schema.define(version: 2019_09_13_060155) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "carros", force: :cascade do |t|
+    t.string "placa"
+    t.string "nom_prop"
+    t.integer "id_prop"
+    t.date "fecha_venc_soat"
+    t.date "fecha_venc_tm"
+    t.date "fecha_venc_pe"
+    t.date "fecha_venc_pc"
+    t.string "img_lic_trans"
+    t.string "img_tarj_oper"
+    t.string "img_soat"
+    t.string "img_tm"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "clientes", force: :cascade do |t|
+    t.integer "id_cliente"
+    t.string "nombres"
+    t.string "apellidos"
+    t.string "correo"
+    t.string "telefono"
+    t.string "ciudad"
+    t.string "estado"
+    t.string "codigo_trans"
+    t.integer "precio"
+    t.string "direccion_inicial"
+    t.string "direccion_final"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "conductores", force: :cascade do |t|
     t.integer "num_documento"
     t.string "nombre"

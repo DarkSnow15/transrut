@@ -1,9 +1,15 @@
+# Ignore all logfiles and tempfiles.
+/log/*
+!/log/.keep
+/tmp
+
 *.gem
 *.rbc
 /.config
 /coverage/
 /InstalledFiles
 /pkg/
+/log
 /spec/reports/
 /spec/examples.txt
 /test/tmp/
@@ -34,6 +40,9 @@ build-iPhoneSimulator/
 /_yardoc/
 /doc/
 /rdoc/
+/public/system
+/public/uploads/
+/spec/tmp
 
 ## Environment normalization:
 /.bundle/

@@ -1,0 +1,35 @@
+
+  <div class="col-lg-12">
+    <div class="card">
+        <div class="card-header">
+            <strong><center>Registrar cliente</center></strong>
+        </div>
+        <div class="card-body card-block">
+          <%= simple_form_for @cliente do |f| %>
+            <div class="row">
+              <div class="col-md-6">
+                <%= f.input :nombres %>
+                <%= f.input :apellidos %>
+              </div>
+              <div class="col-md-6">
+                <%= f.input :correo %>
+                <%= f.input :telefono %>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6">
+                <%= f.input :ciudad %>
+              </div>
+              <div class="col-md-6">
+                <%= f.input :direccion_inicial %>
+              </div>
+            </div>
+
+        <div class="actions">
+            <%= f.button :submit, class: "btn btn-primary btn-sm"%>
+        </div>
+      <% end %>
+  </div>
+    </div>
+  </div>

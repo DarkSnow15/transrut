@@ -11,41 +11,47 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
-    <%=  stylesheet_link_tag "theme.css" %>
+    <%=  stylesheet_link_tag "theme.css", media: 'all'%>
 
-    <%= stylesheet_link_tag "vendor/font-awesome-4.7/css/font-awesome.min.css"%>
-    <%= stylesheet_link_tag "vendor/font-awesome-5/css/fontawesome-all.min.css"%>
-    <%= stylesheet_link_tag "vendor/mdi-font/css/material-design-iconic-font.min.css"%>
+    <%= stylesheet_link_tag "vendor/font-awesome-4.7/css/font-awesome.min.css", media: 'all'%>
+    <%= stylesheet_link_tag "vendor/font-awesome-5/css/fontawesome-all.min.css", media: 'all'%>
+    <%= stylesheet_link_tag "vendor/mdi-font/css/material-design-iconic-font.min.css", media: 'all'%>
 
     <!-- Bootstrap CSS-->
-    <%= stylesheet_link_tag "vendor/bootstrap-4.1/bootstrap.min.css"%>
+    <%= stylesheet_link_tag "vendor/bootstrap-4.1/bootstrap.min.css", media: 'all'%>
 
     <!-- Vendor CSS-->
-    <%= stylesheet_link_tag "vendor/animsition/animsition.min.css"%>
-    <%= stylesheet_link_tag "vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css"%>
-    <%= stylesheet_link_tag "vendor/wow/animate.css"%>
-    <%= stylesheet_link_tag "vendor/css-hamburgers/hamburgers.min.css"%>
-    <%= stylesheet_link_tag "vendor/slick/slick.css"%>
-    <%= stylesheet_link_tag "vendor/select2/select2.min.css"%>
-    <%= stylesheet_link_tag "vendor/perfect-scrollbar/perfect-scrollbar.css"%>
-    <%= stylesheet_link_tag "vendor/vector-map/jqvmap.min.css"%>
+    <%= stylesheet_link_tag "vendor/animsition/animsition.min.css", media: 'all'%>
+    <%= stylesheet_link_tag "vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css", media: 'all'%>
+    <%= stylesheet_link_tag "vendor/wow/animate.css", media: 'all'%>
+    <%= stylesheet_link_tag "vendor/css-hamburgers/hamburgers.min.css", media: 'all'%>
+    <%= stylesheet_link_tag "vendor/slick/slick.css", media: 'all'%>
+    <%= stylesheet_link_tag "vendor/select2/select2.min.css", media: 'all'%>
+    <%= stylesheet_link_tag "vendor/perfect-scrollbar/perfect-scrollbar.css", media: 'all'%>
+    <%= stylesheet_link_tag "vendor/vector-map/jqvmap.min.css", media: 'all'%>
   </head>
 
-  <body class="animsition" style="animation-duration: 900ms; opacity: 1;">
+  <body class="animsition" style="animation-duration: 900ms; opacity: 1;" >
     <div class="page-wrapper">
       <%= render 'layouts/navigation' %>
-      <div class="page-container2">
+      <div class="page-container">
         <%= render 'layouts/topnavbar' %>
-        <%= render 'layouts/sidebar' %>
-        <%= render 'layouts/breadcrumb' %>
-        <section class="statistic">
+        <div class="main-content">
             <div class="section__content section__content--p30">
                 <div class="container-fluid">
-                  <%= custom_bootstrap_flash %>
-                  <%= yield %>
+                    <div class="row">
+                      <%= yield %>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="copyright">
+                                <p>Copyright © 2019 Transrut. All rights reserved. Template by <a href="https://colorlib.com">Colorlib</a>.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
       </div>
     </div>
 

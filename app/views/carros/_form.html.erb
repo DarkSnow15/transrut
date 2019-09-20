@@ -1,0 +1,44 @@
+<div class="col-lg-12">
+  <div class="card">
+      <div class="card-header">
+          <strong>Ingresar vehiculo</strong>
+      </div>
+      <div class="card-body card-block">
+        <%= simple_form_for @carro do |f| %>
+          <div class="row">
+            <div class="col-md-6">
+              <%= f.input :placa %>
+              <%= f.input :nom_prop %>
+            </div>
+            <div class="col-md-6">
+              <%= f.input :id_prop %>
+              <%= f.input :fecha_venc_soat, order: [:day, :month, :year] %>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <%= f.input :fecha_venc_pc, order: [:day, :month, :year] %>
+              <%= f.input :fecha_venc_tm, order: [:day, :month, :year] %>
+            </div>
+            <div class="col-md-6">
+              <%= f.input :fecha_venc_pe, order: [:day, :month, :year] %>
+              <%= f.input :img_tm %>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <%= f.input :img_lic_trans %>
+              <%= f.input :img_tarj_oper %>
+            </div>
+            <div class="col-md-6">
+              <%= f.input :img_soat %>
+            </div>
+          </div>
+
+      <div class="actions">
+          <%= f.button :submit, class: "btn btn-primary btn-sm"%>
+      </div>
+      <% end %>
+</div>
+  </div>
+</div>

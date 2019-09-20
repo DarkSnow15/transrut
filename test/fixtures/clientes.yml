@@ -1,0 +1,47 @@
+# == Schema Information
+#
+# Table name: clientes
+#
+#  id                :bigint           not null, primary key
+#  id_cliente        :integer
+#  nombres           :string
+#  apellidos         :string
+#  correo            :string
+#  telefono          :string
+#  ciudad            :string
+#  estado            :string
+#  codigo_trans      :string
+#  precio            :integer
+#  direccion_inicial :string
+#  direccion_final   :string
+#  created_at        :datetime         not null
+#  updated_at        :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id_cliente: 1
+  nombres: MyString
+  apellidos: MyString
+  correo: MyString
+  telefono: MyString
+  ciudad: MyString
+  estado: MyString
+  codigo_trans: MyString
+  precio: 1
+  direccion_inicial: MyString
+  direccion_final: MyString
+
+two:
+  id_cliente: 1
+  nombres: MyString
+  apellidos: MyString
+  correo: MyString
+  telefono: MyString
+  ciudad: MyString
+  estado: MyString
+  codigo_trans: MyString
+  precio: 1
+  direccion_inicial: MyString
+  direccion_final: MyString
