@@ -19,7 +19,7 @@ end
 # breadcrumbs carros
 
 crumb :carros do
-  link "carros", carros_path
+  link "Carros ", carros_path
 end
 
 crumb :carro_new do

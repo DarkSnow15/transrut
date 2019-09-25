@@ -40,7 +40,7 @@ class ConductoresController < ApplicationController
 
 private
   def params_conductor
-    params.require(:conductor).permit(:num_documento, :nombre, :fech_ingreso, :fech_seg_ini, :fech_seg_ven, :fech_ven_licen)
+    params.require(:conductor).permit(:num_documento, :nombre, :fech_ingreso, :fech_seg_ini, :fech_seg_ven, :fech_ven_licen, :cedula_img, :hoja_vida, :licencia)
   end
   def set_conductor
     @conductor = Conductor.find(params[:id])
