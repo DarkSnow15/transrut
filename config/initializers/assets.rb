@@ -36,3 +36,21 @@ Rails.application.config.assets.precompile += %w( icon/avatar-02.jpg )
 Rails.application.config.assets.precompile += %w( icon/avatar-03.jpg )
 Rails.application.config.assets.precompile += %w( icon/avatar-04.jpg )
 Rails.application.config.assets.precompile += %w( icon/avatar-05.jpg )
+
+# Nueva plantilla
+
+Rails.application.config.assets.precompile += %w( vendors/simple-line-icons/css/simple-line-icons.css )
+Rails.application.config.assets.precompile += %w( vendors/flag-icon-css/css/flag-icon.min.css )
+Rails.application.config.assets.precompile += %w( vendors/css/vendor.bundle.base.css )
+Rails.application.config.assets.precompile += %w( vendors/daterangepicker/daterangepicker.css )
+Rails.application.config.assets.precompile += %w( vendors/chartist/chartist.min.css )
+Rails.application.config.assets.precompile += %w( css/style.css )
+# JS
+Rails.application.config.assets.precompile += %w( vendors/js/vendor.bundle.base.js )
+Rails.application.config.assets.precompile += %w( vendors/chart.js/Chart.min.js )
+Rails.application.config.assets.precompile += %w( vendors/moment/moment.min.js )
+Rails.application.config.assets.precompile += %w( vendors/daterangepicker/daterangepicker.js )
+Rails.application.config.assets.precompile += %w( vendors/chartist/chartist.min.js )
+Rails.application.config.assets.precompile += %w( js/off-canvas.js )
+Rails.application.config.assets.precompile += %w( js/misc.js )
+Rails.application.config.assets.precompile += %w( js/dashboard.js )

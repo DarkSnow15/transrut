@@ -62642,3 +62642,868 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 2398ms (Views: 2127.4ms | ActiveRecord: 71.2ms)
 
 
+Started GET "/" for ::1 at 2019-10-30 15:52:40 -0500
+  [1m[35m (55.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (19.9ms)
+Completed 500 Internal Server Error in 5426ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Asset was not declared to be precompiled in production.
+Add `Rails.application.config.assets.precompile += %w( vendors/simple-line-icons/css/simple-line-icons.css )` to `config/initializers/assets.rb` and restart your server):
+     8:     <%= csrf_meta_tags %>
+     9:     <%= csp_meta_tag %>
+    10: 
+    11:     <%=stylesheet_link_tag "vendors/simple-line-icons/css/simple-line-icons.css", media: 'all'%>+
+    12:     <%=stylesheet_link_tag "vendors/flag-icon-css/css/flag-icon.min.css", media: 'all'%>+
+    13:     <%=stylesheet_link_tag "vendors/css/vendor.bundle.base.css", media: 'all'%>+
+    14:     <%=stylesheet_link_tag "vendors/daterangepicker/daterangepicker.css", media: 'all'%>+
+  
+app/views/layouts/application.html.erb:11:in `_app_views_layouts_application_html_erb___3486319045334766400_70190904549040'
+Started GET "/" for ::1 at 2019-10-30 15:53:28 -0500
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 333ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Asset was not declared to be precompiled in production.
+Add `Rails.application.config.assets.precompile += %w( vendors/simple-line-icons/css/simple-line-icons.css )` to `config/initializers/assets.rb` and restart your server):
+     8:     <%= csrf_meta_tags %>
+     9:     <%= csp_meta_tag %>
+    10: 
+    11:     <%=stylesheet_link_tag "vendors/simple-line-icons/css/simple-line-icons.css", media: 'all'%>+
+    12:     <%=stylesheet_link_tag "vendors/flag-icon-css/css/flag-icon.min.css", media: 'all'%>+
+    13:     <%=stylesheet_link_tag "vendors/css/vendor.bundle.base.css", media: 'all'%>+
+    14:     <%=stylesheet_link_tag "vendors/daterangepicker/daterangepicker.css", media: 'all'%>+
+  
+app/views/layouts/application.html.erb:11:in `_app_views_layouts_application_html_erb___3486319045334766400_70190929776040'
+Started GET "/" for ::1 at 2019-10-30 15:55:02 -0500
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 1558ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Asset was not declared to be precompiled in production.
+Add `Rails.application.config.assets.precompile += %w( vendors/flag-icon-css/css/flag-icon.min.css )` to `config/initializers/assets.rb` and restart your server):
+     9:     <%= csp_meta_tag %>
+    10: 
+    11:     <%=stylesheet_link_tag "vendors/simple-line-icons/css/simple-line-icons.css", media: 'all'%>
+    12:     <%=stylesheet_link_tag "vendors/flag-icon-css/css/flag-icon.min.css", media: 'all'%>
+    13:     <%=stylesheet_link_tag "vendors/css/vendor.bundle.base.css", media: 'all'%>
+    14:     <%=stylesheet_link_tag "vendors/daterangepicker/daterangepicker.css", media: 'all'%>
+    15:     <%=stylesheet_link_tag "vendors/chartist/chartist.min.css", media: 'all'%>
+  
+app/views/layouts/application.html.erb:12:in `_app_views_layouts_application_html_erb__2288819578589370188_70191744034080'
+Started GET "/" for ::1 at 2019-10-30 15:55:40 -0500
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 1981ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Asset was not declared to be precompiled in production.
+Add `Rails.application.config.assets.precompile += %w( vendors/css/vendor.bundle.base.css )` to `config/initializers/assets.rb` and restart your server):
+    10: 
+    11:     <%=stylesheet_link_tag "vendors/simple-line-icons/css/simple-line-icons.css", media: 'all'%>
+    12:     <%=stylesheet_link_tag "vendors/flag-icon-css/css/flag-icon.min.css", media: 'all'%>
+    13:     <%=stylesheet_link_tag "vendors/css/vendor.bundle.base.css", media: 'all'%>
+    14:     <%=stylesheet_link_tag "vendors/daterangepicker/daterangepicker.css", media: 'all'%>
+    15:     <%=stylesheet_link_tag "vendors/chartist/chartist.min.css", media: 'all'%>
+    16:     <%=stylesheet_link_tag "css/style.css", media: 'all'%>
+  
+app/views/layouts/application.html.erb:13:in `_app_views_layouts_application_html_erb___3395341608125119051_70178678581420'
+Started GET "/" for ::1 at 2019-10-30 15:56:23 -0500
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 1818ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Asset was not declared to be precompiled in production.
+Add `Rails.application.config.assets.precompile += %w( vendors/daterangepicker/daterangepicker.css )` to `config/initializers/assets.rb` and restart your server):
+    11:     <%=stylesheet_link_tag "vendors/simple-line-icons/css/simple-line-icons.css", media: 'all'%>
+    12:     <%=stylesheet_link_tag "vendors/flag-icon-css/css/flag-icon.min.css", media: 'all'%>
+    13:     <%=stylesheet_link_tag "vendors/css/vendor.bundle.base.css", media: 'all'%>
+    14:     <%=stylesheet_link_tag "vendors/daterangepicker/daterangepicker.css", media: 'all'%>
+    15:     <%=stylesheet_link_tag "vendors/chartist/chartist.min.css", media: 'all'%>
+    16:     <%=stylesheet_link_tag "css/style.css", media: 'all'%>
+    17: 
+  
+app/views/layouts/application.html.erb:14:in `_app_views_layouts_application_html_erb__4338451158079521107_70306794938860'
+Started GET "/" for ::1 at 2019-10-30 15:56:47 -0500
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 1857ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Asset was not declared to be precompiled in production.
+Add `Rails.application.config.assets.precompile += %w( vendors/chartist/chartist.min.css )` to `config/initializers/assets.rb` and restart your server):
+    12:     <%=stylesheet_link_tag "vendors/flag-icon-css/css/flag-icon.min.css", media: 'all'%>
+    13:     <%=stylesheet_link_tag "vendors/css/vendor.bundle.base.css", media: 'all'%>
+    14:     <%=stylesheet_link_tag "vendors/daterangepicker/daterangepicker.css", media: 'all'%>
+    15:     <%=stylesheet_link_tag "vendors/chartist/chartist.min.css", media: 'all'%>
+    16:     <%=stylesheet_link_tag "css/style.css", media: 'all'%>
+    17: 
+    18: 
+  
+app/views/layouts/application.html.erb:15:in `_app_views_layouts_application_html_erb__2965386549895012649_70241504616900'
+Started GET "/" for ::1 at 2019-10-30 15:57:15 -0500
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 1829ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Asset was not declared to be precompiled in production.
+Add `Rails.application.config.assets.precompile += %w( css/style.css )` to `config/initializers/assets.rb` and restart your server):
+    13:     <%=stylesheet_link_tag "vendors/css/vendor.bundle.base.css", media: 'all'%>
+    14:     <%=stylesheet_link_tag "vendors/daterangepicker/daterangepicker.css", media: 'all'%>
+    15:     <%=stylesheet_link_tag "vendors/chartist/chartist.min.css", media: 'all'%>
+    16:     <%=stylesheet_link_tag "css/style.css", media: 'all'%>
+    17: 
+    18: 
+    19: 
+  
+app/views/layouts/application.html.erb:16:in `_app_views_layouts_application_html_erb__3954853936067751649_70250914265780'
+Started GET "/" for ::1 at 2019-10-30 15:57:47 -0500
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 2277ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Asset was not declared to be precompiled in production.
+Add `Rails.application.config.assets.precompile += %w( vendors/js/vendor.bundle.base.js )` to `config/initializers/assets.rb` and restart your server):
+    506:     </div>
+    507: 
+    508:     <%=yield%>
+    509:     <%= javascript_include_tag 'vendors/js/vendor.bundle.base.js'%>
+    510:     <%= javascript_include_tag 'vendors/chart.js/Chart.min.js'%>
+    511:     <%= javascript_include_tag 'vendors/moment/moment.min.js'%>
+    512:     <%= javascript_include_tag 'vendors/daterangepicker/daterangepicker.js'%>
+  
+app/views/layouts/application.html.erb:509:in `_app_views_layouts_application_html_erb___3923272373155787780_70228842474400'
+Started GET "/" for ::1 at 2019-10-30 16:00:37 -0500
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 2386ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Asset was not declared to be precompiled in production.
+Add `Rails.application.config.assets.precompile += %w( vendors/chart.js/Chart.min.js )` to `config/initializers/assets.rb` and restart your server):
+    507: 
+    508:     <%=yield%>
+    509:     <%= javascript_include_tag 'vendors/js/vendor.bundle.base.js'%>
+    510:     <%= javascript_include_tag 'vendors/chart.js/Chart.min.js'%>
+    511:     <%= javascript_include_tag 'vendors/moment/moment.min.js'%>
+    512:     <%= javascript_include_tag 'vendors/daterangepicker/daterangepicker.js'%>
+    513:     <%= javascript_include_tag 'vendors/chartist/chartist.min.js'%>
+  
+app/views/layouts/application.html.erb:510:in `_app_views_layouts_application_html_erb__1670603506555826511_70257809671420'
+Started GET "/" for ::1 at 2019-10-30 16:01:03 -0500
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 2725ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Asset was not declared to be precompiled in production.
+Add `Rails.application.config.assets.precompile += %w( vendors/moment/moment.min.js )` to `config/initializers/assets.rb` and restart your server):
+    508:     <%=yield%>
+    509:     <%= javascript_include_tag 'vendors/js/vendor.bundle.base.js'%>
+    510:     <%= javascript_include_tag 'vendors/chart.js/Chart.min.js'%>
+    511:     <%= javascript_include_tag 'vendors/moment/moment.min.js'%>
+    512:     <%= javascript_include_tag 'vendors/daterangepicker/daterangepicker.js'%>
+    513:     <%= javascript_include_tag 'vendors/chartist/chartist.min.js'%>
+    514:     <%= javascript_include_tag 'js/off-canvas.js'%>
+  
+app/views/layouts/application.html.erb:511:in `_app_views_layouts_application_html_erb___3672989870862879422_70181162024700'
+Started GET "/" for ::1 at 2019-10-30 16:01:31 -0500
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 2203ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Asset was not declared to be precompiled in production.
+Add `Rails.application.config.assets.precompile += %w( vendors/daterangepicker/daterangepicker.js )` to `config/initializers/assets.rb` and restart your server):
+    509:     <%= javascript_include_tag 'vendors/js/vendor.bundle.base.js'%>
+    510:     <%= javascript_include_tag 'vendors/chart.js/Chart.min.js'%>
+    511:     <%= javascript_include_tag 'vendors/moment/moment.min.js'%>
+    512:     <%= javascript_include_tag 'vendors/daterangepicker/daterangepicker.js'%>
+    513:     <%= javascript_include_tag 'vendors/chartist/chartist.min.js'%>
+    514:     <%= javascript_include_tag 'js/off-canvas.js'%>
+    515:     <%= javascript_include_tag 'js/misc.js'%>
+  
+app/views/layouts/application.html.erb:512:in `_app_views_layouts_application_html_erb___1073177551799354330_70258073755340'
+Started GET "/" for ::1 at 2019-10-30 16:02:09 -0500
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 2138ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Asset was not declared to be precompiled in production.
+Add `Rails.application.config.assets.precompile += %w( vendors/chartist/chartist.min.js )` to `config/initializers/assets.rb` and restart your server):
+    510:     <%= javascript_include_tag 'vendors/chart.js/Chart.min.js'%>
+    511:     <%= javascript_include_tag 'vendors/moment/moment.min.js'%>
+    512:     <%= javascript_include_tag 'vendors/daterangepicker/daterangepicker.js'%>
+    513:     <%= javascript_include_tag 'vendors/chartist/chartist.min.js'%>
+    514:     <%= javascript_include_tag 'js/off-canvas.js'%>
+    515:     <%= javascript_include_tag 'js/misc.js'%>
+    516:     <%= javascript_include_tag 'js/dashboard.js'%>
+  
+app/views/layouts/application.html.erb:513:in `_app_views_layouts_application_html_erb__4522161289120938867_70189915118300'
+Started GET "/" for ::1 at 2019-10-30 16:04:03 -0500
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 2580ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Asset was not declared to be precompiled in production.
+Add `Rails.application.config.assets.precompile += %w( js/off-canvas.js )` to `config/initializers/assets.rb` and restart your server):
+    511:     <%= javascript_include_tag 'vendors/moment/moment.min.js'%>
+    512:     <%= javascript_include_tag 'vendors/daterangepicker/daterangepicker.js'%>
+    513:     <%= javascript_include_tag 'vendors/chartist/chartist.min.js'%>
+    514:     <%= javascript_include_tag 'js/off-canvas.js'%>
+    515:     <%= javascript_include_tag 'js/misc.js'%>
+    516:     <%= javascript_include_tag 'js/dashboard.js'%>
+    517:   </body>
+  
+app/views/layouts/application.html.erb:514:in `_app_views_layouts_application_html_erb___622862277561323335_70335767101680'
+Started GET "/" for ::1 at 2019-10-30 16:04:39 -0500
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 2603ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Asset was not declared to be precompiled in production.
+Add `Rails.application.config.assets.precompile += %w( js/misc.js )` to `config/initializers/assets.rb` and restart your server):
+    512:     <%= javascript_include_tag 'vendors/daterangepicker/daterangepicker.js'%>
+    513:     <%= javascript_include_tag 'vendors/chartist/chartist.min.js'%>
+    514:     <%= javascript_include_tag 'js/off-canvas.js'%>
+    515:     <%= javascript_include_tag 'js/misc.js'%>
+    516:     <%= javascript_include_tag 'js/dashboard.js'%>
+    517:   </body>
+    518: </html>
+  
+app/views/layouts/application.html.erb:515:in `_app_views_layouts_application_html_erb___1013805132565006105_70263323425060'
+Started GET "/" for ::1 at 2019-10-30 16:05:11 -0500
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 3543ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Asset was not declared to be precompiled in production.
+Add `Rails.application.config.assets.precompile += %w( js/dashboard.js )` to `config/initializers/assets.rb` and restart your server):
+    513:     <%= javascript_include_tag 'vendors/chartist/chartist.min.js'%>
+    514:     <%= javascript_include_tag 'js/off-canvas.js'%>
+    515:     <%= javascript_include_tag 'js/misc.js'%>
+    516:     <%= javascript_include_tag 'js/dashboard.js'%>
+    517:   </body>
+    518: </html>
+  
+app/views/layouts/application.html.erb:516:in `_app_views_layouts_application_html_erb__2806596864299813400_70298510137740'
+Started GET "/" for ::1 at 2019-10-30 16:06:25 -0500
+  [1m[35m (30.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 3618ms (Views: 3589.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/logo.svg" for ::1 at 2019-10-30 16:06:31 -0500
+Started GET "/images/logo-mini.svg" for ::1 at 2019-10-30 16:06:31 -0500
+Started GET "/images/faces/face12.jpg" for ::1 at 2019-10-30 16:06:31 -0500
+Started GET "/images/faces/face10.jpg" for ::1 at 2019-10-30 16:06:31 -0500
+Started GET "/images/faces/face8.jpg" for ::1 at 2019-10-30 16:06:31 -0500
+  
+  
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/logo.svg"):
+ActionController::RoutingError (No route matches [GET] "/images/faces/face10.jpg"):
+ActionController::RoutingError (No route matches [GET] "/images/faces/face8.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/faces/face12.jpg"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  
+ActionController::RoutingError (No route matches [GET] "/images/logo-mini.svg"):
+  
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/images/dashboard/alipay.png" for ::1 at 2019-10-30 16:06:34 -0500
+Started GET "/images/faces/face2.jpg" for ::1 at 2019-10-30 16:06:34 -0500
+Started GET "/images/dashboard/paypal.png" for ::1 at 2019-10-30 16:06:34 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/dashboard/alipay.png"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  
+ActionController::RoutingError (No route matches [GET] "/images/faces/face2.jpg"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  
+ActionController::RoutingError (No route matches [GET] "/images/dashboard/paypal.png"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/images/faces/face4.jpg" for ::1 at 2019-10-30 16:06:35 -0500
+Started GET "/images/faces/face3.jpg" for ::1 at 2019-10-30 16:06:35 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/faces/face4.jpg"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  
+ActionController::RoutingError (No route matches [GET] "/images/faces/face3.jpg"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/images/faces/face1.jpg" for ::1 at 2019-10-30 16:06:35 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/faces/face1.jpg"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2019-10-30 16:12:58 -0500
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 1991ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'main.js' with type 'application/javascript'
+Checked in these paths: 
+  /Users/osirisbonadiezcastillo/Documents/transrut/app/assets/config
+  /Users/osirisbonadiezcastillo/Documents/transrut/app/assets/images
+  /Users/osirisbonadiezcastillo/Documents/transrut/app/assets/javascripts
+  /Users/osirisbonadiezcastillo/Documents/transrut/app/assets/stylesheets
+  /Users/osirisbonadiezcastillo/Documents/transrut/vendor/assets/images
+  /Users/osirisbonadiezcastillo/Documents/transrut/vendor/assets/javascripts
+  /Users/osirisbonadiezcastillo/Documents/transrut/vendor/assets/stylesheets
+  /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/gems/toastr-rails-1.0.3/vendor/assets/javascripts
+  /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/gems/toastr-rails-1.0.3/vendor/assets/stylesheets
+  /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/gems/actioncable-5.2.3/lib/assets/compiled
+  /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/gems/activestorage-5.2.3/app/assets/javascripts
+  /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/gems/actionview-5.2.3/lib/assets/compiled
+  /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /Users/osirisbonadiezcastillo/Documents/transrut/node_modules
+  /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/gems/bootstrap-sass-3.4.1/assets/stylesheets
+  /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/gems/bootstrap-sass-3.4.1/assets/javascripts
+  /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/gems/bootstrap-sass-3.4.1/assets/fonts
+  /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/gems/bootstrap-sass-3.4.1/assets/images):
+     8:     <%= csrf_meta_tags %>
+     9:     <%= csp_meta_tag %>
+    10: 
+    11:     <%=stylesheet_link_tag "vendors/simple-line-icons/css/simple-line-icons.css", media: 'all'%>
+    12:     <%=stylesheet_link_tag "vendors/flag-icon-css/css/flag-icon.min.css", media: 'all'%>
+    13:     <%=stylesheet_link_tag "vendors/css/vendor.bundle.base.css", media: 'all'%>
+    14:     <%=stylesheet_link_tag "vendors/daterangepicker/daterangepicker.css", media: 'all'%>
+  
+app/assets/javascripts/application.js:16
+app/views/layouts/application.html.erb:11:in `_app_views_layouts_application_html_erb___101187635187431204_70229026288020'
+Started GET "/" for ::1 at 2019-10-30 16:22:09 -0500
+  [1m[35m (45.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 661ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'main.js' with type 'application/javascript'
+Checked in these paths: 
+  /Users/osirisbonadiezcastillo/Documents/transrut/app/assets/config
+  /Users/osirisbonadiezcastillo/Documents/transrut/app/assets/images
+  /Users/osirisbonadiezcastillo/Documents/transrut/app/assets/javascripts
+  /Users/osirisbonadiezcastillo/Documents/transrut/app/assets/stylesheets
+  /Users/osirisbonadiezcastillo/Documents/transrut/vendor/assets/images
+  /Users/osirisbonadiezcastillo/Documents/transrut/vendor/assets/javascripts
+  /Users/osirisbonadiezcastillo/Documents/transrut/vendor/assets/stylesheets
+  /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/gems/toastr-rails-1.0.3/vendor/assets/javascripts
+  /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/gems/toastr-rails-1.0.3/vendor/assets/stylesheets
+  /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/gems/actioncable-5.2.3/lib/assets/compiled
+  /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/gems/activestorage-5.2.3/app/assets/javascripts
+  /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/gems/actionview-5.2.3/lib/assets/compiled
+  /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /Users/osirisbonadiezcastillo/Documents/transrut/node_modules
+  /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/gems/bootstrap-sass-3.4.1/assets/stylesheets
+  /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/gems/bootstrap-sass-3.4.1/assets/javascripts
+  /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/gems/bootstrap-sass-3.4.1/assets/fonts
+  /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/gems/bootstrap-sass-3.4.1/assets/images):
+     8:     <%= csrf_meta_tags %>
+     9:     <%= csp_meta_tag %>
+    10: 
+    11:     <%=stylesheet_link_tag "vendors/simple-line-icons/css/simple-line-icons.css", media: 'all'%>
+    12:     <%=stylesheet_link_tag "vendors/flag-icon-css/css/flag-icon.min.css", media: 'all'%>
+    13:     <%=stylesheet_link_tag "vendors/css/vendor.bundle.base.css", media: 'all'%>
+    14:     <%=stylesheet_link_tag "vendors/daterangepicker/daterangepicker.css", media: 'all'%>
+  
+app/assets/javascripts/application.js:16
+app/views/layouts/application.html.erb:11:in `_app_views_layouts_application_html_erb___4167912616257370476_70197406350540'
+Started GET "/" for ::1 at 2019-10-30 16:24:35 -0500
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 1057ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'toastr/toastr.min.js' with type 'application/javascript'
+Checked in these paths: 
+  /Users/osirisbonadiezcastillo/Documents/transrut/app/assets/config
+  /Users/osirisbonadiezcastillo/Documents/transrut/app/assets/images
+  /Users/osirisbonadiezcastillo/Documents/transrut/app/assets/javascripts
+  /Users/osirisbonadiezcastillo/Documents/transrut/app/assets/stylesheets
+  /Users/osirisbonadiezcastillo/Documents/transrut/vendor/assets/images
+  /Users/osirisbonadiezcastillo/Documents/transrut/vendor/assets/javascripts
+  /Users/osirisbonadiezcastillo/Documents/transrut/vendor/assets/stylesheets
+  /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/gems/toastr-rails-1.0.3/vendor/assets/javascripts
+  /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/gems/toastr-rails-1.0.3/vendor/assets/stylesheets
+  /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/gems/actioncable-5.2.3/lib/assets/compiled
+  /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/gems/activestorage-5.2.3/app/assets/javascripts
+  /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/gems/actionview-5.2.3/lib/assets/compiled
+  /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /Users/osirisbonadiezcastillo/Documents/transrut/node_modules
+  /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/gems/bootstrap-sass-3.4.1/assets/stylesheets
+  /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/gems/bootstrap-sass-3.4.1/assets/javascripts
+  /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/gems/bootstrap-sass-3.4.1/assets/fonts
+  /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/gems/bootstrap-sass-3.4.1/assets/images):
+     8:     <%= csrf_meta_tags %>
+     9:     <%= csp_meta_tag %>
+    10: 
+    11:     <%=stylesheet_link_tag "vendors/simple-line-icons/css/simple-line-icons.css", media: 'all'%>
+    12:     <%=stylesheet_link_tag "vendors/flag-icon-css/css/flag-icon.min.css", media: 'all'%>
+    13:     <%=stylesheet_link_tag "vendors/css/vendor.bundle.base.css", media: 'all'%>
+    14:     <%=stylesheet_link_tag "vendors/daterangepicker/daterangepicker.css", media: 'all'%>
+  
+app/assets/javascripts/application.js:17
+app/views/layouts/application.html.erb:11:in `_app_views_layouts_application_html_erb___2348830732892285492_70272573298080'
+Started GET "/" for ::1 at 2019-10-30 16:27:19 -0500
+  [1m[35m (30.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 5192ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'toastr/toastr.min.js' with type 'application/javascript'
+Checked in these paths: 
+  /Users/osirisbonadiezcastillo/Documents/transrut/app/assets/config
+  /Users/osirisbonadiezcastillo/Documents/transrut/app/assets/images
+  /Users/osirisbonadiezcastillo/Documents/transrut/app/assets/javascripts
+  /Users/osirisbonadiezcastillo/Documents/transrut/app/assets/stylesheets
+  /Users/osirisbonadiezcastillo/Documents/transrut/vendor/assets/images
+  /Users/osirisbonadiezcastillo/Documents/transrut/vendor/assets/javascripts
+  /Users/osirisbonadiezcastillo/Documents/transrut/vendor/assets/stylesheets
+  /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/gems/actioncable-5.2.3/lib/assets/compiled
+  /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/gems/activestorage-5.2.3/app/assets/javascripts
+  /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/gems/actionview-5.2.3/lib/assets/compiled
+  /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /Users/osirisbonadiezcastillo/Documents/transrut/node_modules
+  /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/gems/bootstrap-sass-3.4.1/assets/stylesheets
+  /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/gems/bootstrap-sass-3.4.1/assets/javascripts
+  /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/gems/bootstrap-sass-3.4.1/assets/fonts
+  /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/gems/bootstrap-sass-3.4.1/assets/images):
+     8:     <%= csrf_meta_tags %>
+     9:     <%= csp_meta_tag %>
+    10: 
+    11:     <%=stylesheet_link_tag "vendors/simple-line-icons/css/simple-line-icons.css", media: 'all'%>
+    12:     <%=stylesheet_link_tag "vendors/flag-icon-css/css/flag-icon.min.css", media: 'all'%>
+    13:     <%=stylesheet_link_tag "vendors/css/vendor.bundle.base.css", media: 'all'%>
+    14:     <%=stylesheet_link_tag "vendors/daterangepicker/daterangepicker.css", media: 'all'%>
+  
+app/assets/javascripts/application.js:17
+app/views/layouts/application.html.erb:11:in `_app_views_layouts_application_html_erb__2955342151580745418_70261509151560'
+Started GET "/" for ::1 at 2019-10-30 16:29:56 -0500
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 2249ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'datetimepicker/bootstrap-datetimepicker.js' with type 'application/javascript'
+Checked in these paths: 
+  /Users/osirisbonadiezcastillo/Documents/transrut/app/assets/config
+  /Users/osirisbonadiezcastillo/Documents/transrut/app/assets/images
+  /Users/osirisbonadiezcastillo/Documents/transrut/app/assets/javascripts
+  /Users/osirisbonadiezcastillo/Documents/transrut/app/assets/stylesheets
+  /Users/osirisbonadiezcastillo/Documents/transrut/vendor/assets/images
+  /Users/osirisbonadiezcastillo/Documents/transrut/vendor/assets/javascripts
+  /Users/osirisbonadiezcastillo/Documents/transrut/vendor/assets/stylesheets
+  /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/gems/toastr-rails-1.0.3/vendor/assets/javascripts
+  /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/gems/toastr-rails-1.0.3/vendor/assets/stylesheets
+  /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/gems/actioncable-5.2.3/lib/assets/compiled
+  /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/gems/activestorage-5.2.3/app/assets/javascripts
+  /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/gems/actionview-5.2.3/lib/assets/compiled
+  /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /Users/osirisbonadiezcastillo/Documents/transrut/node_modules
+  /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/gems/bootstrap-sass-3.4.1/assets/stylesheets
+  /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/gems/bootstrap-sass-3.4.1/assets/javascripts
+  /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/gems/bootstrap-sass-3.4.1/assets/fonts
+  /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/gems/bootstrap-sass-3.4.1/assets/images):
+     8:     <%= csrf_meta_tags %>
+     9:     <%= csp_meta_tag %>
+    10: 
+    11:     <%=stylesheet_link_tag "vendors/simple-line-icons/css/simple-line-icons.css", media: 'all'%>
+    12:     <%=stylesheet_link_tag "vendors/flag-icon-css/css/flag-icon.min.css", media: 'all'%>
+    13:     <%=stylesheet_link_tag "vendors/css/vendor.bundle.base.css", media: 'all'%>
+    14:     <%=stylesheet_link_tag "vendors/daterangepicker/daterangepicker.css", media: 'all'%>
+  
+app/assets/javascripts/conductores.js:1
+app/views/layouts/application.html.erb:11:in `_app_views_layouts_application_html_erb__2854082203742865220_70363010071160'
