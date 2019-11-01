@@ -11,6 +11,8 @@ gem 'pg', '~> 0.18.4'
 
 gem 'simple_form'
 
+gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.2'
+
 gem 'devise'
 
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'

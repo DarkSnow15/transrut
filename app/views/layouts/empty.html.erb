@@ -11,46 +11,33 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
-    <%=  stylesheet_link_tag "theme.css" %>
-
-    <%= stylesheet_link_tag "vendor/font-awesome-4.7/css/font-awesome.min.css"%>
-    <%= stylesheet_link_tag "vendor/font-awesome-5/css/fontawesome-all.min.css"%>
-    <%= stylesheet_link_tag "vendor/mdi-font/css/material-design-iconic-font.min.css"%>
-
-    <!-- Bootstrap CSS-->
-    <%= stylesheet_link_tag "vendor/bootstrap-4.1/bootstrap.min.css"%>
-
-    <!-- Vendor CSS-->
-    <%= stylesheet_link_tag "vendor/animsition/animsition.min.css"%>
-    <%= stylesheet_link_tag "vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css"%>
-    <%= stylesheet_link_tag "vendor/wow/animate.css"%>
-    <%= stylesheet_link_tag "vendor/css-hamburgers/hamburgers.min.css"%>
-    <%= stylesheet_link_tag "vendor/slick/slick.css"%>
-    <%= stylesheet_link_tag "vendor/select2/select2.min.css"%>
-    <%= stylesheet_link_tag "vendor/perfect-scrollbar/perfect-scrollbar.css"%>
-    <%= stylesheet_link_tag "vendor/vector-map/jqvmap.min.css"%>
-
+    <%= stylesheet_link_tag "vendors/simple-line-icons/css/simple-line-icons.css"%>
+    <%= stylesheet_link_tag "vendors/flag-icon-css/css/flag-icon.min.css"%>
+    <%= stylesheet_link_tag "vendors/css/vendor.bundle.base.css"%>
+    <%= stylesheet_link_tag "css/style.css"%>
 </head>
 
   <body class="animsition" style="animation-duration: 900ms; opacity: 1;">
-    <div class="page-wrapper">
-        <div class="page-content--bge5">
-            <div class="container">
-                <div class="login-wrap">
-                    <div class="login-content">
-                        <div class="login-logo">
-                            <a href="#">
-                                <%= image_tag 'translideres-log.png' %>
-                            </a>
-                        </div>
-                        <div class="login-form">
-                            <%= yield %>
-                        </div>
-                    </div>
+    <div class="container-scroller">
+      <div class="container-fluid page-body-wrapper full-page-wrapper">
+        <div class="content-wrapper d-flex align-items-center auth">
+          <div class="row flex-grow">
+            <div class="col-lg-4 mx-auto">
+              <div class="auth-form-light text-left p-5">
+                <div class="brand-logo">
+                  <%=image_tag 'logo_transrut'%>
                 </div>
+                <h4>Hola! Bienvenido a TransRut</h4>
+                <%=yield%>
+              </div>
             </div>
+          </div>
         </div>
+        <!-- content-wrapper ends -->
+      </div>
     </div>
-    <%= javascript_include_tag 'main.js'%>
+    <%= javascript_include_tag 'js/off-canvas.js'%>
+    <%= javascript_include_tag 'js/misc.js'%>
+    <%= javascript_include_tag 'vendors/js/vendor.bundle.base.js'%>
   </body>
 </html>
