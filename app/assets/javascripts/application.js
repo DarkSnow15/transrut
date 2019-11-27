@@ -14,5 +14,5 @@
 //= require activestorage
 //= require turbolinks
 //= require main.js
-//= require toastr/toastr.min.js
+//= require toastr
 //= require_tree .

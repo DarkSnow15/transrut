@@ -19,6 +19,7 @@ class ConductoresController < ApplicationController
   def create
     @conductor = Conductor.create(params_conductor)
     if @conductor.save
+      
       flash[:success] = "Conductor guardado correctamente"
       render :show
     else

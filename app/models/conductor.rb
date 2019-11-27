@@ -24,4 +24,6 @@ class Conductor < ApplicationRecord
   validates :num_documento, numericality: true
   validates :nombre, presence: true
   validates :fech_ingreso, presence: true
+  has_many :carros, through: :conductorcarros
+  has_many :conductorcarros
 end

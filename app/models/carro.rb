@@ -28,4 +28,6 @@ class Carro < ApplicationRecord
     validates :id_prop, presence: true
     validates :fecha_venc_soat , presence: true
     validates :fecha_venc_tm , presence: true
+  has_many :conductores, through: :conductorcarros
+  has_many :conductorcarros
 end

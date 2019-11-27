@@ -18,13 +18,11 @@
 
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-
-
   </head>
 
   <body class="animsition" style="animation-duration: 900ms; opacity: 1;" >
     <div class="container-scroller">
+      <%= custom_bootstrap_flash %>
       <!-- topnavbar -->
       <%= render 'layouts/topnavbar' %>
 
@@ -41,6 +39,7 @@
         </div>
       </div>
     </div>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload', media: 'all' %>
     <%= javascript_include_tag 'vendors/js/vendor.bundle.base.js'%>
     <%= javascript_include_tag 'vendors/chart.js/Chart.min.js'%>
     <%= javascript_include_tag 'vendors/moment/moment.min.js'%>

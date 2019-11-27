@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_13_060155) do
+ActiveRecord::Schema.define(version: 2019_11_26_235128) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -47,6 +47,15 @@ ActiveRecord::Schema.define(version: 2019_09_13_060155) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "conductorcarros", force: :cascade do |t|
+    t.bigint "conductor_id"
+    t.bigint "carro_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["carro_id"], name: "index_conductorcarros_on_carro_id"
+    t.index ["conductor_id"], name: "index_conductorcarros_on_conductor_id"
+  end
+
   create_table "conductores", force: :cascade do |t|
     t.integer "num_documento"
     t.string "nombre"
@@ -76,4 +85,6 @@ ActiveRecord::Schema.define(version: 2019_09_13_060155) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "conductorcarros", "carros"
+  add_foreign_key "conductorcarros", "conductores"
 end
