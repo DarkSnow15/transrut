@@ -3,5 +3,6 @@ Rails.application.routes.draw do
   resources :conductores
   resources :carros
   resources :clientes
+  resources :conductorescarros
   root to: 'home#index'
 end

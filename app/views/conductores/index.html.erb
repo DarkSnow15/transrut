@@ -1,12 +1,13 @@
-<div class="table-responsive table--no-card m-b-30">
+<div class="card-body table-responsive">
   <% breadcrumb :conductores %>
-    <table class="table table-borderless table-striped table-earning">
+  <h4 class="card-title">Conductores</h4>
+    <table class="table table-hover">
         <thead>
             <tr>
-                <th>Nº documento</th>
-                <th>Nombre</th>
-                <th>Fecha de ingreso</th>
-                <th>Editar</th>
+                <th><strong>Nº documento</strong></th>
+                <th><strong>Nombre</strong></th>
+                <th><strong>Fecha de ingreso</strong></th>
+                <th><strong>Acciones</strong></th>
             </tr>
         </thead>
         <tbody>
@@ -14,4 +15,3 @@
         </tbody>
     </table>
 </div>
-<%= link_to 'Nuevo conductor', new_conductor_path %>

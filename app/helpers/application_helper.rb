@@ -9,4 +9,11 @@ module ApplicationHelper
     end
     flash_messages.join("\n").html_safe
   end
+  def activar_si_controlador(controladores)
+    if controladores.include?(params[:controller])
+      "active"
+    else
+      nil
+    end
+  end
 end

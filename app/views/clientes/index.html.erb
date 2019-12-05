@@ -1,33 +1,21 @@
-<div class="table-responsive table--no-card m-b-30">
+<div class="card-body table-responsive">
   <% breadcrumb :clientes %>
-  <table class="table table-borderless table-striped table-earning">
+  <h4 class="card-title">Clientes</h4>
+  <table class="table table-hover">
     <thead>
       <tr>
-        <th>Nombres</th>
-        <th>Apellidos</th>
-        <th>Correo</th>
-        <th>Telefono</th>
-        <th>Ciudad</th>
-        <th>Direccion</th>
-        <th>Editar</th>
+        <th><strong>Nombres</strong></th>
+        <th><strong>Apellidos</strong></th>
+        <th><strong>Correo</strong></th>
+        <th><strong>Telefono</strong></th>
+        <th><strong>Ciudad</strong></th>
+        <th><strong>Direccion</strong></th>
+        <th><strong>Acciones</strong></th>
       </tr>
     </thead>
 
     <tbody>
-      <% @clientes.each do |cliente| %>
-        <tr>
-          <td><%= link_to cliente.nombres, cliente_path(cliente) %></td>
-          <td><%= cliente.apellidos %></td>
-          <td><%= cliente.correo %></td>
-          <td><%= cliente.telefono %></td>
-          <td><%= cliente.ciudad %></td>
-          <td><%= cliente.direccion_inicial %></td>
-          <td><%= link_to edit_cliente_path(cliente) do %> <i class="fa fa-edit"></i> <% end %></td>
-        </tr>
-      <% end %>
+      <%= render partial: "clientes", collection: @clientes, as: :cliente %>
     </tbody>
   </table>
 </div>
-<br>
-
-<%= link_to 'Nuevo Cliente', new_cliente_path %>
