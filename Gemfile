@@ -19,6 +19,8 @@ gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
 
 gem "gretel"
 
+gem 'annotate', '~> 2.7', '>= 2.7.1'
+
 gem 'toastr-rails'
 
 gem 'carrierwave', '~> 0.11.2'

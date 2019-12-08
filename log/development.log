@@ -65606,3 +65606,218 @@ Processing by ConductoresController#show as HTML
 Completed 200 OK in 312ms (Views: 226.1ms | ActiveRecord: 2.2ms)
 
 
+Started GET "/conductorescarros" for ::1 at 2019-12-05 17:37:39 -0500
+Processing by ConductorescarrosController#index as HTML
+  Rendering conductorescarros/index.html.erb within layouts/application
+  [1m[36mConductorcarro Load (1271.4ms)[0m  [1m[34mSELECT "conductorcarros".* FROM "conductorcarros"[0m
+  ↳ app/views/conductorescarros/index.html.erb:14
+  [1m[36mConductor Load (0.8ms)[0m  [1m[34mSELECT  "conductores".* FROM "conductores" WHERE "conductores"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/conductorescarros/_conductorescarros.html.erb:3
+  [1m[36mCarro Load (718.8ms)[0m  [1m[34mSELECT  "carros".* FROM "carros" WHERE "carros"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/conductorescarros/_conductorescarros.html.erb:5
+  Rendered conductorescarros/_conductorescarros.html.erb (9943.4ms)
+  Rendered conductorescarros/index.html.erb within layouts/application (12401.4ms)
+Completed 500 Internal Server Error in 17255ms (ActiveRecord: 2014.6ms)
+
+
+  
+ActionView::Template::Error (Can't resolve image into URL: undefined method `to_model' for #<FileUploader::Uploader70353030121220:0x00007ff8ad446c60>
+Did you mean?  to_xml):
+     5:   <td><%=conductorcarro.carro.placa%></td>
+     6:   <td><%=conductorcarro.carro.nom_prop%></td>
+     7:   <% if conductorcarro.conductor.cedula_img.thumb.present?%>
+     8:     <td class="py-1"><%= image_tag conductorcarro.conductor.cedula_img.thumb%></td>
+     9:   <%end%>
+    10: </tr>
+  
+app/views/conductorescarros/_conductorescarros.html.erb:8:in `_app_views_conductorescarros__conductorescarros_html_erb___129485873745636431_70352997764360'
+app/views/conductorescarros/index.html.erb:15:in `block in _app_views_conductorescarros_index_html_erb___4012380925135337377_70352997272260'
+app/views/conductorescarros/index.html.erb:14:in `each_with_index'
+app/views/conductorescarros/index.html.erb:14:in `_app_views_conductorescarros_index_html_erb___4012380925135337377_70352997272260'
+Started PUT "/__web_console/repl_sessions/bffe35b983e02718e609fcaaee675e2a" for ::1 at 2019-12-05 17:38:39 -0500
+Started PUT "/__web_console/repl_sessions/bffe35b983e02718e609fcaaee675e2a" for ::1 at 2019-12-05 17:38:50 -0500
+Started PUT "/__web_console/repl_sessions/bffe35b983e02718e609fcaaee675e2a" for ::1 at 2019-12-05 17:38:53 -0500
+Started PUT "/__web_console/repl_sessions/bffe35b983e02718e609fcaaee675e2a" for ::1 at 2019-12-05 17:38:55 -0500
+Started PUT "/__web_console/repl_sessions/bffe35b983e02718e609fcaaee675e2a" for ::1 at 2019-12-05 17:38:58 -0500
+Started PUT "/__web_console/repl_sessions/bffe35b983e02718e609fcaaee675e2a" for ::1 at 2019-12-05 17:39:00 -0500
+Started GET "/conductorescarros" for ::1 at 2019-12-05 17:42:43 -0500
+Processing by ConductorescarrosController#index as HTML
+  Rendering conductorescarros/index.html.erb within layouts/application
+  [1m[36mConductorcarro Load (1.1ms)[0m  [1m[34mSELECT "conductorcarros".* FROM "conductorcarros"[0m
+  ↳ app/views/conductorescarros/index.html.erb:14
+  [1m[36mConductor Load (0.9ms)[0m  [1m[34mSELECT  "conductores".* FROM "conductores" WHERE "conductores"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/conductorescarros/_conductorescarros.html.erb:3
+  [1m[36mCarro Load (0.6ms)[0m  [1m[34mSELECT  "carros".* FROM "carros" WHERE "carros"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/conductorescarros/_conductorescarros.html.erb:5
+  Rendered conductorescarros/_conductorescarros.html.erb (122.7ms)
+  Rendered conductorescarros/index.html.erb within layouts/application (137.2ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/_topnavbar.html.erb:68
+  Rendered layouts/_topnavbar.html.erb (243.6ms)
+  Rendered layouts/_navigation.html.erb (2.4ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 6219ms (Views: 6168.1ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/" for ::1 at 2019-12-05 17:52:00 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_topnavbar.html.erb (57.2ms)
+  Rendered layouts/_navigation.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 4695ms (Views: 4637.7ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/" for ::1 at 2019-12-05 17:52:09 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_topnavbar.html.erb (5.4ms)
+  Rendered layouts/_navigation.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 343ms (Views: 336.4ms | ActiveRecord: 0.7ms)
+
+
+  [1m[35m (67.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/bin/rake:23
+  [1m[35m (26.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7461761791342367880)[0m
+  ↳ /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/bin/rake:23
+Migrating to CreateConductorcarros (20191126235128)
+  [1m[35m (26.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/bin/rake:23
+  [1m[35m (829.5ms)[0m  [1m[35mDROP TABLE "conductorcarros"[0m
+  ↳ /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Destroy (24.6ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20191126235128"]]
+  ↳ /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/bin/rake:23
+  [1m[35m (137.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/bin/rake:23
+Migrating to DeviseCreateUsers (20190913060155)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mDROP INDEX  "index_users_on_reset_password_token"[0m
+  ↳ /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[35mDROP INDEX  "index_users_on_email"[0m
+  ↳ /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/bin/rake:23
+  [1m[35m (2.2ms)[0m  [1m[35mDROP TABLE "users"[0m
+  ↳ /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.6ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20190913060155"]]
+  ↳ /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/bin/rake:23
+  [1m[35m (1308.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/bin/rake:23
+Migrating to CreateClientes (20190911140550)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/bin/rake:23
+  [1m[35m (124.5ms)[0m  [1m[35mDROP TABLE "clientes"[0m
+  ↳ /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.5ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20190911140550"]]
+  ↳ /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/bin/rake:23
+  [1m[35m (270.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/bin/rake:23
+Migrating to CreateCarros (20190906204549)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/bin/rake:23
+  [1m[35m (9.4ms)[0m  [1m[35mDROP TABLE "carros"[0m
+  ↳ /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.5ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20190906204549"]]
+  ↳ /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/bin/rake:23
+  [1m[35m (72.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/bin/rake:23
+Migrating to CreateConductores (20190904211221)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/bin/rake:23
+  [1m[35m (3.5ms)[0m  [1m[35mDROP TABLE "conductores"[0m
+  ↳ /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.6ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20190904211221"]]
+  ↳ /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/bin/rake:23
+  [1m[35m (109.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(7461761791342367880)[0m
+  ↳ /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7461761791342367880)[0m
+  ↳ /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/bin/rake:23
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/bin/rake:23
+Migrating to CreateConductores (20190904211221)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/bin/rake:23
+  [1m[35m (2903.1ms)[0m  [1m[35mCREATE TABLE "conductores" ("id" bigserial primary key, "documento" integer, "nombre" character varying, "cedula_img" character varying, "hoja_vida" character varying, "licencia" character varying, "fech_ven_licen" date, "fech_seg_ini" date, "fech_seg_ven" date, "fech_ingreso" date, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190904211221_create_conductores.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (72.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190904211221"]]
+  ↳ /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/bin/rake:23
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/bin/rake:23
+Migrating to CreateCarros (20190906204549)
+  [1m[35m (41.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/bin/rake:23
+  [1m[35m (127.7ms)[0m  [1m[35mCREATE TABLE "carros" ("id" bigserial primary key, "placa" character varying, "documen_prop" integer, "nom_prop" character varying, "cel_propietario" integer, "fecha_venc_soat" date, "fecha_venc_tm" date, "fecha_venc_pe" date, "fecha_venc_pc" date, "serv_publico" boolean, "img_lic_trans" character varying, "img_tarj_oper" character varying, "img_soat" character varying, "img_tec_mecan" character varying, "carro_img" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190906204549_create_carros.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190906204549"]]
+  ↳ /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/bin/rake:23
+Migrating to CreateClientes (20190911140550)
+  [1m[35m (40.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/bin/rake:23
+  [1m[35m (15.6ms)[0m  [1m[35mCREATE TABLE "clientes" ("id" bigserial primary key, "documento" integer, "nombres" character varying, "apellidos" character varying, "correo" character varying, "celular" character varying, "telefono" character varying, "ciudad" character varying, "direccion" character varying, "empresa" boolean, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190911140550_create_clientes.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190911140550"]]
+  ↳ /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/bin/rake:23
+Migrating to DeviseCreateUsers (20190913060155)
+  [1m[35m (40.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/bin/rake:23
+  [1m[35m (7.8ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "nombre" character varying, "avatar" character varying, "cedula" integer, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190913060155_devise_create_users.rb:5
+  [1m[35m (39.3ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  ↳ db/migrate/20190913060155_devise_create_users.rb:41
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  ↳ db/migrate/20190913060155_devise_create_users.rb:42
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190913060155"]]
+  ↳ /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/bin/rake:23
+Migrating to CreateConductorcarros (20191126235128)
+  [1m[35m (25.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/bin/rake:23
+  [1m[35m (165.9ms)[0m  [1m[35mCREATE TABLE "conductorcarros" ("id" bigserial primary key, "conductor_id" bigint, "carro_id" bigint, "state" boolean DEFAULT TRUE, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_ef7275938e"
+FOREIGN KEY ("conductor_id")
+  REFERENCES "conductores" ("id")
+, CONSTRAINT "fk_rails_222b6e12db"
+FOREIGN KEY ("carro_id")
+  REFERENCES "carros" ("id")
+)[0m
+  ↳ db/migrate/20191126235128_create_conductorcarros.rb:3
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE  INDEX  "index_conductorcarros_on_conductor_id" ON "conductorcarros"  ("conductor_id")[0m
+  ↳ db/migrate/20191126235128_create_conductorcarros.rb:3
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE  INDEX  "index_conductorcarros_on_carro_id" ON "conductorcarros"  ("carro_id")[0m
+  ↳ db/migrate/20191126235128_create_conductorcarros.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191126235128"]]
+  ↳ /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (50.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(7461761791342367880)[0m
+  ↳ /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/bin/rake:23
+  [1m[35m (91.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/osirisbonadiezcastillo/.rvm/gems/ruby-2.6.0/bin/annotate:23

@@ -17,32 +17,33 @@ ActiveRecord::Schema.define(version: 2019_11_26_235128) do
 
   create_table "carros", force: :cascade do |t|
     t.string "placa"
+    t.integer "documen_prop"
     t.string "nom_prop"
-    t.integer "id_prop"
+    t.integer "cel_propietario"
     t.date "fecha_venc_soat"
     t.date "fecha_venc_tm"
     t.date "fecha_venc_pe"
     t.date "fecha_venc_pc"
+    t.boolean "serv_publico"
     t.string "img_lic_trans"
     t.string "img_tarj_oper"
     t.string "img_soat"
-    t.string "img_tm"
+    t.string "img_tec_mecan"
+    t.string "carro_img"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "clientes", force: :cascade do |t|
-    t.integer "id_cliente"
+    t.integer "documento"
     t.string "nombres"
     t.string "apellidos"
     t.string "correo"
+    t.string "celular"
     t.string "telefono"
     t.string "ciudad"
-    t.string "estado"
-    t.string "codigo_trans"
-    t.integer "precio"
-    t.string "direccion_inicial"
-    t.string "direccion_final"
+    t.string "direccion"
+    t.boolean "empresa"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -58,7 +59,7 @@ ActiveRecord::Schema.define(version: 2019_11_26_235128) do
   end
 
   create_table "conductores", force: :cascade do |t|
-    t.integer "num_documento"
+    t.integer "documento"
     t.string "nombre"
     t.string "cedula_img"
     t.string "hoja_vida"

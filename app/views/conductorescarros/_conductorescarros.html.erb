@@ -5,6 +5,6 @@
   <td><%=conductorcarro.carro.placa%></td>
   <td><%=conductorcarro.carro.nom_prop%></td>
   <% if conductorcarro.conductor.cedula_img.thumb.present?%>
-    <td class="py-1"><%= image_tag conductorcarro.conductor.cedula_img.thumb%></td>
+    <td class="py-1"><%= image_tag conductorcarro.conductor.cedula_img.thumb.url%></td>
   <%end%>
 </tr>

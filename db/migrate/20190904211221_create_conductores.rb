@@ -1,7 +1,7 @@
 class CreateConductores < ActiveRecord::Migration[5.2]
   def change
     create_table :conductores do |t|
-      t.integer :num_documento
+      t.integer :documento
       t.string :nombre
       t.string :cedula_img
       t.string :hoja_vida
