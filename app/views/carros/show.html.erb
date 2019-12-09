@@ -1,58 +1,86 @@
-<p id="notice"><%= notice %></p>
-<p>
-  <strong>Placa:</strong>
-  <%= @carro.placa %>
-</p>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
 
-<p>
-  <strong>Nom prop:</strong>
-  <%= @carro.nom_prop %>
-</p>
+  </head>
+  <body>
+    <div id="container">
+      <div class="card">
+        <div class="card-header">
+            <strong>Vehiculo
+        </div>
+      </div>
+      <article>
 
-<p>
-  <strong>Id prop:</strong>
-  <%= @carro.documen_prop %>
-</p>
+        <p id="notice"><%= notice %></p>
+        <p>
+          <strong>Placa:</strong>
 
-<p>
-  <strong>Fecha venc soat:</strong>
-  <%= @carro.fecha_venc_soat %>
-</p>
+          <%= @carro.placa %>
+        </p>
 
-<p>
-  <strong>Fecha venc tm:</strong>
-  <%= @carro.fecha_venc_tm %>
-</p>
+        <p>
+          <strong>Nom prop:</strong>
+          <%= @carro.nom_prop %>
+        </p>
 
-<p>
-  <strong>Fecha venc pe:</strong>
-  <%= @carro.fecha_venc_pe %>
-</p>
+        <p>
+          <strong>Id prop:</strong>
+          <%= @carro.id_prop %>
+        </p>
 
-<p>
-  <strong>Fecha venc pc:</strong>
-  <%= @carro.fecha_venc_pc %>
-</p>
+        <p>
+          <strong>Fecha venc soat:</strong>
+          <%= @carro.fecha_venc_soat %>
+        </p>
 
-<p>
-  <strong>Img lic trans:</strong>
-  <%= @carro.img_lic_trans %>
-</p>
+        <p>
+          <strong>Fecha venc tm:</strong>
+          <%= @carro.fecha_venc_tm %>
+        </p>
 
-<p>
-  <strong>Img tarj oper:</strong>
-  <%= @carro.img_tarj_oper %>
-</p>
+        <p>
+          <strong>Fecha venc pe:</strong>
+          <%= @carro.fecha_venc_pe %>
+        </p>
 
-<p>
-  <strong>Img soat:</strong>
-  <%= @carro.img_soat %>
-</p>
+        <p>
+          <strong>Fecha venc pc:</strong>
+          <%= @carro.fecha_venc_pc %>
+        </p>
 
-<p>
-  <strong>Img tm:</strong>
-  <%= @carro.img_tec_mecan %>
-</p>
+        <p>
+          <strong>Img lic trans:</strong>
+          <%= @carro.img_lic_trans %>
+        </p>
 
-<%= link_to 'Editar', edit_carro_path(@carro) %> |
-<%= link_to 'Regresar', carros_path %>
+        <p>
+          <strong>Img tarj oper:</strong>
+          <%= @carro.img_tarj_oper %>
+        </p>
+
+        <p>
+          <strong>Img soat:</strong>
+          <%= @carro.img_soat %>
+
+        </p>
+
+        <p>
+          <strong>Img tm:</strong>
+           <%= @carro.img_tm %>
+        </p>
+
+    </article>
+    </div>
+
+
+  <div id="h">
+  <button type="button" name="button">  <%= link_to 'Editar', edit_carro_path(@carro) %> </button>
+  <button type="button" name="button">  <%= link_to 'Regresar', carros_path %> </button>
+  </div>
+
+
+  </body>
+</html>

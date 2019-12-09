@@ -2,3 +2,17 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 //= require datetimepicker/bootstrap-datetimepicker.css
+
+
+  body{background-color: black;}
+  #container{
+
+    margin: 0 auto;
+    width: 900px;
+    padding: 15px;
+  }
+  article{
+    padding-top: 25px;
+    column-count: 1;
+    column-gap: 20px;
+  }
