@@ -31,7 +31,7 @@ class Carro < ApplicationRecord
     validates :cel_propietario , presence: true
     validates :serv_publico , presence: true
     validates :nom_prop , presence: true
-    validates :id_prop, presence: true
+    validates :documen_prop, presence: true
     validates :fecha_venc_soat , presence: true
     validates :fecha_venc_tm , presence: true
   has_many :conductores, through: :conductorcarros

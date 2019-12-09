@@ -17,9 +17,9 @@ ActiveRecord::Schema.define(version: 2019_11_26_235128) do
 
   create_table "carros", force: :cascade do |t|
     t.string "placa"
-    t.integer "documen_prop"
+    t.bigint "documen_prop"
     t.string "nom_prop"
-    t.integer "cel_propietario"
+    t.bigint "cel_propietario"
     t.date "fecha_venc_soat"
     t.date "fecha_venc_tm"
     t.date "fecha_venc_pe"
@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(version: 2019_11_26_235128) do
   end
 
   create_table "clientes", force: :cascade do |t|
-    t.integer "documento"
+    t.bigint "documento"
     t.string "nombres"
     t.string "apellidos"
     t.string "correo"
@@ -59,7 +59,7 @@ ActiveRecord::Schema.define(version: 2019_11_26_235128) do
   end
 
   create_table "conductores", force: :cascade do |t|
-    t.integer "documento"
+    t.bigint "documento"
     t.string "nombre"
     t.string "cedula_img"
     t.string "hoja_vida"

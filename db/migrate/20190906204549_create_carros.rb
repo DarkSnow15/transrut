@@ -2,9 +2,9 @@ class CreateCarros < ActiveRecord::Migration[5.2]
   def change
     create_table :carros do |t|
       t.string :placa
-      t.integer :documen_prop
+      t.bigint :documen_prop
       t.string :nom_prop
-      t.integer :cel_propietario
+      t.bigint :cel_propietario
       t.date :fecha_venc_soat
       t.date :fecha_venc_tm
       t.date :fecha_venc_pe

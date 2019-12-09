@@ -70,6 +70,6 @@ class CarrosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def carro_params
-      params.require(:carro).permit(:placa, :nom_prop, :id_prop, :fecha_venc_soat, :fecha_venc_tm, :fecha_venc_pe, :fecha_venc_pc, :img_lic_trans, :img_tarj_oper, :img_soat, :img_tm)
+      params.require(:carro).permit(:placa, :serv_publico, :nom_prop, :documen_prop, :cel_propietario, :fecha_venc_soat, :fecha_venc_tm, :fecha_venc_pe, :fecha_venc_pc, :img_lic_trans, :img_tarj_oper, :img_soat, :img_tec_mecan, :carro_img)
     end
 end
