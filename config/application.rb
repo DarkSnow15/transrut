@@ -16,6 +16,7 @@ module Transrut
     config.i18n.default_locale = :"es-CO"
 
     config.i18n.enforce_available_locales = false
+    config. preload_frameworks = true
 
     config.to_prepare do
       Devise::SessionsController.layout "empty"

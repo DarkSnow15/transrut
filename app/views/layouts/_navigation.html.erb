@@ -3,8 +3,6 @@
 
       <a href="#" class="nav-link">
 
-
-
       </a>
 
     <li class="nav-item nav-category">
@@ -52,6 +50,22 @@
           <li class="nav-item"> <a class="nav-link" href="<%=clientes_path%>">Clientes</a></li>
         </ul>
       </div>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="collapse" href="#concar" aria-expanded="false" aria-controls="ui-basic">
+        <span class="menu-title">Asociación</span>
+        <i class="fa fa-car menu-icon" aria-hidden="true"></i>
+        <i class="fa fa-male menu-icon" aria-hidden="true"></i>
+      </a>
+      <div class="collapse" id="concar">
+        <ul class="nav flex-column sub-menu">
+          <li class="nav-item"> <a class="nav-link" href="<%=new_conductorescarro_path%>">Nueva Asociación</a></li>
+          <li class="nav-item"> <a class="nav-link" href="<%=conductorescarros_path%>">Asociaciones</a></li>
+        </ul>
+      </div>
+    </li>
+    <li class="nav-item nav-category">
+      <span class="nav-link">SERVICIOS</span>
     </li>
   </ul>
 </nav>

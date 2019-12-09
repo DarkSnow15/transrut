@@ -3,7 +3,7 @@
 # Table name: clientes
 #
 #  id         :bigint           not null, primary key
-#  documento  :integer
+#  documento  :bigint
 #  nombres    :string
 #  apellidos  :string
 #  correo     :string

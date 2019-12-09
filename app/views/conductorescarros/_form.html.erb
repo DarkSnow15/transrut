@@ -1,1 +1,19 @@
-
+<div class="card-body card-block">
+  <%= simple_form_for @conductorcarro, :url => conductorescarros_path, :method => :post do |f| %>
+      <div class="row">
+        <div class="col-md-5">
+          <%=f.association :carro, label_method: :carros_list, value_method: :id, prompt: "Carro", input_html: {:tabindex => 1}%>
+        </div>
+        <div class="col-md-5">
+          <%=f.association :conductor, label_method: :conductores_list, value_method: :id, prompt: "Conductor", input_html: {:tabindex => 2}%>
+        </div>
+        <div class="col-md-2">
+          <div class="form-check mx-sm-2">
+            <label class="form-check-label">
+            <input type="checkbox" class="form-check-input" name="conductorescarros[state]" tabindex="3"> Activo <i class="input-helper"></i></label>
+          </div>
+        </div>
+      </div>
+      <%= f.button :submit, class: "btn btn-primary btn-lg btn-block"%>
+    <%end%>
+</div>

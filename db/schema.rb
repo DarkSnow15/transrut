@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_26_235128) do
+ActiveRecord::Schema.define(version: 2019_12_09_133354) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -72,6 +72,22 @@ ActiveRecord::Schema.define(version: 2019_11_26_235128) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "servicios", force: :cascade do |t|
+    t.date "fecha"
+    t.text "descripcion"
+    t.bigint "conductorcarro_id"
+    t.bigint "cliente_id"
+    t.bigint "valor_serv"
+    t.bigint "num_cumplido"
+    t.bigint "num_factura"
+    t.text "observaciones"
+    t.text "comision"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["cliente_id"], name: "index_servicios_on_cliente_id"
+    t.index ["conductorcarro_id"], name: "index_servicios_on_conductorcarro_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -89,4 +105,6 @@ ActiveRecord::Schema.define(version: 2019_11_26_235128) do
 
   add_foreign_key "conductorcarros", "carros"
   add_foreign_key "conductorcarros", "conductores"
+  add_foreign_key "servicios", "clientes"
+  add_foreign_key "servicios", "conductorcarros"
 end

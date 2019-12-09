@@ -3,7 +3,7 @@
 # Table name: conductores
 #
 #  id             :bigint           not null, primary key
-#  documento      :integer
+#  documento      :bigint
 #  nombre         :string
 #  cedula_img     :string
 #  hoja_vida      :string

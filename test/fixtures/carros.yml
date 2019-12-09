@@ -4,9 +4,9 @@
 #
 #  id              :bigint           not null, primary key
 #  placa           :string
-#  documen_prop    :integer
+#  documen_prop    :bigint
 #  nom_prop        :string
-#  cel_propietario :integer
+#  cel_propietario :bigint
 #  fecha_venc_soat :date
 #  fecha_venc_tm   :date
 #  fecha_venc_pe   :date

@@ -2,29 +2,24 @@
   <%= simple_form_for @conductor do |f| %>
       <div class="row">
         <div class="col-md-6">
-          <%= f.input :num_documento %>
-          <%= f.input :fech_ven_licen, order: [:day, :month, :year] %>
-          <%= f.input :fech_seg_ven, order: [:day, :month, :year] %>
+          <%= f.input :documento, input_html: {:tabindex => 1} %>
+          <%= f.input :fech_ven_licen, order: [:day, :month, :year], input_html: {:tabindex => 3} %>
+          <%= f.input :fech_seg_ven, order: [:day, :month, :year], input_html: {:tabindex => 5} %>
         </div>
         <div class="col-md-6">
-          <%= f.input :nombre %>
-          <%= f.input :fech_seg_ini, order: [:day, :month, :year] %>
-          <%= f.input :fech_ingreso, order: [:day, :month, :year] %>
+          <%= f.input :nombre, input_html: {:tabindex => 2} %>
+          <%= f.input :fech_seg_ini, order: [:day, :month, :year], input_html: {:tabindex => 4} %>
+          <%= f.input :fech_ingreso, order: [:day, :month, :year], input_html: {:tabindex => 6} %>
         </div>
       </div>
 
       <div class="row">
         <div class="col-md-6">
-          <%= f.input :cedula_img%>
-
-
-          <%= f.input :hoja_vida %>
-
-
-          <%= f.input :licencia %>
-
+          <%= f.input :cedula_img, input_html: {:tabindex => 7}%>
+          <%= f.input :hoja_vida, input_html: {:tabindex => 8} %>
+          <%= f.input :licencia, input_html: {:tabindex => 9} %>
         </div>
       </div>
-      <%= f.button :submit, class: "btn btn-primary btn-sm"%>
+      <%= f.button :submit, class: "btn btn-primary btn-sm", input_html: {:tabindex => 10}%>
     <% end %>
 </div>
