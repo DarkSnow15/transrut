@@ -4,11 +4,12 @@
   <table class="table table-hover">
     <thead>
       <tr>
+          <th><strong>Carro</strong></th>
           <th><strong>Placa</strong></th>
           <th><strong>Nombre propietario</strong></th>
           <th><strong>Cedula</strong></th>
-          <th><strong>Fecha vencimiento soat</strong></th>
-          <th><strong>Fecha vencimiento tecnomecanica</strong></th>
+          <th><strong>Fecha Soat</strong></th>
+          <th><strong>Fecha Tecnomecanica</strong></th>
           <th><strong>Acciones</strong></th>
       </tr>
     </thead>
@@ -17,4 +18,5 @@
       <%= render partial: "carros", collection: @carros, as: :carro %>
     </tbody>
   </table>
+  <a class="btn btn-primary" href="<%=new_carro_path%>">Nuevo Carro</a>
 </div>

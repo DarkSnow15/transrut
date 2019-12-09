@@ -73,7 +73,7 @@ ActiveRecord::Schema.define(version: 2019_12_09_133354) do
   end
 
   create_table "servicios", force: :cascade do |t|
-    t.date "fecha"
+    t.datetime "fecha_hora"
     t.text "descripcion"
     t.bigint "conductorcarro_id"
     t.bigint "cliente_id"
@@ -82,6 +82,8 @@ ActiveRecord::Schema.define(version: 2019_12_09_133354) do
     t.bigint "num_factura"
     t.text "observaciones"
     t.text "comision"
+    t.string "direccion_inicio"
+    t.string "direccion_destino"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["cliente_id"], name: "index_servicios_on_cliente_id"

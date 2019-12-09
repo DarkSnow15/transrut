@@ -22,20 +22,18 @@
       </a>
       <div class="collapse" id="conduct">
         <ul class="nav flex-column sub-menu">
-          <li class="nav-item"> <a class="nav-link" href="<%=new_conductor_path%>">Nuevo conductor</a></li>
           <li class="nav-item"> <a class="nav-link" href="<%=conductores_path%>">Conductores</a></li>
         </ul>
       </div>
     </li>
     <li class="nav-item">
       <a class="nav-link" data-toggle="collapse" href="#veh" aria-expanded="false" aria-controls="ui-basic">
-        <span class="menu-title">Vehiculos</span>
+        <span class="menu-title">Carros</span>
         <i class="fa fa-car menu-icon" aria-hidden="true"></i>
       </a>
       <div class="collapse" id="veh">
         <ul class="nav flex-column sub-menu">
-          <li class="nav-item"> <a class="nav-link" href="<%=new_carro_path%>">Nuevo vehiculo</a></li>
-          <li class="nav-item"> <a class="nav-link" href="<%=carros_path%>">Vehiculos</a></li>
+          <li class="nav-item"> <a class="nav-link" href="<%=carros_path%>">Carros</a></li>
         </ul>
       </div>
     </li>
@@ -46,26 +44,29 @@
       </a>
       <div class="collapse" id="cli">
         <ul class="nav flex-column sub-menu">
-          <li class="nav-item"> <a class="nav-link" href="<%=new_cliente_path%>">Nuevo cliente</a></li>
           <li class="nav-item"> <a class="nav-link" href="<%=clientes_path%>">Clientes</a></li>
         </ul>
       </div>
     </li>
-    <li class="nav-item">
-      <a class="nav-link" data-toggle="collapse" href="#concar" aria-expanded="false" aria-controls="ui-basic">
+    <li class="nav-item <%=activar_si_controlador(['conductorcarro'])%>">
+      <a class="nav-link" href="<%=conductorescarros_path%>">
         <span class="menu-title">Asociación</span>
-        <i class="fa fa-car menu-icon" aria-hidden="true"></i>
-        <i class="fa fa-male menu-icon" aria-hidden="true"></i>
+        <i class="icon-screen-desktop menu-icon"></i>
       </a>
-      <div class="collapse" id="concar">
-        <ul class="nav flex-column sub-menu">
-          <li class="nav-item"> <a class="nav-link" href="<%=new_conductorescarro_path%>">Nueva Asociación</a></li>
-          <li class="nav-item"> <a class="nav-link" href="<%=conductorescarros_path%>">Asociaciones</a></li>
-        </ul>
-      </div>
     </li>
     <li class="nav-item nav-category">
       <span class="nav-link">SERVICIOS</span>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="collapse" href="#serv" aria-expanded="false" aria-controls="ui-basic">
+        <span class="menu-title">Servicios</span>
+        <i class="fa fa-taxi menu-icon" aria-hidden="true"></i>
+      </a>
+      <div class="collapse" id="serv">
+        <ul class="nav flex-column sub-menu">
+          <li class="nav-item"> <a class="nav-link" href="<%=servicios_path%>">Servicios</a></li>
+        </ul>
+      </div>
     </li>
   </ul>
 </nav>
