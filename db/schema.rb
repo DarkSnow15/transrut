@@ -50,6 +50,7 @@ ActiveRecord::Schema.define(version: 2019_11_26_235128) do
   create_table "conductorcarros", force: :cascade do |t|
     t.bigint "conductor_id"
     t.bigint "carro_id"
+    t.boolean "state", default: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["carro_id"], name: "index_conductorcarros_on_carro_id"

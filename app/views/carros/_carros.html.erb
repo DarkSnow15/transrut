@@ -1,0 +1,11 @@
+<tr>
+  <td><%= carro.placa.upcase%></td>
+  <td><%= carro.nom_prop %></td>
+  <td><%= carro.id_prop %></td>
+  <td><%= carro.fecha_venc_soat %></td>
+  <td><%= carro.fecha_venc_tm %></td>
+  <td>
+    <%= link_to carro_path(carro), title: 'Ver' do %> <i class="fa fa-eye fa-2x"></i> <% end %>
+    <%= link_to edit_carro_path(carro), title: 'Editar' do %> <i class="fa fa-edit fa-2x col-edi"></i> <% end %>
+  </td>
+</tr>

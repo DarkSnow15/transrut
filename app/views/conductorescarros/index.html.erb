@@ -1,0 +1,19 @@
+<div class="card-body">
+  <h4 class="card-title">Conductores y carros asociados</h4>
+  <table class="table table-striped">
+    <thead>
+        <tr>
+            <th><strong>#</strong></th>
+            <th><strong>Cedula</strong></th>
+            <th><strong>Conductor</strong></th>
+            <th><strong>Placa</strong></th>
+            <th><strong>Propietario</strong></th>
+        </tr>
+    </thead>
+    <tbody>
+      <% @conductorescarros.each_with_index do |conductorcarro, index| %>
+        <%= render partial: "conductorescarros", locals: { conductorcarro: conductorcarro, index: index } %>
+      <% end %>
+    </tbody>
+  </table>
+</div>

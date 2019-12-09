@@ -1,3 +1,43 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+* {
+	padding: 0;
+	margin: 0;
+	font-family: century gothic;
+}
+
+body {
+	background-color: #ededed
+}
+
+#form-param {
+	padding: 20px;
+	background-color: #fff;
+	display: flex;
+}
+
+#form-param .container {
+    flex: 2;
+}
+#form-param .buttons {
+	flex: 1;
+}
+
+input {
+	padding: 9px;
+	margin: 6px;
+	width: 42%
+}
+
+button{
+	border: none;
+	padding: 9px;
+	display: block;
+	margin: 6px
+}
+
+button:first-child {
+	background-color: #48e;
+	color: #fff
+}

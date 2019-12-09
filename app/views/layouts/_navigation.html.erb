@@ -1,6 +1,6 @@
 <nav class="sidebar sidebar-offcanvas" id="sidebar">
   <ul class="nav">
-    
+
       <a href="#" class="nav-link">
 
 
@@ -10,7 +10,7 @@
     <li class="nav-item nav-category">
       <span class="nav-link">INICIO</span>
     </li>
-    <li class="nav-item">
+    <li class="nav-item <%=activar_si_controlador(['home'])%>">
       <a class="nav-link" href="<%=root_path%>">
         <span class="menu-title">Lobby</span>
         <i class="icon-screen-desktop menu-icon"></i>
@@ -42,14 +42,14 @@
       </div>
     </li>
     <li class="nav-item">
-      <a class="nav-link" data-toggle="collapse" href="#cli" aria-expanded="false" aria-controls="auth">
+      <a class="nav-link" data-toggle="collapse" href="#cli" aria-expanded="false" aria-controls="ui-basic">
         <span class="menu-title">Clientes</span>
         <i class="fa fa-address-book-o menu-icon" aria-hidden="true"></i>
       </a>
       <div class="collapse" id="cli">
         <ul class="nav flex-column sub-menu">
-          <li class="nav-item"> <a class="nav-link" href="<%=new_conductor_path%>">Nuevo cliente</a></li>
-          <li class="nav-item"> <a class="nav-link" href="<%=conductores_path%>">Clientes</a></li>
+          <li class="nav-item"> <a class="nav-link" href="<%=new_cliente_path%>">Nuevo cliente</a></li>
+          <li class="nav-item"> <a class="nav-link" href="<%=clientes_path%>">Clientes</a></li>
         </ul>
       </div>
     </li>

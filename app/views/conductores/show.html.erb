@@ -1,43 +1,70 @@
-<div class="row">
-  <% breadcrumb :conductor_show, @conductor %>
-  <div class="col-lg-6">
-    <div class="card">
-      <div class="card-header">
-          <strong>Conductor <%= @conductor.nombre.humanize %> <a href="<%= edit_conductor_path(@conductor)%>" class="check-o"><i class="fa fa-edit"></i></a></strong>
-      </div>
-      <div class="card-body">
-        <strong>Numero de documento: </strong><%= @conductor.num_documento%><br><br>
-        <strong>Fecha de ingreso: </strong><%= @conductor.fech_ingreso %><br><br>
-        <strong>Fecha de licencia: </strong><%= @conductor.fech_ven_licen %><br><br>
-        <strong>Fecha de vencimiento seguro: </strong><%= @conductor.fech_seg_ven %>
-      </div>
-    </div>
-  </div>
-  <div class="col-lg-6">
-    <div class="card">
-      <div class="card-header">
-          <strong>Archivos requeridos</strong>
-      </div>
-      <div class="card-body">
-        <strong>Hoja de vida: </strong>
-        <% if @conductor.hoja_vida.present?%>
-          <i class="fas fa-check-circle fa-lg check-o"></i><br><br>
-        <% else %>
-          <i class="fas fa-times-circle fa-lg check-d"></i><br><br>
-        <% end %>
-        <strong>Licencia: </strong>
-        <% if @conductor.licencia.present?%>
-          <i class="fas fa-check-circle fa-lg check-o"></i><br><br>
-        <% else %>
-          <i class="fas fa-times-circle fa-lg check-d"></i><br><br>
-        <% end %>
-        <strong>Cedula: </strong>
-        <% if @conductor.cedula_img.present?%>
-          <i class="fas fa-check-circle fa-lg check-o"></i><br><br>
-        <% else %>
-          <i class="fas fa-times-circle fa-lg check-d"></i><br><br>
-        <% end %>
-      </div>
-    </div>
-  </div>
-</div>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+  </head>
+  <body>
+     <div id="container">
+       <article>
+         <div class="row">
+           <% breadcrumb :conductor_show, @conductor %>
+           <div class="col-lg-6">
+             <div class="card">
+               <div class="card-header">
+                   <strong>Conductor <%= @conductor.nombre.humanize %>
+               </div>
+               <div class="card-body">
+                 <p>
+                    <strong>Numero de documento: </strong>
+                    <%= @conductor.num_documento%><br><br>
+                 </p>
+
+                 <p>
+                     <strong>Fecha de ingreso: </strong>
+                     <%= @conductor.fech_ingreso %><br><br>
+                 </p>
+
+                 <p>
+                    <strong>Fecha de licencia: </strong>
+                    <%= @conductor.fech_ven_licen %><br><br>
+                 </p>
+
+                 <p>
+                      <strong>Fecha de vencimiento seguro: </strong>
+                      <%= @conductor.fech_seg_ven %>
+                 </p>
+
+                 <p>
+                   <strong>Hoja de vida: </strong>
+                    <% @conductor.hoja_vida.present?%>
+                 </p>
+
+                  <p>
+                    <strong>Licencia: </strong>
+                    <% @conductor.licencia.present?%>
+                  </p>
+
+                  <p>
+                    <strong>Cedula: </strong>
+                    <% @conductor.cedula_img.present?%>
+                  </p>
+
+               </div>
+             </div>
+           </div>
+
+
+         </div>
+
+       </article>
+
+     </div>
+
+     <div >
+     <button type="button" class="button">  <%= link_to 'Editar', edit_conductor_path(@conductor) %> </button>
+     <button type="button" class="button">  <%= link_to 'Regresar', conductores_path %> </button>
+     </div>
+  </body>
+</html>
