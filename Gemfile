@@ -23,7 +23,7 @@ gem 'annotate', '~> 2.7', '>= 2.7.1'
 
 gem 'toastr-rails'
 
-gem 'carrierwave', '~> 0.11.2'
+gem 'carrierwave', '~> 1.3.2'
 # Use Puma as the app server
 gem 'puma', '~> 4.3'
 # Use SCSS for stylesheets
